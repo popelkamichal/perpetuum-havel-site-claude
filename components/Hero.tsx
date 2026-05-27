@@ -30,12 +30,13 @@ export default function Hero() {
           odkazem Václava Havla, premiéra v hlavní sezóně Národního divadla.
         </p>
 
-        {/* Video embed */}
-        <div className="w-full max-w-3xl mx-auto">
+        {/* Video embed — bílý průhledný box s kulatými rohy */}
+        <div className="w-full max-w-3xl mx-auto rounded-3xl overflow-hidden"
+          style={{ background: "rgba(255,255,255,0.45)" }}>
           <YoutubeEmbed
             videoId="D0_T1T1eQC0"
             title="Perpetuum Havel – trailer k inscenaci"
-            thumbnail="/perpetuum-havel-thumb.jpg"
+            variant="ghost"
           />
         </div>
 
