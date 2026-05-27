@@ -1,37 +1,5 @@
 import YoutubeEmbed from "./YoutubeEmbed";
 
-type LetterVariant = "outline" | "solid" | "teal";
-
-function TitleLetter({
-  char,
-  variant,
-}: {
-  char: string;
-  variant: LetterVariant;
-}) {
-  if (variant === "teal") {
-    return (
-      <span style={{ color: "#0ECECE", display: "inline-block" }}>{char}</span>
-    );
-  }
-  if (variant === "outline") {
-    return (
-      <span
-        style={{
-          WebkitTextStroke: "2px #ffffff",
-          color: "transparent",
-          display: "inline-block",
-        }}
-      >
-        {char}
-      </span>
-    );
-  }
-  return (
-    <span style={{ color: "#ffffff", display: "inline-block" }}>{char}</span>
-  );
-}
-
 export default function Hero() {
   return (
     <section
@@ -47,7 +15,7 @@ export default function Hero() {
       {/* Dark overlay over photo */}
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(8,8,8,0.72)" }}
+        style={{ background: "rgba(8,8,8,0.55)" }}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -56,24 +24,15 @@ export default function Hero() {
           className="font-bebas leading-[0.88] tracking-tight uppercase mb-8 select-none"
           style={{ fontSize: "clamp(5.5rem, 20vw, 15rem)" }}
         >
-          {/* P-E-R-P-E-T-U-U-M */}
+          {/* PERP = bílá, E = teal, TUUM = bílá */}
           <div>
-            <TitleLetter char="P" variant="outline" />
-            <TitleLetter char="E" variant="teal" />
-            <TitleLetter char="R" variant="outline" />
-            <TitleLetter char="P" variant="outline" />
-            <TitleLetter char="E" variant="teal" />
-            <TitleLetter char="T" variant="solid" />
-            <TitleLetter char="U" variant="solid" />
-            <TitleLetter char="U" variant="solid" />
-            <TitleLetter char="M" variant="solid" />
+            <span style={{ color: "#ffffff" }}>PERP</span>
+            <span style={{ color: "#0ECECE" }}>E</span>
+            <span style={{ color: "#ffffff" }}>TUUM</span>
           </div>
-          {/* H-A-V-Ǝ-L */}
+          {/* HAV = teal, Ǝ = teal (převrácené E), L = teal */}
           <div>
-            <TitleLetter char="H" variant="outline" />
-            <TitleLetter char="A" variant="outline" />
-            <TitleLetter char="V" variant="outline" />
-            {/* Reversed E in teal */}
+            <span style={{ color: "#0ECECE" }}>HAV</span>
             <span
               style={{
                 color: "#0ECECE",
@@ -83,7 +42,7 @@ export default function Hero() {
             >
               E
             </span>
-            <TitleLetter char="L" variant="solid" />
+            <span style={{ color: "#0ECECE" }}>L</span>
           </div>
         </h1>
 
