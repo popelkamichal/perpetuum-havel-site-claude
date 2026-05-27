@@ -8,35 +8,53 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#080808]">
-      <Navbar />
-      <Hero />
 
-      {/* Pair 1 — photo background, Reel z Avignonu */}
-      <ContentPair
-        sectionLabel="Kontext, rozhovory a svědectví"
-        article1={{
-          title: "Text o kontextu vzniku Perpetuum mobile (Petišková)",
-          href: "#",
+      {/* ── FOTO POZADÍ ── pokrývá Navbar + Hero + ContentPair1, plynule přechází do černé */}
+      <div
+        className="relative"
+        style={{
+          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundColor: "#080808",
         }}
-        article2={{
-          title: "Text: Rozhovor s Romanem Zotovem Mikshinem (z Foyer)",
-          href: "#",
-        }}
-        reelId="AVIGNON_REEL_ID"
-        reelLabel="Reel z Avignonu"
-        withPhotoBg
-      />
+      >
+        {/* Gradient overlay: průhledný nahoře → plná černá dole */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.82) 72%, rgba(8,8,8,0.97) 90%, #080808 100%)",
+          }}
+        />
 
-      {/* Thin divider */}
-      <div className="w-full border-t border-[#1a1a1a]" />
+        <div className="relative z-10">
+          <Navbar />
+          <Hero />
 
-      {/* Full-width interview video */}
+          {/* Pair 1 — Reel z Avignonu, na foto pozadí */}
+          <ContentPair
+            sectionLabel="Kontext, rozhovory a svědectví"
+            article1={{
+              title: "Text o kontextu vzniku Perpetuum mobile (Petišková)",
+              href: "#",
+            }}
+            article2={{
+              title: "Text: Rozhovor s Romanem Zotovem Mikshinem (z Foyer)",
+              href: "#",
+            }}
+            reelId="AVIGNON_REEL_ID"
+            reelLabel="Reel z Avignonu"
+          />
+        </div>
+      </div>
+
+      {/* ── ČERNÉ POZADÍ ── zbytek stránky */}
+      <div className="w-full border-t border-[#111]" />
       <VideoSection />
+      <div className="w-full border-t border-[#111]" />
 
-      {/* Thin divider */}
-      <div className="w-full border-t border-[#1a1a1a]" />
-
-      {/* Pair 2 — dark background, Reel ze zkoušení */}
+      {/* Pair 2 — Reel ze zkoušení */}
       <ContentPair
         article1={{
           title:

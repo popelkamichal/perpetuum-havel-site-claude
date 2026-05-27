@@ -10,7 +10,6 @@ interface ContentPairProps {
   article2: Article;
   reelId: string;
   reelLabel: string;
-  withPhotoBg?: boolean;
   sectionLabel?: string;
 }
 
@@ -37,31 +36,11 @@ export default function ContentPair({
   article2,
   reelId,
   reelLabel,
-  withPhotoBg,
   sectionLabel,
 }: ContentPairProps) {
   return (
-    <section
-      className="w-full px-6 py-12 relative"
-      style={
-        withPhotoBg
-          ? {
-              backgroundImage: "url('/hero-bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundColor: "#080808",
-            }
-          : {}
-      }
-    >
-      {withPhotoBg && (
-        <div
-          className="absolute inset-0"
-          style={{ background: "rgba(8,8,8,0.72)" }}
-        />
-      )}
-
-      <div className="relative z-10 max-w-4xl mx-auto">
+    <section className="w-full px-6 py-12">
+      <div className="max-w-4xl mx-auto">
         {sectionLabel && (
           <div className="flex items-center gap-3 mb-8">
             <div className="w-8 h-px" style={{ backgroundColor: "#0ECECE" }} />
