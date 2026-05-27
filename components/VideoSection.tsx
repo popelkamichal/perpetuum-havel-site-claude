@@ -2,10 +2,9 @@ import YoutubeEmbed from "./YoutubeEmbed";
 
 export default function VideoSection() {
   return (
-    <section className="w-full px-4 py-16">
-      <div className="max-w-3xl mx-auto">
-        {/* White box around video — matches Canva design */}
-        <div className="bg-white p-3">
+    <section className="w-full px-6 py-16">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white rounded-3xl overflow-hidden">
           <YoutubeEmbed
             videoId="INTERVIEW_VIDEO_ID"
             title="Video rozhovor s Petrem Boháčem – Perpetuum Havel"
