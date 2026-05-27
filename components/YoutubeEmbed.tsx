@@ -44,7 +44,7 @@ export default function YoutubeEmbed({
     );
   }
 
-  // Ghost variant — průhledný, jednoduchý tmavý trojúhelník
+  // Ghost variant — průhledný, výrazné play tlačítko s kroužkem
   if (variant === "ghost") {
     return (
       <div
@@ -54,14 +54,26 @@ export default function YoutubeEmbed({
         role="button"
         aria-label={`Přehrát video: ${title}`}
       >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <svg
-            viewBox="0 0 24 24"
-            className="w-14 h-14 md:w-20 md:h-20 opacity-60 group-hover:opacity-90 transition-opacity duration-200"
-            fill="rgba(0,0,0,0.75)"
-          >
-            <path d="M8 5v14l11-7z" />
-          </svg>
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+          {/* Kroužek s trojúhelníkem — pulzuje */}
+          <div className="relative flex items-center justify-center">
+            {/* Pulzující ring */}
+            <div className="absolute w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-white/60 animate-ping" />
+            {/* Hlavní kruh */}
+            <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-white/90 bg-white/20 group-hover:bg-white/35 transition-colors duration-200 flex items-center justify-center backdrop-blur-sm">
+              <svg
+                viewBox="0 0 24 24"
+                fill="white"
+                className="w-8 h-8 md:w-11 md:h-11 ml-1 drop-shadow-lg"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+          {/* Popis */}
+          <span className="text-white/80 text-[10px] tracking-[0.3em] uppercase font-inter">
+            Přehrát trailer
+          </span>
         </div>
       </div>
     );
