@@ -1,4 +1,5 @@
 import YoutubeEmbed from "./YoutubeEmbed";
+import Ticker from "./Ticker";
 
 export default function Hero() {
   return (
@@ -43,6 +44,9 @@ export default function Hero() {
         >
           Trailer k inscenaci
         </p>
+
+        {/* Ticker pod videem */}
+        <Ticker />
       </div>
     </section>
   );

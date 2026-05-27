@@ -16,20 +16,24 @@ body {
   color: #ffffff;
 }
 
+/* Ticker scrolling animation */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker 22s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
 @layer utilities {
-  .text-teal {
-    color: #0ECECE;
-  }
-  .text-gold {
-    color: #C89A2A;
-  }
-  .bg-teal {
-    background-color: #0ECECE;
-  }
-  .bg-gold {
-    background-color: #C89A2A;
-  }
-  .border-teal {
-    border-color: #0ECECE;
-  }
+  .text-teal  { color: #0ECECE; }
+  .text-gold  { color: #C89A2A; }
+  .bg-teal    { background-color: #0ECECE; }
+  .bg-gold    { background-color: #C89A2A; }
+  .border-teal { border-color: #0ECECE; }
 }
