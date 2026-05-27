@@ -43,7 +43,7 @@ export default function Home() {
               title: "Text: Rozhovor s Romanem Zotovem Mikshinem (z Foyer)",
               href: "#",
             }}
-            reelId="AVIGNON_REEL_ID"
+            instagramUrl="https://www.instagram.com/reel/DIQB-djM309/"
             reelLabel="Reel z Avignonu"
           />
         </div>

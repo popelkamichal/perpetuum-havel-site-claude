@@ -1,4 +1,5 @@
 import YoutubeEmbed from "./YoutubeEmbed";
+import InstagramEmbed from "./InstagramEmbed";
 
 interface Article {
   title: string;
@@ -8,7 +9,10 @@ interface Article {
 interface ContentPairProps {
   article1: Article;
   article2: Article;
-  reelId: string;
+  /** YouTube video ID — použij buď reelId NEBO instagramUrl */
+  reelId?: string;
+  /** Přímý odkaz na Instagram Reel — použij buď reelId NEBO instagramUrl */
+  instagramUrl?: string;
   reelLabel: string;
   sectionLabel?: string;
 }
@@ -35,6 +39,7 @@ export default function ContentPair({
   article1,
   article2,
   reelId,
+  instagramUrl,
   reelLabel,
   sectionLabel,
 }: ContentPairProps) {
@@ -54,16 +59,20 @@ export default function ContentPair({
         )}
 
         <div className="grid grid-cols-2 gap-4">
-          {/* Left: 2 stacked article boxes — stretch to reel height */}
+          {/* Left: 2 stacked article boxes */}
           <div className="flex flex-col gap-4">
             <ArticleBox {...article1} />
             <ArticleBox {...article2} />
           </div>
 
-          {/* Right: portrait reel in white rounded box */}
+          {/* Right: reel — YouTube nebo Instagram */}
           <div className="flex flex-col">
             <div className="bg-white rounded-3xl overflow-hidden flex-1">
-              <YoutubeEmbed videoId={reelId} title={reelLabel} aspect="portrait" />
+              {instagramUrl ? (
+                <InstagramEmbed url={instagramUrl} />
+              ) : reelId ? (
+                <YoutubeEmbed videoId={reelId} title={reelLabel} aspect="portrait" />
+              ) : null}
             </div>
             <p
               className="mt-3 text-[9px] tracking-[0.3em] uppercase font-inter text-center"
