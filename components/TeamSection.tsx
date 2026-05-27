@@ -53,15 +53,6 @@ export default function TeamSection() {
           </span>
         </div>
 
-        {/* Title */}
-        <h2
-          className="font-bebas leading-none uppercase mb-12"
-          style={{ fontSize: "clamp(2.5rem, 8vw, 5rem)" }}
-        >
-          <span className="text-white">Tváře za&nbsp;</span>
-          <span style={{ color: "#0ECECE" }}>Perpetuem</span>
-        </h2>
-
         {/* Team grid */}
         <div className="grid grid-cols-4 gap-6 md:gap-10">
           {team.map((member) => (
