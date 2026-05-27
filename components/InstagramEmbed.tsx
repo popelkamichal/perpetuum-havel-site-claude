@@ -21,7 +21,6 @@ export default function InstagramEmbed({ url }: InstagramEmbedProps) {
 
   return (
     <div className="w-full">
-      {/* @ts-expect-error — Instagram blockquote attrs */}
       <blockquote
         className="instagram-media"
         data-instgrm-permalink={url}
