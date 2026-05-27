@@ -94,6 +94,7 @@ export default function ArticlesSection() {
               <YoutubeEmbed
                 videoId="REHEARSAL_VIDEO_ID"
                 title="Hraj ze zkoušení – Perpetuum Havel"
+                aspect="portrait"
               />
               <p
                 className="mt-3 text-xs tracking-[0.25em] uppercase font-inter text-center"
