@@ -58,15 +58,15 @@ export default function ContentPair({
           </div>
         )}
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left: 2 stacked article boxes */}
           <div className="flex flex-col gap-4">
             <ArticleBox {...article1} />
             <ArticleBox {...article2} />
           </div>
 
-          {/* Right: reel — YouTube nebo Instagram */}
-          <div className="flex flex-col">
+          {/* Right: reel — na mobilu plná šířka, na desktopu vedle článků */}
+          <div className="flex flex-col max-w-sm mx-auto w-full md:max-w-none md:mx-0">
             <div className="bg-white rounded-3xl overflow-hidden flex-1">
               {instagramUrl ? (
                 <InstagramEmbed url={instagramUrl} />
