@@ -38,7 +38,7 @@ export default function Hero() {
         {/* Video embed */}
         <div className="w-full">
           <YoutubeEmbed
-            videoId="TRAILER_VIDEO_ID"
+            videoId="D0_T1T1eQC0"
             title="Perpetuum Havel – trailer k inscenaci"
           />
         </div>
