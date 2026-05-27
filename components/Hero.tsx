@@ -33,15 +33,7 @@ export default function Hero() {
           {/* HAV = teal, Ǝ = teal (převrácené E), L = teal */}
           <div>
             <span style={{ color: "#0ECECE" }}>HAV</span>
-            <span
-              style={{
-                color: "#0ECECE",
-                display: "inline-block",
-                transform: "scaleX(-1)",
-              }}
-            >
-              E
-            </span>
+            <span style={{ color: "#0ECECE" }}>E</span>
             <span style={{ color: "#0ECECE" }}>L</span>
           </div>
         </h1>
