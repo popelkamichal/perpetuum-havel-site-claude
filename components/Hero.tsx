@@ -35,6 +35,7 @@ export default function Hero() {
           <YoutubeEmbed
             videoId="D0_T1T1eQC0"
             title="Perpetuum Havel – trailer k inscenaci"
+            thumbnail="/perpetuum-havel-thumb.jpg"
           />
         </div>
 
