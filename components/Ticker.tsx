@@ -1,6 +1,5 @@
 export default function Ticker() {
-  const text =
-    "PERPETUUM HAVEL · LATERNA MAGIKA · NÁRODNÍ DIVADLO · PREMIÉRA 2025 · VÁCLAV HAVEL · SCÉNICKÁ MEDITACE O MOCI, PAMĚTI A SVOBODĚ · ";
+  const text = "PERPETUUM HAVEL · ";
 
   // Zdvojíme text pro plynulou smyčku
   const repeated = text.repeat(3);
