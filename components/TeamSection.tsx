@@ -21,16 +21,16 @@ function AvatarCard({
   return (
     <div className="flex flex-col items-center gap-3 group cursor-pointer">
       <div
-        className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-black font-bebas text-xl md:text-2xl tracking-wide transition-transform duration-200 group-hover:scale-110"
+        className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center font-bebas text-black text-xl md:text-2xl tracking-wide transition-transform duration-200 group-hover:scale-105"
         style={{ backgroundColor: "#C89A2A" }}
       >
         {initials}
       </div>
       <div className="text-center">
-        <p className="text-white font-inter font-semibold text-xs md:text-sm uppercase tracking-wide">
+        <p className="text-white font-inter font-bold text-[10px] uppercase tracking-wider leading-snug">
           {name}
         </p>
-        <p className="text-gray-500 font-inter text-[10px] md:text-xs uppercase tracking-widest mt-0.5">
+        <p className="text-[#444] font-inter text-[9px] uppercase tracking-widest mt-1">
           {role}
         </p>
       </div>
@@ -43,10 +43,10 @@ export default function TeamSection() {
     <section className="w-full px-4 py-16">
       <div className="max-w-4xl mx-auto">
         {/* Section label */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-8 h-px bg-[#0ECECE]" />
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-8 h-px" style={{ backgroundColor: "#0ECECE" }} />
           <span
-            className="text-[10px] tracking-[0.3em] uppercase font-inter"
+            className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
             style={{ color: "#0ECECE" }}
           >
             Medailony tvůrců
