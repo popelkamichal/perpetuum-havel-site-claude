@@ -5,23 +5,15 @@ export default function Hero() {
   return (
     <section className="w-full px-4 pb-20 pt-4">
       <div className="max-w-5xl mx-auto text-center">
-        {/* Big title */}
-        <h1
-          className="font-bebas leading-[0.88] tracking-tight uppercase mb-8 select-none"
-          style={{ fontSize: "clamp(5.5rem, 20vw, 15rem)" }}
-        >
-          {/* PERP = bílá, E = teal převrácené, TUUM = bílá */}
-          <div>
-            <span style={{ color: "#ffffff" }}>PERP</span>
-            <span style={{ color: "#0ECECE", display: "inline-block", transform: "scaleX(-1)" }}>E</span>
-            <span style={{ color: "#ffffff" }}>TUUM</span>
-          </div>
-          {/* HAV = teal, E = bílé, L = teal */}
-          <div>
-            <span style={{ color: "#0ECECE" }}>HAV</span>
-            <span style={{ color: "#ffffff" }}>E</span>
-            <span style={{ color: "#0ECECE" }}>L</span>
-          </div>
+        {/* Big title — SVG from designer */}
+        <h1 className="mb-8 select-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/HAVEL-TITLE.svg"
+            alt="Perpetuum Havel"
+            className="w-full max-w-4xl mx-auto"
+            draggable={false}
+          />
         </h1>
 
         {/* Subtitle */}
