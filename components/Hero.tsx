@@ -5,15 +5,20 @@ export default function Hero() {
   return (
     <section className="w-full px-4 pb-20 pt-4">
       <div className="max-w-5xl mx-auto text-center">
-        {/* Big title — SVG from designer */}
-        <h1 className="mb-8 select-none">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/HAVEL-TITLE.svg"
-            alt="Perpetuum Havel"
-            className="w-full max-w-4xl mx-auto"
-            draggable={false}
-          />
+        {/* Big title — SVG with full-width black translucent strip */}
+        <h1 className="mb-8 select-none" style={{ marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)", width: "100vw" }}>
+          <div
+            className="w-full py-[30px] px-6"
+            style={{ background: "rgba(0,0,0,0.8)" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/HAVEL-TITLE.svg"
+              alt="Perpetuum Havel"
+              className="w-full max-w-4xl mx-auto"
+              draggable={false}
+            />
+          </div>
         </h1>
 
         {/* Subtitle */}
