@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://www.narodni-divadlo.cz"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 hover:text-[#0ECECE] font-inter text-[10px] tracking-[0.25em] uppercase transition-colors duration-200"
+          className="text-gray-600 hover:text-[#00ac93] font-inter text-[10px] tracking-[0.25em] uppercase transition-colors duration-200"
         >
           narodni-divadlo.cz
         </a>

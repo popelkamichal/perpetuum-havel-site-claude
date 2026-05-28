@@ -9,14 +9,14 @@ export default function Ticker() {
       <div className="flex whitespace-nowrap ticker-track">
         <span
           className="text-xs tracking-[0.25em] uppercase font-inter font-medium pr-8"
-          style={{ color: "#0ECECE" }}
+          style={{ color: "#ffffff" }}
         >
           {repeated}
         </span>
         {/* Duplikát pro bezešvou smyčku */}
         <span
           className="text-xs tracking-[0.25em] uppercase font-inter font-medium pr-8"
-          style={{ color: "#0ECECE" }}
+          style={{ color: "#ffffff" }}
           aria-hidden="true"
         >
           {repeated}

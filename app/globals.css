@@ -41,9 +41,9 @@ body {
 }
 
 @layer utilities {
-  .text-teal  { color: #0ECECE; }
+  .text-teal  { color: #00ac93; }
   .text-gold  { color: #C89A2A; }
-  .bg-teal    { background-color: #0ECECE; }
+  .bg-teal    { background-color: #00ac93; }
   .bg-gold    { background-color: #C89A2A; }
-  .border-teal { border-color: #0ECECE; }
+  .border-teal { border-color: #00ac93; }
 }

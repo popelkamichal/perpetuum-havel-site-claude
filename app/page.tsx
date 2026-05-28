@@ -49,6 +49,7 @@ export default function Home() {
                 width={800}
                 height={200}
                 className="w-full h-auto select-none"
+                style={{ opacity: 0.7 }}
                 draggable={false}
                 priority
               />

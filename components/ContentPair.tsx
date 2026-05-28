@@ -28,7 +28,7 @@ function ArticleBox({ title, href }: Article) {
       <p className="text-[#111] font-inter font-semibold text-sm leading-snug">
         {title}
       </p>
-      <span className="mt-5 text-[9px] tracking-[0.25em] uppercase font-inter text-[#bbb] group-hover:text-[#0ECECE] transition-colors duration-200">
+      <span className="mt-5 text-[9px] tracking-[0.25em] uppercase font-inter text-[#bbb] group-hover:text-[#00ac93] transition-colors duration-200">
         Číst článek →
       </span>
     </a>
@@ -48,10 +48,10 @@ export default function ContentPair({
       <div className="max-w-4xl mx-auto">
         {sectionLabel && (
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-8 h-px" style={{ backgroundColor: "#0ECECE" }} />
+            <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
             <span
               className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
-              style={{ color: "#0ECECE" }}
+              style={{ color: "#00ac93" }}
             >
               {sectionLabel}
             </span>
@@ -76,7 +76,7 @@ export default function ContentPair({
             </div>
             <p
               className="mt-3 text-[9px] tracking-[0.3em] uppercase font-inter text-center"
-              style={{ color: "#0ECECE" }}
+              style={{ color: "#00ac93" }}
             >
               {reelLabel}
             </p>

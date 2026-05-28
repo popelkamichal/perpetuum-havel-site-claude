@@ -23,7 +23,7 @@ export default function Hero() {
 
         <p
           className="mt-3 text-[9px] tracking-[0.35em] uppercase font-inter"
-          style={{ color: "#0ECECE" }}
+          style={{ color: "#00ac93" }}
         >
           Trailer k inscenaci
         </p>

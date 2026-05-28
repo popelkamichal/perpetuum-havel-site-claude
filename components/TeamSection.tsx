@@ -78,10 +78,10 @@ export default function TeamSection() {
     <section className="w-full px-4 py-16">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-8 h-px" style={{ backgroundColor: "#0ECECE" }} />
+          <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
           <span
             className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
-            style={{ color: "#0ECECE" }}
+            style={{ color: "#00ac93" }}
           >
             Tvůrci
           </span>

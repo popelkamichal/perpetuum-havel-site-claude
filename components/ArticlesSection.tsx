@@ -41,12 +41,12 @@ function ArticleCard({
       <div className="flex justify-between items-start mb-3">
         <span
           className="text-[9px] tracking-[0.3em] uppercase font-inter font-semibold"
-          style={{ color: "#0ECECE" }}
+          style={{ color: "#00ac93" }}
         >
           {category}
         </span>
         <span
-          className="text-gray-300 group-hover:text-[#0ECECE] transition-colors duration-200 text-sm leading-none"
+          className="text-gray-300 group-hover:text-[#00ac93] transition-colors duration-200 text-sm leading-none"
         >
           ↗
         </span>
@@ -59,7 +59,7 @@ function ArticleCard({
       </p>
       <a
         href="#"
-        className="text-[9px] tracking-[0.25em] uppercase font-inter text-[#aaa] group-hover:text-[#0ECECE] transition-colors duration-200"
+        className="text-[9px] tracking-[0.25em] uppercase font-inter text-[#aaa] group-hover:text-[#00ac93] transition-colors duration-200"
       >
         Číst dál →
       </a>
@@ -73,10 +73,10 @@ export default function ArticlesSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-8 h-px" style={{ backgroundColor: "#0ECECE" }} />
+          <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
           <span
             className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
-            style={{ color: "#0ECECE" }}
+            style={{ color: "#00ac93" }}
           >
             Kontext, rozhovory a svědectví
           </span>
@@ -101,7 +101,7 @@ export default function ArticlesSection() {
             </div>
             <p
               className="mt-3 text-[9px] tracking-[0.3em] uppercase font-inter text-center"
-              style={{ color: "#0ECECE" }}
+              style={{ color: "#00ac93" }}
             >
               Hraj ze zkoušení
             </p>
