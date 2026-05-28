@@ -20,13 +20,6 @@ export default function Hero() {
           />
         </div>
 
-        <p
-          className="mt-3 text-[9px] tracking-[0.35em] uppercase font-inter"
-          style={{ color: "#00ac93" }}
-        >
-          Trailer k inscenaci
-        </p>
-
         {/* Ticker pod videem */}
         <Ticker />
       </div>
