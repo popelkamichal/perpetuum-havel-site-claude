@@ -30,8 +30,9 @@ export default function Home() {
         />
 
         <div className="relative z-10">
-          {/* Černý průhledný pruh — od vrchu přes Navbar + titul */}
+          {/* Černý průhledný pruh — od vrchu přes Navbar + titul, vyjede shora */}
           <div
+            className="header-strip"
             style={{
               background: "rgba(0,0,0,0.8)",
               marginLeft: "calc(50% - 50vw)",
