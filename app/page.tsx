@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import ContentPair from "@/components/ContentPair";
 import VideoSection from "@/components/VideoSection";
@@ -29,7 +30,29 @@ export default function Home() {
         />
 
         <div className="relative z-10">
-          <Navbar />
+          {/* Černý průhledný pruh — od vrchu přes Navbar + titul */}
+          <div
+            style={{
+              background: "rgba(0,0,0,0.8)",
+              marginLeft: "calc(50% - 50vw)",
+              width: "100vw",
+              paddingTop: "30px",
+              paddingBottom: "30px",
+            }}
+          >
+            <Navbar />
+            <div className="max-w-4xl mx-auto px-6 mt-2">
+              <Image
+                src="/HAVEL-TITLE.svg"
+                alt="Perpetuum Havel"
+                width={800}
+                height={200}
+                className="w-full h-auto select-none"
+                draggable={false}
+                priority
+              />
+            </div>
+          </div>
           <Hero />
 
           {/* Pair 1 — Reel z Avignonu, na foto pozadí */}
