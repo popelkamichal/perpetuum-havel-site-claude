@@ -12,7 +12,7 @@ export default function Hero() {
         </p>
 
         {/* Video embed — bez pozadí, jen pulsující tlačítko přes foto */}
-        <div className="w-full max-w-3xl mx-auto rounded-3xl overflow-hidden">
+        <div className="w-full max-w-3xl mx-auto rounded-3xl overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.6)" }}>
           <YoutubeEmbed
             videoId="D0_T1T1eQC0"
             title="Perpetuum Havel – trailer k inscenaci"
