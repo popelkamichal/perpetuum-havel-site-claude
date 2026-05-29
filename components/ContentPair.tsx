@@ -100,31 +100,23 @@ function ArticleCard({ article }: { article: Article }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const card = (
-    <div className="flex-1 flex flex-col rounded-2xl overflow-hidden group cursor-pointer"
-         style={{ border: "1px solid rgba(255,255,255,0.18)", background: "#0f0f0f" }}>
-      {/* Foto nahoře */}
-      <div className="w-full h-36 overflow-hidden flex-shrink-0">
-        {article.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={article.image}
-            alt={article.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
-        )}
-      </div>
-      {/* Text pod fotkou */}
-      <div className="flex flex-col flex-1 p-4 gap-2">
-        {/* Kategorie — styl "— Kontext" */}
-        <p className="text-[9px] tracking-[0.25em] uppercase font-inter flex items-center gap-2"
-           style={{ color: "#00ac93" }}>
-          <span className="w-3 h-px inline-block" style={{ backgroundColor: "#00ac93" }} />
-          {article.modal ? "Rozhovor" : "Kontext"}
-        </p>
-        {/* Velký titulek */}
-        <p className="text-white font-inter font-bold text-sm md:text-[15px] leading-snug group-hover:underline underline-offset-2">
+    <div className="relative flex-1 rounded-2xl overflow-hidden group cursor-pointer min-h-[180px]"
+         style={{ border: "1px solid #ffffff" }}>
+      {/* Foto přes celý box */}
+      {article.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={article.image}
+          alt={article.title}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
+      )}
+      {/* Titulek na průhledném černém pruhu dole */}
+      <div className="absolute bottom-0 left-0 right-0 px-4 py-3"
+           style={{ background: "rgba(0,0,0,0.72)" }}>
+        <p className="text-white font-inter font-bold text-base leading-snug">
           {article.title}
         </p>
       </div>
