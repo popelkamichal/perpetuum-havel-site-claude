@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -27,6 +28,11 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body className={`${bebasNeue.variable} ${inter.variable} bg-[#080808] text-white`}>
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/4577d1e0be9d2d9ed6745f6d697bc730/script.js"
+          strategy="beforeInteractive"
+        />
         {children}
       </body>
     </html>
