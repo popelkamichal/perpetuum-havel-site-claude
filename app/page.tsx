@@ -63,10 +63,14 @@ export default function Home() {
             article1={{
               title: "Text o kontextu vzniku Perpetuum mobile (Petišková)",
               href: "#",
+              perex: "Jak vznikla inscenace, která spojuje odkaz Václava Havla s otázkami současného světa?",
+              body: "Dramaturgická zpráva sleduje tvorbu od prvních inspiračních setkání přes Avignon až po premiéru v Národním divadle. Text vychází z rozhovorů s tvůrci a ze zápisků ze zkušebního procesu.",
             }}
             article2={{
               title: "Text: Rozhovor s Romanem Zotovem Mikshinem (z Foyer)",
-              href: "#",
+              modal: true,
+              perex: "Choreograf a spoluautor scénáře Roman Zotov-Mikshin o práci s tělem, pamětí a politickým gestem.",
+              body: `„Tělo si pamatuje věci, které mysl zapomněla. Přesně o tom je Perpetuum Havel — o tom, jak se gesto stane odkazem, jak pohyb přetrvá slovo.“ Roman Zotov-Mikshin přišel do projektu z Avignonu. Jeho pohybový jazyk vychází z ruské taneční tradice, ale vědomě ji rozkládá. V rozhovoru pro Foyer mluví o svobodě jako fyzickém zážitku, o Havlovi, kterého nikdy neviděl živě, a o tom, proč inscenace nemůže mít šťastný konec.`,
             }}
             instagramUrl="https://www.instagram.com/reel/DIQB-djM309/"
             reelLabel="Reel z Avignonu"
