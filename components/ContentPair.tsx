@@ -100,29 +100,33 @@ function ArticleCard({ article }: { article: Article }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const card = (
-    <div className="relative flex-1 rounded-2xl overflow-hidden group cursor-pointer min-h-[160px]" style={{ border: "1px solid rgba(255,255,255,0.18)" }}>
-      {/* Pozadí — foto nebo tmavý gradient */}
-      <div
-        className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
-        style={
-          article.image
-            ? { backgroundImage: `url(${article.image})`, backgroundSize: "cover", backgroundPosition: "center" }
-            : { background: "linear-gradient(135deg, #1c1c1c 0%, #0d0d0d 100%)" }
-        }
-      />
-      {/* Gradient overlay shora dolů */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
-      {/* Obsah */}
-      <div className="absolute bottom-0 left-0 right-0 p-4">
-        <p className="text-white font-inter font-semibold text-[13px] leading-snug mb-2 drop-shadow">
+    <div className="flex-1 flex flex-col rounded-2xl overflow-hidden group cursor-pointer"
+         style={{ border: "1px solid rgba(255,255,255,0.18)", background: "#0f0f0f" }}>
+      {/* Foto nahoře */}
+      <div className="w-full h-36 overflow-hidden flex-shrink-0">
+        {article.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={article.image}
+            alt={article.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
+        )}
+      </div>
+      {/* Text pod fotkou */}
+      <div className="flex flex-col flex-1 p-4 gap-2">
+        {/* Kategorie — styl "— Kontext" */}
+        <p className="text-[9px] tracking-[0.25em] uppercase font-inter flex items-center gap-2"
+           style={{ color: "#00ac93" }}>
+          <span className="w-3 h-px inline-block" style={{ backgroundColor: "#00ac93" }} />
+          {article.modal ? "Rozhovor" : "Kontext"}
+        </p>
+        {/* Velký titulek */}
+        <p className="text-white font-inter font-bold text-sm md:text-[15px] leading-snug group-hover:underline underline-offset-2">
           {article.title}
         </p>
-        <span
-          className="text-[8px] tracking-[0.3em] uppercase font-inter transition-colors duration-200"
-          style={{ color: "#00ac93" }}
-        >
-          {article.modal ? "Zobrazit →" : "Číst článek →"}
-        </span>
       </div>
     </div>
   );
