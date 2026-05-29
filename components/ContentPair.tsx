@@ -138,11 +138,12 @@ function ArticleCard({ article }: { article: Article }) {
     );
   }
 
+  const isExternal = article.href && article.href.startsWith("http");
   return (
     <a
       href={article.href || "#"}
-      target={article.href && article.href !== "#" ? "_blank" : undefined}
-      rel="noopener noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className="flex-1 flex flex-col"
     >
       {card}
