@@ -15,7 +15,7 @@ export default function KontextVznikuPage() {
       <div className="w-full aspect-[16/7] overflow-hidden relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://picsum.photos/seed/stage11/1400/600"
+          src="/1766237746-perpetuum-3.jpg"
           alt="Perpetuum Havel"
           className="w-full h-full object-cover"
         />
