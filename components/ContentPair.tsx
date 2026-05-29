@@ -100,7 +100,7 @@ function ArticleCard({ article }: { article: Article }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const card = (
-    <div className="relative flex-1 rounded-2xl overflow-hidden group cursor-pointer min-h-[160px]">
+    <div className="relative flex-1 rounded-2xl overflow-hidden group cursor-pointer min-h-[160px]" style={{ border: "1px solid rgba(255,255,255,0.18)" }}>
       {/* Pozadí — foto nebo tmavý gradient */}
       <div
         className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"

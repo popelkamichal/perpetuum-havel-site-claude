@@ -6,53 +6,51 @@ export default function KontextVznikuPage() {
   return (
     <main className="min-h-screen bg-[#080808]">
 
-      {/* Navbar v pruhu */}
+      {/* Navbar */}
       <div style={{ background: "rgba(0,0,0,0.85)", borderBottom: "1px solid #1a1a1a" }}>
         <Navbar />
       </div>
 
-      {/* Hero foto */}
-      <div className="w-full h-64 md:h-96 overflow-hidden relative">
+      {/* Hero foto — plná šířka */}
+      <div className="w-full aspect-[16/7] overflow-hidden relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://picsum.photos/seed/stage11/1400/600"
           alt="Perpetuum Havel"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/10 to-transparent" />
       </div>
 
       {/* Obsah */}
-      <article className="max-w-2xl mx-auto px-6 pb-20 -mt-12 relative z-10">
+      <article className="max-w-2xl mx-auto px-6 pb-20 -mt-4 relative z-10">
 
-        {/* Zpět */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-[9px] tracking-[0.3em] uppercase font-inter mb-8 transition-colors duration-200 hover:opacity-70"
-          style={{ color: "#00ac93" }}
-        >
-          ← Zpět
-        </Link>
+        {/* Zpět + kategorie */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-4 h-px" style={{ backgroundColor: "#00ac93" }} />
+          <Link
+            href="/"
+            className="text-[9px] tracking-[0.3em] uppercase font-inter transition-colors duration-200 hover:opacity-70"
+            style={{ color: "#00ac93" }}
+          >
+            Kontext
+          </Link>
+        </div>
 
-        {/* Meta */}
-        <p className="text-[9px] tracking-[0.3em] uppercase font-inter mb-3" style={{ color: "#00ac93" }}>
-          Kontext · Petišková
-        </p>
-
-        {/* Titulek */}
-        <h1 className="text-white font-inter font-bold text-2xl md:text-3xl leading-snug mb-6">
-          Text o kontextu vzniku Perpetuum mobile
+        {/* Velký titulek */}
+        <h1 className="text-white font-inter font-bold leading-tight mb-6"
+            style={{ fontSize: "clamp(1.75rem, 5vw, 2.75rem)" }}>
+          Text o kontextu vzniku Perpetuum mobile (Petišková)
         </h1>
 
         {/* Perex */}
-        <p
-          className="font-inter text-base italic leading-relaxed mb-8 pl-5 border-l-2 text-[#ccc]"
-          style={{ borderColor: "#00ac93" }}
-        >
+        <p className="font-inter text-base leading-relaxed mb-8 text-[#bbb]">
           Jak vznikla inscenace, která spojuje odkaz Václava Havla s otázkami
           současného světa? Dramaturgická zpráva sleduje tvorbu od prvních
           inspiračních setkání přes Avignon až po premiéru v Národním divadle.
         </p>
+
+        <div className="w-full h-px mb-8" style={{ backgroundColor: "#1a1a1a" }} />
 
         {/* Tělo */}
         <div className="space-y-5 text-[#888] font-inter text-sm leading-relaxed">
