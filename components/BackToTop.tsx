@@ -39,7 +39,7 @@ export default function BackToTop() {
           letterSpacing: "0.3em",
         }}
       >
-        Back to top
+        Zpět nahoru
       </span>
     </button>
   );
