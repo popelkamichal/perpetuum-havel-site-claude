@@ -17,7 +17,7 @@ export default function ScrollIndicator() {
   }, []);
 
   return (
-    <div className="fixed top-1/2 right-3 -translate-y-1/2 z-[10000] flex flex-col gap-1.5 pointer-events-none">
+    <div className="fixed top-1/2 right-3 -translate-y-1/2 z-[10000] hidden md:flex flex-col gap-1.5 pointer-events-none">
       {[...Array(SEGMENTS)].map((_, i) => {
         const active = progress >= (i / SEGMENTS) * 100;
         return (
