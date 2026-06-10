@@ -33,7 +33,7 @@ export default function GrainOverlay() {
         data[i] = v;
         data[i + 1] = v;
         data[i + 2] = v;
-        data[i + 3] = 22;
+        data[i + 3] = 55;
       }
       ctx.putImageData(imageData, 0, 0);
     };
@@ -53,8 +53,8 @@ export default function GrainOverlay() {
         height: "100%",
         pointerEvents: "none",
         zIndex: 9998,
-        opacity: 0.055,
-        mixBlendMode: "overlay",
+        opacity: 0.18,
+        mixBlendMode: "screen",
       }}
     />
   );
