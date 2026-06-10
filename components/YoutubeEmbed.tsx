@@ -71,7 +71,7 @@ export default function YoutubeEmbed({
             aspectRatio: "4/3",
             filter: "grayscale(0.4)",
             padding: "8px 8px 22px",
-            background: "white",
+            background: "rgba(255,255,255,0.55)",
             transform: "rotate(-4deg)",
             boxShadow: "0 6px 24px rgba(0,0,0,0.7)",
           }}
