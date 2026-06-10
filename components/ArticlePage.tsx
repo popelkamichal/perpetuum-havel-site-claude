@@ -18,14 +18,14 @@ export default function ArticlePage({ tema, autor, image, perex, children }: Art
         <Navbar />
       </div>
 
-      {/* Hero foto */}
-      <div className="w-full aspect-[16/7] overflow-hidden relative">
+      {/* Hero foto — max 50vh na desktopu */}
+      <div className="w-full overflow-hidden relative" style={{ maxHeight: "50vh", minHeight: "220px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image} alt={tema} className="w-full h-full object-cover" />
+        <img src={image} alt={tema} className="w-full h-full object-cover" style={{ maxHeight: "50vh" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/10 to-transparent" />
       </div>
 
-      <article className="max-w-2xl mx-auto px-6 pb-20 -mt-4 relative z-10">
+      <article className="max-w-2xl mx-auto px-6 pb-20 -mt-16 relative z-10">
 
         {/* Breadcrumb */}
         <div className="flex items-center gap-3 mb-6">
