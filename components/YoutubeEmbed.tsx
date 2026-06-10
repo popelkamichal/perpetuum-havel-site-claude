@@ -57,6 +57,16 @@ export default function YoutubeEmbed({
         role="button"
         aria-label={`Přehrát video: ${title}`}
       >
+        {/* Malý náhled v levém horním rohu */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={thumbUrl}
+          alt=""
+          aria-hidden="true"
+          className="absolute top-4 left-4 w-28 md:w-36 rounded object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+          style={{ aspectRatio: "16/9", filter: "grayscale(0.5)", border: "1px solid rgba(255,255,255,0.2)" }}
+        />
+
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
           {/* Kroužek s trojúhelníkem — pulzuje */}
           <div className="relative flex items-center justify-center">
