@@ -57,14 +57,24 @@ export default function YoutubeEmbed({
         role="button"
         aria-label={`Přehrát video: ${title}`}
       >
-        {/* Malý náhled v levém horním rohu */}
+        {/* Polaroid náhled — natočený vlevo nahoře */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={thumbUrl}
           alt=""
           aria-hidden="true"
-          className="absolute top-4 left-4 w-28 md:w-36 rounded object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
-          style={{ aspectRatio: "16/9", filter: "grayscale(0.5)", border: "1px solid rgba(255,255,255,0.2)" }}
+          className="absolute object-cover opacity-75 group-hover:opacity-90 transition-opacity duration-300"
+          style={{
+            top: "10%",
+            left: "3%",
+            width: "30%",
+            aspectRatio: "4/3",
+            filter: "grayscale(0.4)",
+            padding: "8px 8px 22px",
+            background: "white",
+            transform: "rotate(-4deg)",
+            boxShadow: "0 6px 24px rgba(0,0,0,0.7)",
+          }}
         />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
