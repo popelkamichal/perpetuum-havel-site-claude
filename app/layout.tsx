@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
+import GrainOverlay from "@/components/GrainOverlay";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="cs">
       <body className={`${bebasNeue.variable} ${inter.variable} bg-[#080808] text-white`}>
         {children}
+        <GrainOverlay />
         <BackToTop />
         <CookieBanner />
       </body>
