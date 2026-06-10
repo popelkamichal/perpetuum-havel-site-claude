@@ -11,10 +11,10 @@ const LOREM = [
 export default function Page() {
   return (
     <ArticlePage
-      tema="O kontextu vzniku Perpetuum mobile"
-      autor="Ladislava Petišková"
+      tema="Václav Havel jako disident a dramatik"
+      autor="Martin C. Putna"
       image="/1766237746-perpetuum-3.jpg"
-      perex="Jak vznikla inscenace, která spojuje odkaz Václava Havla s otázkami současného světa? Dramaturgická zpráva sleduje tvorbu od prvních inspiračních setkání přes Avignon až po premiéru v Národním divadle."
+      perex="Literárněhistorická studie sleduje Havlovu dvojí identitu — jako dramatika, jehož hry přesáhly železnou oponu, a jako disidenta, jehož slova formovala českou politickou kulturu."
     >
       {LOREM.map((p, i) => <p key={i}>{p}</p>)}
     </ArticlePage>

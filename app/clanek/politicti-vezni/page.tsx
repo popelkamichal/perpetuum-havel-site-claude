@@ -11,10 +11,10 @@ const LOREM = [
 export default function Page() {
   return (
     <ArticlePage
-      tema="O kontextu vzniku Perpetuum mobile"
-      autor="Ladislava Petišková"
-      image="/1766237746-perpetuum-3.jpg"
-      perex="Jak vznikla inscenace, která spojuje odkaz Václava Havla s otázkami současného světa? Dramaturgická zpráva sleduje tvorbu od prvních inspiračních setkání přes Avignon až po premiéru v Národním divadle."
+      tema="Političtí vězni současnosti + podkapitola Fenomén vězně v české literatuře"
+      autor="Tomáš Glanc"
+      image="/1766237746-perpetuum-6.jpg"
+      perex="Esej zkoumá fenomén politického vězně jako kulturní a literární figury v kontextu české literatury 20. a 21. století a jeho rezonanci v současném světě."
     >
       {LOREM.map((p, i) => <p key={i}>{p}</p>)}
     </ArticlePage>

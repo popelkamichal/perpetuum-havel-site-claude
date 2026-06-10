@@ -11,10 +11,10 @@ const LOREM = [
 export default function Page() {
   return (
     <ArticlePage
-      tema="O kontextu vzniku Perpetuum mobile"
-      autor="Ladislava Petišková"
-      image="/1766237746-perpetuum-3.jpg"
-      perex="Jak vznikla inscenace, která spojuje odkaz Václava Havla s otázkami současného světa? Dramaturgická zpráva sleduje tvorbu od prvních inspiračních setkání přes Avignon až po premiéru v Národním divadle."
+      tema="Roman Zotov-Mikshin"
+      autor="PR Laterna Magika"
+      image="/1766237746-perpetuum-6.jpg"
+      perex="Choreograf a spoluautor scénáře Perpetuum Havel. Profil umělce, jehož pohybový jazyk propojuje tradici ruského fyzického divadla s otázkami politické svobody a tělesné paměti."
     >
       {LOREM.map((p, i) => <p key={i}>{p}</p>)}
     </ArticlePage>
