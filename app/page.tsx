@@ -74,7 +74,7 @@ export default function Home() {
               perex: "Choreograf a spoluautor scénáře Roman Zotov-Mikshin o práci s tělem, pamětí a politickým gestem.",
               body: `„Tělo si pamatuje věci, které mysl zapomněla. Přesně o tom je Perpetuum Havel — o tom, jak se gesto stane odkazem, jak pohyb přetrvá slovo.“ Roman Zotov-Mikshin přišel do projektu z Avignonu. Jeho pohybový jazyk vychází z ruské taneční tradice, ale vědomě ji rozkládá. V rozhovoru pro Foyer mluví o svobodě jako fyzickém zážitku, o Havlovi, kterého nikdy neviděl živě, a o tom, proč inscenace nemůže mít šťastný konec.`,
             }}
-            reelId="LNGYQmUdYAc"
+            reelId="SjevFk_0Txo"
             reelLabel="Reel z Avignonu"
           />
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
           title: "Text: Václav Havel jako dramatik, disident a prezident",
           href: "#",
         }}
-        instagramUrl="https://www.instagram.com/reel/DIQB-djM309/"
+        instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
         reelLabel="Reel z Avignonu"
       />
 

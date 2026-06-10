@@ -6,7 +6,7 @@ export default function VideoSection() {
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-3xl overflow-hidden">
           <YoutubeEmbed
-            videoId="INTERVIEW_VIDEO_ID"
+            videoId="ZAPgtShs3dY"
             title="Video rozhovor s Petrem Boháčem – Perpetuum Havel"
           />
         </div>
