@@ -68,8 +68,10 @@ export default function CookieBanner() {
           </button>
           <button
             onClick={() => handle("all")}
-            className="font-inter text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-colors duration-200 hover:opacity-80"
+            className="font-inter text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-200"
             style={{ background: "#00ac93", color: "#000" }}
+            onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 16px rgba(0,172,147,0.6)")}
+            onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
           >
             {t.accept}
           </button>

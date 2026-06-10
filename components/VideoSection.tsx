@@ -4,7 +4,13 @@ export default function VideoSection() {
   return (
     <section className="w-full px-6 py-16">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-3xl overflow-hidden">
+        <div
+          className="rounded-3xl overflow-hidden"
+          style={{
+            background: "#0a0a0a",
+            border: "1px solid rgba(255,255,255,0.12)",
+          }}
+        >
           <YoutubeEmbed
             videoId="ZAPgtShs3dY"
             title="Video rozhovor s Petrem Boháčem – Perpetuum Havel"

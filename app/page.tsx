@@ -5,6 +5,7 @@ import ContentPair from "@/components/ContentPair";
 import VideoSection from "@/components/VideoSection";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
+import FadeInSection from "@/components/FadeInSection";
 
 export default function Home() {
   return (
@@ -73,25 +74,31 @@ export default function Home() {
       </div>
 
       <div className="w-full border-t border-[#111]" />
-      <VideoSection />
+      <FadeInSection>
+        <VideoSection />
+      </FadeInSection>
       <div className="w-full border-t border-[#111]" />
 
-      <ContentPair
-        article1={{
-          title: "Téma: Václav Havel jako disident a dramatik",
-          href: "/clanek/havel-dramatik",
-          image: "/1766237746-perpetuum-3.jpg",
-        }}
-        article2={{
-          title: "Téma: Roman Zotov-Mikshin",
-          href: "/clanek/roman-zotov-mikshin",
-          image: "/1766237746-perpetuum-6.jpg",
-        }}
-        instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
-        reelLabel="Instagram"
-      />
+      <FadeInSection delay={100}>
+        <ContentPair
+          article1={{
+            title: "Téma: Václav Havel jako disident a dramatik",
+            href: "/clanek/havel-dramatik",
+            image: "/1766237746-perpetuum-3.jpg",
+          }}
+          article2={{
+            title: "Téma: Roman Zotov-Mikshin",
+            href: "/clanek/roman-zotov-mikshin",
+            image: "/1766237746-perpetuum-6.jpg",
+          }}
+          instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
+          reelLabel="Instagram"
+        />
+      </FadeInSection>
 
-      <TeamSection />
+      <FadeInSection delay={150}>
+        <TeamSection />
+      </FadeInSection>
       <Footer />
     </main>
   );

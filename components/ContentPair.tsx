@@ -101,7 +101,10 @@ function ArticleCard({ article }: { article: Article }) {
 
   const card = (
     <div className="relative flex-1 rounded-2xl overflow-hidden group cursor-pointer min-h-[180px]"
-         style={{ border: "1px solid #ffffff" }}>
+         style={{
+           background: "linear-gradient(#111, #111) padding-box, linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.06) 100%) border-box",
+           border: "1px solid transparent",
+         }}>
       {/* Foto přes celý box */}
       {article.image ? (
         // eslint-disable-next-line @next/next/no-img-element

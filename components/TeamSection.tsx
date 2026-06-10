@@ -53,10 +53,10 @@ function AvatarCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-center gap-3 group"
+      className="flex flex-col items-center gap-3 group transition-transform duration-300 hover:scale-105"
     >
       <div
-        className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center font-bebas text-black text-xl md:text-2xl tracking-wide transition-transform duration-200 group-hover:scale-105"
+        className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center font-bebas text-black text-xl md:text-2xl tracking-wide"
         style={{ backgroundColor: "#C89A2A" }}
       >
         {initials}
@@ -65,6 +65,10 @@ function AvatarCard({
         <p className="text-white font-inter font-bold text-[10px] uppercase tracking-wider leading-snug group-hover:text-[#C89A2A] transition-colors duration-200">
           {name}
         </p>
+        <div
+          className="mt-1 h-px origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+          style={{ backgroundColor: "#00ac93" }}
+        />
         <p className="text-[#444] font-inter text-[9px] uppercase tracking-widest mt-1">
           {role}
         </p>
