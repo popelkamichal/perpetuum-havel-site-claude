@@ -12,7 +12,7 @@ export default function Hero() {
         </p>
 
         {/* Video embed */}
-        <div className="w-full rounded-3xl overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.15)" }}>
+        <div className="w-full rounded-3xl overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.06)" }}>
           <YoutubeEmbed
             videoId="qZKGOPEbhmo"
             title="Perpetuum Havel – trailer k inscenaci"
