@@ -99,6 +99,12 @@ export default function Home() {
       <FadeInSection delay={150}>
         <TeamSection />
       </FadeInSection>
+
+      <div className="w-full border-t border-[#111]" />
+
+      <FadeInSection delay={100}>
+        <TeamSection title="Současní političtí vězni" />
+      </FadeInSection>
       <Footer />
     </main>
   );

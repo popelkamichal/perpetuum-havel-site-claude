@@ -77,7 +77,7 @@ function AvatarCard({
   );
 }
 
-export default function TeamSection() {
+export default function TeamSection({ title = "Tvůrci" }: { title?: string }) {
   return (
     <section className="w-full px-4 py-16">
       <div className="max-w-4xl mx-auto">
@@ -87,7 +87,7 @@ export default function TeamSection() {
             className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
             style={{ color: "#00ac93" }}
           >
-            Tvůrci
+            {title}
           </span>
         </div>
 
