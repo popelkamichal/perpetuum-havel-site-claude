@@ -15,6 +15,8 @@ interface YoutubeEmbedProps {
    * "ghost"   = průhledné pozadí, tmavý trojúhelník — pro použití v bílém průhledném containeru
    */
   variant?: "default" | "ghost";
+  /** Popisek zobrazený pod play tlačítkem v ghost variantě */
+  label?: string;
 }
 
 export default function YoutubeEmbed({
@@ -24,6 +26,7 @@ export default function YoutubeEmbed({
   thumbnail,
   facade = true,
   variant = "default",
+  label,
 }: YoutubeEmbedProps) {
   const [playing, setPlaying] = useState(false);
   const paddingBottom = aspect === "portrait" ? "177.78%" : "56.25%";
@@ -71,9 +74,11 @@ export default function YoutubeEmbed({
             </div>
           </div>
           {/* Popis */}
-          <span className="text-white/80 text-[10px] tracking-[0.3em] uppercase font-inter">
-            Přehrát trailer
-          </span>
+          {label !== "" && (
+            <span className="text-white/80 text-[10px] tracking-[0.3em] uppercase font-inter">
+              {label ?? "Přehrát trailer"}
+            </span>
+          )}
         </div>
       </div>
     );

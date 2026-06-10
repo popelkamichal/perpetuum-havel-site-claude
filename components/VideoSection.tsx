@@ -14,6 +14,8 @@ export default function VideoSection() {
           <YoutubeEmbed
             videoId="ZAPgtShs3dY"
             title="Video rozhovor s Petrem Boháčem – Perpetuum Havel"
+            variant="ghost"
+            label="Přehrát rozhovor"
           />
         </div>
         <p
