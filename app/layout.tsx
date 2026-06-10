@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body className={`${bebasNeue.variable} ${inter.variable} bg-[#080808] text-white`}>
+        <ScrollIndicator />
         {children}
         <BackToTop />
         <CookieBanner />
