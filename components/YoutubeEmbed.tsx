@@ -51,22 +51,12 @@ export default function YoutubeEmbed({
   if (variant === "ghost") {
     return (
       <div
-        className="relative w-full cursor-pointer group overflow-hidden"
+        className="relative w-full cursor-pointer group"
         style={{ paddingBottom }}
         onClick={() => setPlaying(true)}
         role="button"
         aria-label={`Přehrát video: ${title}`}
       >
-        {/* Thumbnail na pozadí — černobílý */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={thumbUrl}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          style={{ filter: "grayscale(1)" }}
-        />
-        {/* Tmavý overlay */}
-        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
           {/* Kroužek s trojúhelníkem — pulzuje */}
           <div className="relative flex items-center justify-center">
