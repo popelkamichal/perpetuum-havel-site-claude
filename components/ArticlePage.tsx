@@ -47,14 +47,14 @@ export default function ArticlePage({ tema, autor, image, perex, children }: Art
         </p>
 
         {/* Perex */}
-        <p className="font-inter text-base leading-relaxed mb-8 text-[#bbb]">
+        <p className="font-inter text-lg md:text-xl leading-relaxed mb-8 text-[#bbb]">
           {perex}
         </p>
 
         <div className="w-full h-px mb-8" style={{ backgroundColor: "#1a1a1a" }} />
 
         {/* Tělo */}
-        <div className="space-y-5 text-[#888] font-inter text-sm leading-relaxed">
+        <div className="space-y-5 text-[#888] font-inter text-base md:text-[17px] leading-relaxed">
           {children}
         </div>
 
