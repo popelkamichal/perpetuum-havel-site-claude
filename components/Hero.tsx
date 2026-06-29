@@ -20,7 +20,7 @@ export default function Hero() {
             alt=""
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            style={{ opacity: 0.45 }}
+            style={{ opacity: 0.75 }}
           />
           <YoutubeEmbed
             videoId="FMct6jwJaxY"
