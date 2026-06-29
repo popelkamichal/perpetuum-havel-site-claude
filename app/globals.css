@@ -28,7 +28,7 @@ body {
 
 /* Hero video slow zoom-in on load */
 @keyframes heroZoomIn {
-  from { transform: scale(0.93); opacity: 0; }
+  from { transform: scale(0.2); opacity: 0; }
   to   { transform: scale(1);    opacity: 1; }
 }
 
