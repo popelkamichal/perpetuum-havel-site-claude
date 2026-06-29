@@ -33,7 +33,7 @@ body {
 }
 
 .hero-video {
-  animation: heroZoomIn 2s cubic-bezier(0.22, 1, 0.36, 1) 3s both;
+  animation: heroZoomIn 2s cubic-bezier(0.22, 1, 0.36, 1) 1.5s both;
 }
 
 /* Ticker scrolling animation */
