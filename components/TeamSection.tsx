@@ -62,14 +62,14 @@ function AvatarCard({
         {initials}
       </div>
       <div className="text-center">
-        <p className="text-white font-inter font-bold text-[10px] uppercase tracking-wider leading-snug group-hover:text-[#C89A2A] transition-colors duration-200">
+        <p className="text-white font-inter font-bold text-xs uppercase tracking-wider leading-snug group-hover:text-[#C89A2A] transition-colors duration-200">
           {name}
         </p>
         <div
           className="mt-1 h-px origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
           style={{ backgroundColor: "#00ac93" }}
         />
-        <p className="text-[#444] font-inter text-[9px] uppercase tracking-widest mt-1">
+        <p className="text-[#444] font-inter text-[10px] uppercase tracking-widest mt-1">
           {role}
         </p>
       </div>

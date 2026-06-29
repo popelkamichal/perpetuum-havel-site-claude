@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="w-full px-6 pb-20 pt-10">
       <div className="max-w-4xl mx-auto text-center">
         {/* Subtitle */}
-        <p className="text-[#aaa] font-inter text-xs md:text-sm max-w-md mx-auto mb-10 leading-relaxed">
+        <p className="text-[#aaa] font-inter text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed">
           Scénická meditace o moci, paměti a svobodě. Inscenace inspirovaná
           odkazem Václava Havla, premiéra v hlavní sezóně Národního divadla.
         </p>

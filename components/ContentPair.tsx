@@ -119,7 +119,7 @@ function ArticleCard({ article }: { article: Article }) {
       {/* Titulek na průhledném černém pruhu dole */}
       <div className="absolute bottom-0 left-0 right-0 px-4 py-3"
            style={{ background: "rgba(0,0,0,0.72)" }}>
-        <p className="text-white font-inter font-bold text-base leading-snug">
+        <p className="text-white font-inter font-bold text-lg leading-snug">
           {article.title}
         </p>
       </div>
