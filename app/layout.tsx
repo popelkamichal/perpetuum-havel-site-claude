@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Bebas_Neue, DM_Sans } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
 import ScrollIndicator from "@/components/ScrollIndicator";
@@ -11,7 +11,7 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas",
 });
 
-const inter = Inter({
+const inter = DM_Sans({
   subsets: ["latin"],
   variable: "--font-inter",
 });
