@@ -20,6 +20,16 @@ export const metadata: Metadata = {
   title: "Perpetuum Havel | Laterna Magika | Národní divadlo",
   description:
     "Scénická meditace o moci, paměti a svobodě. Inscenace inspirovaná odkazem Václava Havla, premiéra v hlavní sezóně Národního divadla.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" },
+    ],
+  },
 };
 
 export default function RootLayout({
