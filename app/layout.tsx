@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, DM_Sans } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
+import localFont from "next/font/local";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
 import ScrollIndicator from "@/components/ScrollIndicator";
@@ -11,9 +12,14 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas",
 });
 
-const inter = DM_Sans({
-  subsets: ["latin"],
+const inter = localFont({
+  src: [
+    { path: "../public/fonts/DINNextLTPro-Regular.otf", weight: "400", style: "normal" },
+    { path: "../public/fonts/DINNextLTPro-Medium.otf",  weight: "500", style: "normal" },
+    { path: "../public/fonts/DINNextLTPro-Bold.otf",    weight: "700", style: "normal" },
+  ],
   variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
