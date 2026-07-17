@@ -97,17 +97,17 @@ export default function Home() {
         />
       </FadeInSection>
 
-      <div id="tvurci" className="scroll-mt-20">
+      <div id="politicti-vezni" className="scroll-mt-20">
         <FadeInSection delay={150}>
-          <TeamSection />
+          <TeamSection title="Současní političtí vězni" />
         </FadeInSection>
       </div>
 
       <div className="w-full border-t border-[#111]" />
 
-      <div id="politicti-vezni" className="scroll-mt-20">
+      <div id="tvurci" className="scroll-mt-20">
         <FadeInSection delay={100}>
-          <TeamSection title="Současní političtí vězni" />
+          <TeamSection />
         </FadeInSection>
       </div>
       <Footer />
