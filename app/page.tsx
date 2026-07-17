@@ -37,8 +37,8 @@ export default function Home() {
               background: "rgba(0,0,0,0.8)",
               marginLeft: "calc(50% - 50vw)",
               width: "100vw",
-              paddingTop: "30px",
-              paddingBottom: "30px",
+              paddingTop: "16px",
+              paddingBottom: "16px",
             }}
           >
             <div className="max-w-4xl mx-auto px-6">
