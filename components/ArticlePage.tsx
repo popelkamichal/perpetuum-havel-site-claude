@@ -14,9 +14,7 @@ export default function ArticlePage({ tema, autor, image, perex, children }: Art
   return (
     <main className="min-h-screen bg-[#080808]">
 
-      <div style={{ background: "rgba(0,0,0,0.85)", borderBottom: "1px solid #1a1a1a" }}>
-        <Navbar />
-      </div>
+      <Navbar />
 
       {/* Hero foto — max 50vh na desktopu */}
       <div className="w-full overflow-hidden relative" style={{ maxHeight: "50vh", minHeight: "220px" }}>

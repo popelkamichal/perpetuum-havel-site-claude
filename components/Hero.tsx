@@ -13,15 +13,6 @@ export default function Hero() {
 
         {/* Video embed */}
         <div className="hero-video w-full rounded-3xl overflow-hidden relative" style={{ border: "1px solid rgba(255,255,255,0.6)" }}>
-          {/* Poloprůhledné pozadí — prosvítá hero foto za ním */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/hero-background-video1.jpg"
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            style={{ opacity: 0.65 }}
-          />
           <YoutubeEmbed
             videoId="FMct6jwJaxY"
             title="Perpetuum Havel – trailer k inscenaci"

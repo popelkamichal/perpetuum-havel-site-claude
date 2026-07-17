@@ -11,6 +11,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#080808]">
 
+      <Navbar />
+
       <div
         className="relative"
         style={{
@@ -39,8 +41,7 @@ export default function Home() {
               paddingBottom: "30px",
             }}
           >
-            <Navbar />
-            <div className="max-w-4xl mx-auto px-6 mt-2">
+            <div className="max-w-4xl mx-auto px-6">
               <Image
                 src="/HAVEL-TITLE.svg"
                 alt="Perpetuum Havel"
@@ -96,15 +97,19 @@ export default function Home() {
         />
       </FadeInSection>
 
-      <FadeInSection delay={150}>
-        <TeamSection />
-      </FadeInSection>
+      <div id="tvurci" className="scroll-mt-20">
+        <FadeInSection delay={150}>
+          <TeamSection />
+        </FadeInSection>
+      </div>
 
       <div className="w-full border-t border-[#111]" />
 
-      <FadeInSection delay={100}>
-        <TeamSection title="Současní političtí vězni" />
-      </FadeInSection>
+      <div id="politicti-vezni" className="scroll-mt-20">
+        <FadeInSection delay={100}>
+          <TeamSection title="Současní političtí vězni" />
+        </FadeInSection>
+      </div>
       <Footer />
     </main>
   );
