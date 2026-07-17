@@ -16,7 +16,7 @@ export default function Home() {
       <div
         className="relative"
         style={{
-          backgroundImage: "url('/hero-bg-w.jpg')",
+          backgroundImage: "url('/hero-bg-w-z.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundColor: "#080808",
