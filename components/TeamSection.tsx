@@ -45,38 +45,40 @@ const team: Member[] = [
 ];
 
 const politicalPrisoners: Member[] = [
-  { initials: "AM", name: "Alexej Morozov",     role: "Novinář, Rusko" },
-  { initials: "NK", name: "Natalija Koval",      role: "Aktivistka, Bělorusko" },
-  { initials: "ZW", name: "Zhang Wei",           role: "Student, Čína" },
-  { initials: "FH", name: "Farid Hosseini",      role: "Právník, Írán" },
-  { initials: "MK", name: "Maryam Khalili",      role: "Blogerka, Írán" },
-  { initials: "DP", name: "Dmitrij Petrov",      role: "Spisovatel, Rusko" },
-  { initials: "LA", name: "Leila Ahmadi",        role: "Novinářka, Írán" },
-  { initials: "VS", name: "Viktor Savčenko",     role: "Poslanec, Rusko" },
-  { initials: "YR", name: "Yusuf Al-Rashid",    role: "Aktivista, Saúdská Arábie" },
-  { initials: "AK", name: "Anna Kowalczyk",      role: "Fotografka, Bělorusko" },
-  { initials: "IH", name: "Ibrahim Hassan",      role: "Novinář, Egypt" },
-  { initials: "SM", name: "Sofija Melnyk",       role: "Učitelka, Rusko" },
-  { initials: "BD", name: "Batyr Dzhaksybekov", role: "Ekolog, Kazachstán" },
-  { initials: "ML", name: "Mei Lin",             role: "Umělkyně, Čína" },
-  { initials: "RN", name: "Rustam Nazarov",      role: "Právník, Uzbekistán" },
-  { initials: "TB", name: "Tamar Beridze",       role: "Novinářka, Gruzie" },
-  { initials: "HM", name: "Hassan Mortazavi",    role: "Básník, Írán" },
-  { initials: "EV", name: "Elena Voronova",      role: "Lékařka, Rusko" },
-  { initials: "SP", name: "Sang-jun Park",       role: "Student, Severní Korea" },
-  { initials: "YD", name: "Yildiz Demir",        role: "Aktivistka, Turecko" },
-  { initials: "KZ", name: "Kirill Zaitsev",      role: "Programátor, Bělorusko" },
-  { initials: "AD", name: "Amina Diallo",        role: "Novinářka, Eritrea" },
-  { initials: "PH", name: "Pavel Hrušov",        role: "Akademik, Rusko" },
-  { initials: "SČ", name: "Selin Çelik",         role: "Právnička, Turecko" },
-  { initials: "TK", name: "Timur Bekzod",        role: "Básník, Uzbekistán" },
-  { initials: "OM", name: "Olena Marchuk",       role: "Učitelka, Krym" },
-  { initials: "JP", name: "Jonas Petrauskas",    role: "Aktivista, Rusko" },
-  { initials: "FR", name: "Farida Ruziyeva",     role: "Novinářka, Tádžikistán" },
-  { initials: "MD", name: "Mikhail Denisov",     role: "Ekolog, Rusko" },
-  { initials: "YN", name: "Yasmin Al-Nouri",    role: "Lékařka, Sýrie" },
-  { initials: "LX", name: "Ling Xiaofeng",       role: "Profesor, Čína" },
-  { initials: "VB", name: "Vira Bondarenko",     role: "Filmařka, Krym" },
+  // původních 6 (placeholdery — nahradit reálnými daty)
+  { initials: "PB", name: "Petr Boháč",          role: "Námět, scénář a režie",       href: "https://www.narodni-divadlo.cz/cs/profil/petr-bohac-Av4PuxCESv6gxfTq0mGI2w" },
+  { initials: "RZ", name: "Roman Zotov-Mikshin", role: "Spolupráce na scénáři",        href: "https://www.narodni-divadlo.cz/cs/profil/roman-zotov-mikshin-KFqQzepjQqaeeWHt78UIAg" },
+  { initials: "RV", name: "Radim Vizváry",        role: "Pohybová spolupráce",          href: "https://www.narodni-divadlo.cz/cs/profil/radim-vizvary-1609468" },
+  { initials: "PČ", name: "Pavlína Chroňáková",  role: "Scéna a kostýmy",              href: "https://www.narodni-divadlo.cz/cs/profil/pavlina-chronakova-eZF3YRxtQzWKeGDRLFIJLQ" },
+  { initials: "MH", name: "Martin Hůla",          role: "Video, hudba a zvukový design", href: "https://www.narodni-divadlo.cz/cs/profil/martin-hula-JAxNGFvTTQOu1NIpeRxxzw" },
+  { initials: "FH", name: "Filip Horn",           role: "Světelný design",              href: "https://www.narodni-divadlo.cz/cs/profil/filip-horn-KRPcCcwAR42ONPuf2PjIFg" },
+  // fiktivní — nahradit reálnými vězni
+  { initials: "AM", name: "Alexej Morozov",       role: "Novinář, Rusko" },
+  { initials: "NK", name: "Natalija Koval",        role: "Aktivistka, Bělorusko" },
+  { initials: "ZW", name: "Zhang Wei",             role: "Student, Čína" },
+  { initials: "FX", name: "Farid Hosseini",        role: "Právník, Írán" },
+  { initials: "MK", name: "Maryam Khalili",        role: "Blogerka, Írán" },
+  { initials: "DP", name: "Dmitrij Petrov",        role: "Spisovatel, Rusko" },
+  { initials: "LA", name: "Leila Ahmadi",          role: "Novinářka, Írán" },
+  { initials: "VS", name: "Viktor Savčenko",       role: "Poslanec, Rusko" },
+  { initials: "YR", name: "Yusuf Al-Rashid",      role: "Aktivista, Saúdská Arábie" },
+  { initials: "AK", name: "Anna Kowalczyk",        role: "Fotografka, Bělorusko" },
+  { initials: "IH", name: "Ibrahim Hassan",        role: "Novinář, Egypt" },
+  { initials: "SM", name: "Sofija Melnyk",         role: "Učitelka, Rusko" },
+  { initials: "BD", name: "Batyr Dzhaksybekov",   role: "Ekolog, Kazachstán" },
+  { initials: "ML", name: "Mei Lin",               role: "Umělkyně, Čína" },
+  { initials: "RN", name: "Rustam Nazarov",        role: "Právník, Uzbekistán" },
+  { initials: "TB", name: "Tamar Beridze",         role: "Novinářka, Gruzie" },
+  { initials: "HM", name: "Hassan Mortazavi",      role: "Básník, Írán" },
+  { initials: "EV", name: "Elena Voronova",        role: "Lékařka, Rusko" },
+  { initials: "SP", name: "Sang-jun Park",         role: "Student, Severní Korea" },
+  { initials: "YD", name: "Yildiz Demir",          role: "Aktivistka, Turecko" },
+  { initials: "KZ", name: "Kirill Zaitsev",        role: "Programátor, Bělorusko" },
+  { initials: "AD", name: "Amina Diallo",          role: "Novinářka, Eritrea" },
+  { initials: "PV", name: "Pavel Hrušov",          role: "Akademik, Rusko" },
+  { initials: "SČ", name: "Selin Çelik",           role: "Právnička, Turecko" },
+  { initials: "OM", name: "Olena Marchuk",         role: "Učitelka, Krym" },
+  { initials: "VB", name: "Vira Bondarenko",       role: "Filmařka, Krym" },
 ];
 
 function AvatarCard({ initials, name, role, href }: Member) {
@@ -140,27 +142,20 @@ export default function TeamSection({
         {/* Tmavší pozadí */}
         <div className="absolute inset-0" style={{ background: "#060606" }} />
 
-        {/* Mříž — vertikální tyče přes celou sekci */}
+        {/* Bílá mříž jako dekorativní pozadí — pod avatary */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            zIndex: 10,
             backgroundImage:
-              "repeating-linear-gradient(90deg, transparent 0px, transparent 50px, rgba(0,0,0,0.72) 50px, rgba(0,0,0,0.18) 53px, rgba(0,0,0,0.72) 56px, transparent 58px)",
+              "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
+            backgroundSize: "64px 64px",
           }}
         />
-        {/* Horizontální příčle */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            zIndex: 10,
-            backgroundImage:
-              "repeating-linear-gradient(0deg, transparent 0px, transparent 110px, rgba(0,0,0,0.55) 110px, rgba(0,0,0,0.1) 113px, rgba(0,0,0,0.55) 116px, transparent 118px)",
-          }}
-        />
-        {/* Horní a spodní vigneta */}
-        <div className="absolute inset-x-0 top-0 h-20 pointer-events-none" style={{ zIndex: 11, background: "linear-gradient(to bottom, #060606 0%, transparent 100%)" }} />
-        <div className="absolute inset-x-0 bottom-0 h-20 pointer-events-none" style={{ zIndex: 11, background: "linear-gradient(to top, #060606 0%, transparent 100%)" }} />
+        {/* Vignety na krajích — mříž mizí ke krajům */}
+        <div className="absolute inset-y-0 left-0 w-16 pointer-events-none" style={{ background: "linear-gradient(to right, #060606, transparent)" }} />
+        <div className="absolute inset-y-0 right-0 w-16 pointer-events-none" style={{ background: "linear-gradient(to left, #060606, transparent)" }} />
+        <div className="absolute inset-x-0 top-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to bottom, #060606, transparent)" }} />
+        <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #060606, transparent)" }} />
 
         {/* Obsah */}
         <div className="relative max-w-4xl mx-auto" style={{ zIndex: 2 }}>
