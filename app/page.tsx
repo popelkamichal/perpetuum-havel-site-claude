@@ -99,7 +99,7 @@ export default function Home() {
 
       <div id="politicti-vezni" className="scroll-mt-20">
         <FadeInSection delay={150}>
-          <TeamSection title="Současní političtí vězni" />
+          <TeamSection title="Současní političtí vězni" variant="prisoners" />
         </FadeInSection>
       </div>
 
