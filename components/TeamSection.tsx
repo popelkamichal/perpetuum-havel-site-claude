@@ -134,6 +134,59 @@ export default function TeamSection({
 }) {
   const data = members ?? (variant === "prisoners" ? politicalPrisoners : team);
 
+  if (variant === "prisoners") {
+    return (
+      <section className="relative w-full px-4 py-16 overflow-hidden">
+        {/* Tmavší pozadí */}
+        <div className="absolute inset-0" style={{ background: "#060606" }} />
+
+        {/* Mříž — vertikální tyče přes celou sekci */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            zIndex: 10,
+            backgroundImage:
+              "repeating-linear-gradient(90deg, transparent 0px, transparent 50px, rgba(0,0,0,0.72) 50px, rgba(0,0,0,0.18) 53px, rgba(0,0,0,0.72) 56px, transparent 58px)",
+          }}
+        />
+        {/* Horizontální příčle */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            zIndex: 10,
+            backgroundImage:
+              "repeating-linear-gradient(0deg, transparent 0px, transparent 110px, rgba(0,0,0,0.55) 110px, rgba(0,0,0,0.1) 113px, rgba(0,0,0,0.55) 116px, transparent 118px)",
+          }}
+        />
+        {/* Horní a spodní vigneta */}
+        <div className="absolute inset-x-0 top-0 h-20 pointer-events-none" style={{ zIndex: 11, background: "linear-gradient(to bottom, #060606 0%, transparent 100%)" }} />
+        <div className="absolute inset-x-0 bottom-0 h-20 pointer-events-none" style={{ zIndex: 11, background: "linear-gradient(to top, #060606 0%, transparent 100%)" }} />
+
+        {/* Obsah */}
+        <div className="relative max-w-4xl mx-auto" style={{ zIndex: 2 }}>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
+            <span
+              className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
+              style={{ color: "#8b1a1a" }}
+            >
+              {title}
+            </span>
+            <span className="text-[8px] font-inter tracking-[0.2em] uppercase" style={{ color: "#2a2a2a" }}>
+              — fiktivní data
+            </span>
+          </div>
+
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-8 gap-6">
+            {data.map((member, i) => (
+              <AvatarCard key={`${member.initials}-${i}`} {...member} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="w-full px-4 py-16">
       <div className="max-w-4xl mx-auto">
@@ -147,7 +200,7 @@ export default function TeamSection({
           </span>
         </div>
 
-        <div className={`grid gap-6 ${data.length > 6 ? "grid-cols-3 sm:grid-cols-4 md:grid-cols-8" : "grid-cols-2 sm:grid-cols-3 md:grid-cols-6"}`}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8">
           {data.map((member, i) => (
             <AvatarCard key={`${member.initials}-${i}`} {...member} />
           ))}
