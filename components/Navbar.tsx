@@ -42,6 +42,15 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+          <a
+            href="https://www.narodni-divadlo.cz/cs/predstaveni/perpetuum-havel-UmymnrWnRvC2a_KyhqKeWQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-inter text-[11px] tracking-[0.2em] uppercase text-white px-4 py-2 rounded transition-opacity duration-200 hover:opacity-80"
+            style={{ backgroundColor: "#8a732e" }}
+          >
+            Koupit vstupenky
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -73,6 +82,16 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+          <a
+            href="https://www.narodni-divadlo.cz/cs/predstaveni/perpetuum-havel-UmymnrWnRvC2a_KyhqKeWQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-inter text-[11px] tracking-[0.2em] uppercase text-white text-center px-4 py-2 rounded transition-opacity duration-200 hover:opacity-80"
+            style={{ backgroundColor: "#8a732e" }}
+            onClick={() => setOpen(false)}
+          >
+            Koupit vstupenky
+          </a>
         </div>
       )}
     </nav>
