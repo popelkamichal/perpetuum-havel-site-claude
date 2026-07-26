@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ContentPair from "@/components/ContentPair";
 import VideoSection from "@/components/VideoSection";
 import TeamSection from "@/components/TeamSection";
+import PrisonersSection from "@/components/PrisonersSection";
 import Footer from "@/components/Footer";
 import FadeInSection from "@/components/FadeInSection";
 
@@ -99,7 +100,7 @@ export default function Home() {
 
       <div id="politicti-vezni" className="scroll-mt-20">
         <FadeInSection delay={150}>
-          <TeamSection title="Současní političtí vězni" variant="prisoners" />
+          <PrisonersSection />
         </FadeInSection>
       </div>
 
