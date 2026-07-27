@@ -44,7 +44,7 @@ const members: Member[] = [
   { initials: "VB", name: "Vira Bondarenko",      role: "Filmařka, Krym" },
 ];
 
-const SPACING = 130;
+const SPACING = 175;
 
 function itemStyle(d: number): { scale: number; opacity: number; zIndex: number } {
   const a = Math.abs(d);
@@ -108,7 +108,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
       {/* Karusel */}
       <div
         className="relative overflow-hidden"
-        style={{ height: 220 }}
+        style={{ height: 300 }}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -141,12 +141,12 @@ export default function PrisonersSection({ title = "Současní političtí vězn
                 aria-label={m.name}
               >
                 <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center font-bebas text-black text-3xl flex-shrink-0"
+                  className="w-40 h-40 rounded-full flex items-center justify-center font-bebas text-black text-5xl flex-shrink-0"
                   style={{ backgroundColor: "#C89A2A" }}
                 >
                   {m.initials}
                 </div>
-                <div className="text-center" style={{ width: 128 }}>
+                <div className="text-center" style={{ width: 160 }}>
                   <p className="text-white font-inter font-bold text-xs uppercase tracking-wider leading-snug">
                     {m.name}
                   </p>
