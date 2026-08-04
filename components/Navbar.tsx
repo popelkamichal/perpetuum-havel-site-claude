@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 const NAV_ITEMS = [
-  { label: "Odkaz 1", href: "#" },
   { label: "Tvůrci", href: "#tvurci" },
   { label: "Současní političtí vězni", href: "#politicti-vezni" },
 ];
