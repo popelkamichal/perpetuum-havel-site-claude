@@ -106,7 +106,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
 
   const go = (dir: 1 | -1) => setCurrent(i => (i + dir + n) % n);
 
-  const onBroken = (i: number) => setBrokenPhotos(prev => new Set([...prev, i]));
+  const onBroken = (i: number) => setBrokenPhotos(prev => { const s = new Set(prev); s.add(i); return s; });
 
   const onTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     touchStart.current = e.touches[0].clientX;
