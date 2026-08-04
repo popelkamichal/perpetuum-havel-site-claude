@@ -11,9 +11,9 @@ interface Member {
 
 const members: Member[] = [
   // Rusko
-  { initials: "IS", name: "Ivan Safronov",              role: "Novinář, Rusko",             photo: "ivan-safronov.jpg" },
+  { initials: "IS", name: "Ivan Safronov",              role: "Novinář, Rusko",             photo: "ivan-safronov.png" },
   { initials: "AG", name: "Aleksei Gorinov",            role: "Zastupitel, Rusko",           photo: "aleksei-gorinov.jpg" },
-  { initials: "MP", name: "Maria Ponomarenko",          role: "Novinářka, Rusko",            photo: "maria-ponomarenko.jpg" },
+  { initials: "MP", name: "Maria Ponomarenko",          role: "Novinářka, Rusko",            photo: "maria-ponomarenko.png" },
   // Bělorusko
   { initials: "VC", name: "Vital Chopik",               role: "Aktivista, Bělorusko",        photo: "vital-chopik.jpg" },
   // Kuba
