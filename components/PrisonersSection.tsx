@@ -6,42 +6,54 @@ interface Member {
   initials: string;
   name: string;
   role: string;
-  href?: string;
+  photo?: string; // cesta k /vezni/nazev.jpg v public/
 }
 
 const members: Member[] = [
-  { initials: "PB", name: "Petr Boháč",          role: "Námět, scénář a režie",        href: "https://www.narodni-divadlo.cz/cs/profil/petr-bohac-Av4PuxCESv6gxfTq0mGI2w" },
-  { initials: "RZ", name: "Roman Zotov-Mikshin", role: "Spolupráce na scénáři",         href: "https://www.narodni-divadlo.cz/cs/profil/roman-zotov-mikshin-KFqQzepjQqaeeWHt78UIAg" },
-  { initials: "RV", name: "Radim Vizváry",        role: "Pohybová spolupráce",           href: "https://www.narodni-divadlo.cz/cs/profil/radim-vizvary-1609468" },
-  { initials: "PČ", name: "Pavlína Chroňáková",  role: "Scéna a kostýmy",               href: "https://www.narodni-divadlo.cz/cs/profil/pavlina-chronakova-eZF3YRxtQzWKeGDRLFIJLQ" },
-  { initials: "MH", name: "Martin Hůla",          role: "Video, hudba a zvukový design", href: "https://www.narodni-divadlo.cz/cs/profil/martin-hula-JAxNGFvTTQOu1NIpeRxxzw" },
-  { initials: "FH", name: "Filip Horn",           role: "Světelný design",               href: "https://www.narodni-divadlo.cz/cs/profil/filip-horn-KRPcCcwAR42ONPuf2PjIFg" },
-  { initials: "AM", name: "Alexej Morozov",       role: "Novinář, Rusko" },
-  { initials: "NK", name: "Natalija Koval",       role: "Aktivistka, Bělorusko" },
-  { initials: "ZW", name: "Zhang Wei",            role: "Student, Čína" },
-  { initials: "FX", name: "Farid Hosseini",       role: "Právník, Írán" },
-  { initials: "MK", name: "Maryam Khalili",       role: "Blogerka, Írán" },
-  { initials: "DP", name: "Dmitrij Petrov",       role: "Spisovatel, Rusko" },
-  { initials: "LA", name: "Leila Ahmadi",         role: "Novinářka, Írán" },
-  { initials: "VS", name: "Viktor Savčenko",      role: "Poslanec, Rusko" },
-  { initials: "YR", name: "Yusuf Al-Rashid",     role: "Aktivista, Saúdská Arábie" },
-  { initials: "AK", name: "Anna Kowalczyk",       role: "Fotografka, Bělorusko" },
-  { initials: "IH", name: "Ibrahim Hassan",       role: "Novinář, Egypt" },
-  { initials: "SM", name: "Sofija Melnyk",        role: "Učitelka, Rusko" },
-  { initials: "BD", name: "Batyr Dzhaksybekov",  role: "Ekolog, Kazachstán" },
-  { initials: "ML", name: "Mei Lin",              role: "Umělkyně, Čína" },
-  { initials: "RN", name: "Rustam Nazarov",       role: "Právník, Uzbekistán" },
-  { initials: "TB", name: "Tamar Beridze",        role: "Novinářka, Gruzie" },
-  { initials: "HM", name: "Hassan Mortazavi",     role: "Básník, Írán" },
-  { initials: "EV", name: "Elena Voronova",       role: "Lékařka, Rusko" },
-  { initials: "SP", name: "Sang-jun Park",        role: "Student, Severní Korea" },
-  { initials: "YD", name: "Yildiz Demir",         role: "Aktivistka, Turecko" },
-  { initials: "KZ", name: "Kirill Zaitsev",       role: "Programátor, Bělorusko" },
-  { initials: "AD", name: "Amina Diallo",         role: "Novinářka, Eritrea" },
-  { initials: "PV", name: "Pavel Hrušov",         role: "Akademik, Rusko" },
-  { initials: "SČ", name: "Selin Çelik",          role: "Právnička, Turecko" },
-  { initials: "OM", name: "Olena Marchuk",        role: "Učitelka, Krym" },
-  { initials: "VB", name: "Vira Bondarenko",      role: "Filmařka, Krym" },
+  // Rusko
+  { initials: "IS", name: "Ivan Safronov",              role: "Novinář, Rusko",             photo: "ivan-safronov.jpg" },
+  { initials: "AG", name: "Aleksei Gorinov",            role: "Zastupitel, Rusko",           photo: "aleksei-gorinov.jpg" },
+  { initials: "MP", name: "Maria Ponomarenko",          role: "Novinářka, Rusko",            photo: "maria-ponomarenko.jpg" },
+  // Bělorusko
+  { initials: "VC", name: "Vital Chopik",               role: "Aktivista, Bělorusko",        photo: "vital-chopik.jpg" },
+  // Kuba
+  { initials: "LO", name: "Luis Manuel Otero Alcántara",role: "Umělec, Kuba",                photo: "luis-otero-alcantara.jpg" },
+  { initials: "MC", name: "Maykel Castillo Pérez",      role: "Hudebník, Kuba",              photo: "maykel-castillo.jpg" },
+  { initials: "FN", name: "Félix Navarro Rodríguez",   role: "Disident, Kuba",              photo: "felix-navarro.jpg" },
+  { initials: "SN", name: "Sayli Navarro Álvarez",     role: "Aktivistka, Kuba",            photo: "sayli-navarro.jpg" },
+  { initials: "RP", name: "Roberto Pérez Fonseca",      role: "Aktivista, Kuba",             photo: "roberto-perez-fonseca.jpg" },
+  { initials: "LH", name: "Loreto Hernández García",   role: "Aktivista, Kuba",             photo: "loreto-hernandez.jpg" },
+  { initials: "DP", name: "Donaida Pérez Paseiro",      role: "Aktivistka, Kuba",            photo: "donaida-perez.jpg" },
+  { initials: "JF", name: "José Daniel Ferrer García",  role: "Opoziční vůdce, Kuba",        photo: "jose-daniel-ferrer.jpg" },
+  // Hongkong / Čína
+  { initials: "JL", name: "Jimmy Lai",                  role: "Novinář, Hongkong",           photo: "jimmy-lai.jpg" },
+  { initials: "CH", name: "Chow Hang-tung",             role: "Právnička, Hongkong",         photo: "chow-hang-tung.jpg" },
+  { initials: "DJ", name: "Ding Jiaxi",                 role: "Právník, Čína",               photo: "ding-jiaxi.jpg" },
+  { initials: "XZ", name: "Xu Zhiyong",                 role: "Akademik, Čína",              photo: "xu-zhiyong.jpg" },
+  { initials: "IT", name: "Ilham Tohti",                role: "Ekonom, Čína",                photo: "ilham-tohti.jpg" },
+  { initials: "ZZ", name: "Zhang Zhan",                 role: "Novinářka, Čína",             photo: "zhang-zhan.jpg" },
+  { initials: "SH", name: "Sophia Huang Xueqin",       role: "Novinářka, Čína",             photo: "sophia-huang-xueqin.jpg" },
+  // Turecko
+  { initials: "ÇM", name: "Çiğdem Mater",              role: "Dokumentaristka, Turecko",    photo: "cigdem-mater.jpg" },
+  { initials: "TK", name: "Tayfun Kahraman",            role: "Urbanista, Turecko",          photo: "tayfun-kahraman.jpg" },
+  { initials: "MÖ", name: "Mine Özerden",              role: "Dokumentaristka, Turecko",    photo: "mine-ozerden.jpg" },
+  { initials: "OK", name: "Osman Kavala",               role: "Filantrop, Turecko",          photo: "osman-kavala.jpg" },
+  { initials: "CA", name: "Can Atalay",                 role: "Právník a poslanec, Turecko", photo: "can-atalay.jpg" },
+  // Saúdská Arábie
+  { initials: "WA", name: "Waleed Abu al-Khair",       role: "Právník, Saúdská Arábie",     photo: "waleed-abu-al-khair.jpg" },
+  // Írán
+  { initials: "NM", name: "Narges Mohammadi",           role: "Aktivistka, Írán",            photo: "narges-mohammadi.jpg" },
+  { initials: "SM", name: "Sharifeh Mohammadi",         role: "Aktivistka, Írán",            photo: "sharifeh-mohammadi.jpg" },
+  { initials: "PA", name: "Pakhshan Azizi",             role: "Aktivistka, Írán",            photo: "pakhshan-azizi.jpg" },
+  // Vietnam
+  { initials: "CT", name: "Cấn Thị Thêu",              role: "Aktivistka, Vietnam",         photo: "can-thi-theu.jpg" },
+  { initials: "ĐB", name: "Đặng Đình Bách",            role: "Ekologický právník, Vietnam", photo: "dang-dinh-bach.jpg" },
+  { initials: "HB", name: "Hoàng Đức Binh",            role: "Ekologický aktivista, Vietnam",photo: "hoang-duc-binh.jpg" },
+  // Kambodža
+  { initials: "TR", name: "Thun Ratha",                 role: "Aktivista, Kambodža",         photo: "thun-ratha.jpg" },
+  { initials: "LK", name: "Long Kunthea",               role: "Aktivistka, Kambodža",        photo: "long-kunthea.jpg" },
+  { initials: "PK", name: "Phuon Keoraksmey",          role: "Aktivistka, Kambodža",        photo: "phuon-keoraksmey.jpg" },
+  { initials: "LC", name: "Ly Chandaravuth",            role: "Aktivista, Kambodža",         photo: "ly-chandaravuth.jpg" },
 ];
 
 const SPACING = 175;
@@ -55,12 +67,46 @@ function itemStyle(d: number): { scale: number; opacity: number; zIndex: number 
   return              { scale: 0.18, opacity: 0.08, zIndex: 2 };
 }
 
+function Avatar({ member, index, brokenPhotos, onBroken }: {
+  member: Member;
+  index: number;
+  brokenPhotos: Set<number>;
+  onBroken: (i: number) => void;
+}) {
+  const showPhoto = member.photo && !brokenPhotos.has(index);
+
+  if (showPhoto) {
+    return (
+      <img
+        src={`/vezni/${member.photo}`}
+        alt={member.name}
+        className="w-40 h-40 rounded-full object-cover object-top flex-shrink-0"
+        style={{ border: "3px solid #C89A2A" }}
+        onError={() => onBroken(index)}
+        draggable={false}
+      />
+    );
+  }
+
+  return (
+    <div
+      className="w-40 h-40 rounded-full flex items-center justify-center font-bebas text-black text-4xl flex-shrink-0"
+      style={{ backgroundColor: "#C89A2A" }}
+    >
+      {member.initials}
+    </div>
+  );
+}
+
 export default function PrisonersSection({ title = "Současní političtí vězni" }: { title?: string }) {
   const [current, setCurrent] = useState(0);
+  const [brokenPhotos, setBrokenPhotos] = useState<Set<number>>(new Set());
   const touchStart = useRef<number | null>(null);
   const n = members.length;
 
   const go = (dir: 1 | -1) => setCurrent(i => (i + dir + n) % n);
+
+  const onBroken = (i: number) => setBrokenPhotos(prev => new Set([...prev, i]));
 
   const onTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     touchStart.current = e.touches[0].clientX;
@@ -74,10 +120,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
 
   return (
     <section className="relative w-full py-16 overflow-hidden">
-      {/* Tmavé pozadí */}
       <div className="absolute inset-0" style={{ background: "#060606" }} />
-
-      {/* Bílá mříž */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -86,26 +129,20 @@ export default function PrisonersSection({ title = "Současní političtí vězn
           backgroundSize: "64px 64px",
         }}
       />
-      {/* Vignety — mříž mizí ke krajům */}
       <div className="absolute inset-y-0 left-0 w-32 pointer-events-none" style={{ background: "linear-gradient(to right, #060606, transparent)" }} />
       <div className="absolute inset-y-0 right-0 w-32 pointer-events-none" style={{ background: "linear-gradient(to left, #060606, transparent)" }} />
       <div className="absolute inset-x-0 top-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to bottom, #060606, transparent)" }} />
       <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #060606, transparent)" }} />
 
-      {/* Záhlaví */}
       <div className="relative max-w-4xl mx-auto px-4 mb-10" style={{ zIndex: 2 }}>
         <div className="flex items-center gap-3">
           <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
           <span className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium" style={{ color: "#8b1a1a" }}>
             {title}
           </span>
-          <span className="text-[8px] font-inter tracking-[0.2em] uppercase" style={{ color: "#2a2a2a" }}>
-            — fiktivní data
-          </span>
         </div>
       </div>
 
-      {/* Karusel */}
       <div
         className="relative overflow-hidden"
         style={{ height: 300 }}
@@ -126,7 +163,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
             return (
               <button
                 key={i}
-                className="absolute flex flex-col items-center gap-2"
+                className="absolute flex flex-col items-center gap-3"
                 style={{
                   transform: `translateX(${x}px) scale(${scale})`,
                   opacity,
@@ -140,12 +177,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
                 onClick={() => setCurrent(i)}
                 aria-label={m.name}
               >
-                <div
-                  className="w-40 h-40 rounded-full flex items-center justify-center font-bebas text-black text-5xl flex-shrink-0"
-                  style={{ backgroundColor: "#C89A2A" }}
-                >
-                  {m.initials}
-                </div>
+                <Avatar member={m} index={i} brokenPhotos={brokenPhotos} onBroken={onBroken} />
                 <div className="text-center" style={{ width: 160 }}>
                   <p className="text-white font-inter font-bold text-xs uppercase tracking-wider leading-snug">
                     {m.name}
@@ -159,7 +191,6 @@ export default function PrisonersSection({ title = "Současní političtí vězn
           })}
         </div>
 
-        {/* Šipky — pouze desktop */}
         <button
           onClick={() => go(-1)}
           className="hidden md:flex absolute left-8 top-[45%] -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full transition-colors duration-200"
@@ -186,7 +217,6 @@ export default function PrisonersSection({ title = "Současní političtí vězn
         </button>
       </div>
 
-      {/* Počítadlo */}
       <div className="relative flex justify-center mt-4" style={{ zIndex: 2 }}>
         <span className="text-[9px] font-inter tracking-[0.3em] uppercase" style={{ color: "#2a2a2a" }}>
           {current + 1} / {n}
