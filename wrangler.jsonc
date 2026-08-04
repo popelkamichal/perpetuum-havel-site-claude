@@ -1,0 +1,7 @@
+{
+  "name": "perpetuum-havel-site-claude",
+  "compatibility_date": "2026-08-04",
+  "assets": {
+    "directory": "./out"
+  }
+}
