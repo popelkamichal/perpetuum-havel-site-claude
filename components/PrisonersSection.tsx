@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, type TouchEvent } from "react";
+import { useState, useRef, useEffect, useCallback, type TouchEvent } from "react";
 
 interface Member {
   initials: string;
@@ -102,9 +102,28 @@ export default function PrisonersSection({ title = "Současní političtí vězn
   const [current, setCurrent] = useState(0);
   const [brokenPhotos, setBrokenPhotos] = useState<Set<number>>(new Set());
   const touchStart = useRef<number | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const n = members.length;
 
-  const go = (dir: 1 | -1) => setCurrent(i => (i + dir + n) % n);
+  const resetAutoPlay = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => setCurrent(i => (i + 1) % n), 3000);
+  }, [n]);
+
+  useEffect(() => {
+    resetAutoPlay();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [resetAutoPlay]);
+
+  const go = (dir: 1 | -1) => {
+    setCurrent(i => (i + dir + n) % n);
+    resetAutoPlay();
+  };
+
+  const goTo = (i: number) => {
+    setCurrent(i);
+    resetAutoPlay();
+  };
 
   const onBroken = (i: number) => setBrokenPhotos(prev => { const s = new Set(prev); s.add(i); return s; });
 
@@ -174,7 +193,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
                   cursor: "pointer",
                   padding: 0,
                 }}
-                onClick={() => setCurrent(i)}
+                onClick={() => goTo(i)}
                 aria-label={m.name}
               >
                 <Avatar member={m} index={i} brokenPhotos={brokenPhotos} onBroken={onBroken} />
