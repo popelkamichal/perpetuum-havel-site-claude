@@ -12,7 +12,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-black border-b border-[#1a1a1a]">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black border-b border-[#1a1a1a]">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between py-3">
         {/* Logo */}
         <a
