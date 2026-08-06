@@ -110,6 +110,10 @@ export default function PrisonersSection({ title = "Současní političtí vězn
     intervalRef.current = setInterval(() => setCurrent(i => (i + 1) % n), 3000);
   }, [n]);
 
+  const pauseAutoPlay = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  };
+
   useEffect(() => {
     resetAutoPlay();
     return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
@@ -165,6 +169,8 @@ export default function PrisonersSection({ title = "Současní političtí vězn
       <div
         className="relative overflow-hidden"
         style={{ height: 300 }}
+        onMouseEnter={pauseAutoPlay}
+        onMouseLeave={resetAutoPlay}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
