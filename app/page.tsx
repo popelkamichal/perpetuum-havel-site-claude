@@ -10,7 +10,7 @@ import FadeInSection from "@/components/FadeInSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#080808]">
+    <main className="min-h-screen bg-[#080808] pt-14">
 
       <Navbar />
 
