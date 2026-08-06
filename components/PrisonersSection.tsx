@@ -274,13 +274,13 @@ export default function PrisonersSection({ title = "Současní političtí vězn
 
       <div
         className="relative overflow-visible"
-        style={{ height: 440 }}
+        style={{ height: 380 }}
         onMouseEnter={pauseAutoPlay}
         onMouseLeave={resetAutoPlay}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
-        <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: 16 }}>
+        <div className="absolute inset-0 flex items-start justify-center">
           {members.map((m, i) => {
             let d = i - current;
             const half = Math.floor(n / 2);
@@ -300,12 +300,13 @@ export default function PrisonersSection({ title = "Současní političtí vězn
                   transform: `translateX(${x}px) scale(${scale})`,
                   opacity,
                   zIndex,
+                  top: 16,
                   transition: "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease",
                   background: "none",
                   border: "none",
                   cursor: "pointer",
                   padding: 0,
-                  transformOrigin: "top center",
+                  transformOrigin: "50% 160px",
                 }}
                 onClick={() => goTo(i)}
                 aria-label={m.name}
