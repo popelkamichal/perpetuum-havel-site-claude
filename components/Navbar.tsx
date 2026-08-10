@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const NAV_ITEMS = [
   { label: "Tvůrci", href: "#tvurci" },
-  { label: "Současní političtí vězni", href: "#politicti-vezni" },
+  { label: "Současní političtí vězni", href: "/vezni" },
 ];
 
 export default function Navbar() {
