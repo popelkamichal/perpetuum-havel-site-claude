@@ -81,6 +81,14 @@ export default function Home() {
       </FadeInSection>
       <div className="w-full border-t border-[#111]" />
 
+      <div id="politicti-vezni" className="scroll-mt-20">
+        <FadeInSection delay={150}>
+          <PrisonersSection />
+        </FadeInSection>
+      </div>
+
+      <div className="w-full border-t border-[#111]" />
+
       <FadeInSection delay={100}>
         <ContentPair
           article1={{
@@ -97,12 +105,6 @@ export default function Home() {
           reelLabel="Instagram"
         />
       </FadeInSection>
-
-      <div id="politicti-vezni" className="scroll-mt-20">
-        <FadeInSection delay={150}>
-          <PrisonersSection />
-        </FadeInSection>
-      </div>
 
       <div className="w-full border-t border-[#111]" />
 
