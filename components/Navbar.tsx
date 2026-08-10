@@ -15,21 +15,30 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black border-b border-[#1a1a1a]">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between py-3">
-        {/* Logo */}
-        <a
-          href="https://www.narodni-divadlo.cz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:opacity-70 transition-opacity duration-200 flex-shrink-0"
-        >
-          <Image
-            src="/logoND_bila.png"
-            alt="Národní divadlo"
-            width={100}
-            height={40}
-            className="h-8 w-auto"
-          />
-        </a>
+        {/* Logo + Úvod */}
+        <div className="flex items-center gap-4 flex-shrink-0">
+          <a
+            href="https://www.narodni-divadlo.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-70 transition-opacity duration-200"
+          >
+            <Image
+              src="/logoND_bila.png"
+              alt="Národní divadlo"
+              width={100}
+              height={40}
+              className="h-8 w-auto"
+            />
+          </a>
+          <div className="w-px h-5 bg-[#2a2a2a]" />
+          <a
+            href="/"
+            className="text-white font-inter text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+          >
+            Úvod
+          </a>
+        </div>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
