@@ -7,7 +7,7 @@ const BARS = {
   inset: 0,
   borderRadius: "50%",
   pointerEvents: "none" as const,
-  background: "repeating-linear-gradient(90deg, rgba(0,0,0,0.82) 0px, rgba(0,0,0,0.82) 4px, transparent 4px, transparent 22px)",
+  background: "repeating-linear-gradient(90deg, rgba(40,40,40,0.72) 0px, rgba(40,40,40,0.72) 4px, transparent 4px, transparent 22px)",
   boxShadow: "inset 0 0 0 2px rgba(0,0,0,0.5)",
 };
 
