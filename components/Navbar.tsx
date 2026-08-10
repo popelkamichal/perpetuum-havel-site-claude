@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const NAV_ITEMS = [
-  { label: "Tvůrci", href: "#tvurci" },
+  { label: "Tvůrci", href: "/#tvurci" },
   { label: "Současní političtí vězni", href: "/vezni" },
 ];
 
