@@ -331,7 +331,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
                       borderTop: "2px solid #C89A2A",
                       padding: "14px 18px 16px",
                       marginTop: 4,
-                      textAlign: "left",
+                      textAlign: "center",
                     }}
                   >
                     <p style={{ fontSize: 11, lineHeight: 1.72, color: "#b8b0a0", letterSpacing: "0.01em" }}>
