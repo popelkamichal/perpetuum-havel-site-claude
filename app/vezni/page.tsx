@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import { members } from "@/lib/prisoners";
 
 function Avatar({ member }: { member: { initials: string; name: string; photo?: string } }) {
@@ -26,6 +26,7 @@ function Avatar({ member }: { member: { initials: string; name: string; photo?: 
 export default function VezniPage() {
   return (
     <main className="min-h-screen pt-14" style={{ background: "#060606" }}>
+      <Navbar />
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
