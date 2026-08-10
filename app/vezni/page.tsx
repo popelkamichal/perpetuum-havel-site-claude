@@ -2,23 +2,35 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { members } from "@/lib/prisoners";
 
+const BARS = {
+  position: "absolute" as const,
+  inset: 0,
+  borderRadius: "50%",
+  pointerEvents: "none" as const,
+  background: "repeating-linear-gradient(90deg, rgba(0,0,0,0.82) 0px, rgba(0,0,0,0.82) 4px, transparent 4px, transparent 22px)",
+  boxShadow: "inset 0 0 0 2px rgba(0,0,0,0.5)",
+};
+
 function Avatar({ member }: { member: { initials: string; name: string; photo?: string } }) {
   if (member.photo) {
     return (
-      <img
-        src={`/vezni/${member.photo}`}
-        alt={member.name}
-        className="w-20 h-20 rounded-full object-cover object-top flex-shrink-0"
-        style={{ border: "2px solid #C89A2A" }}
-      />
+      <div className="relative w-20 h-20 flex-shrink-0" style={{ border: "2px solid #C89A2A", borderRadius: "50%" }}>
+        <img
+          src={`/vezni/${member.photo}`}
+          alt={member.name}
+          className="w-full h-full rounded-full object-cover object-top"
+        />
+        <div style={BARS} />
+      </div>
     );
   }
   return (
     <div
-      className="w-20 h-20 rounded-full flex items-center justify-center font-bebas text-black text-2xl flex-shrink-0"
+      className="relative w-20 h-20 rounded-full flex items-center justify-center font-bebas text-black text-2xl flex-shrink-0"
       style={{ backgroundColor: "#C89A2A" }}
     >
       {member.initials}
+      <div style={BARS} />
     </div>
   );
 }
