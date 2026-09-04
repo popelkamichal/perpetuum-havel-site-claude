@@ -106,10 +106,10 @@ function ArticleCard({ article }: { article: Article }) {
 
   const card = article.splitAccent ? (
     /* Split layout: fotka vlevo, tyrkysový panel vpravo */
-    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[180px] rounded-2xl flex flex-row"
+    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[280px] rounded-2xl flex flex-row"
          style={{ border: "1px solid #00ac93" }}>
       {/* Levá fotka */}
-      <div className="relative" style={{ width: "45%" }}>
+      <div className="relative" style={{ width: "38%" }}>
         {article.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -125,35 +125,31 @@ function ArticleCard({ article }: { article: Article }) {
       </div>
       {/* Pravý tyrkysový panel */}
       <div className="flex-1 flex flex-col justify-center px-5 py-5" style={{ background: "#00ac93" }}>
-        <p className="font-inter font-bold text-xl leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
+        <p className="font-inter font-bold text-[28px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
     </div>
   ) : (
-    /* Standardní layout: fotka na pozadí, text dole */
-    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[180px] rounded-2xl"
-         style={{ border: "1px solid #00ac93" }}>
-      {article.image ? (
+    /* Standardní layout: text vlevo na tmavém pozadí, fotka (cutout s průhledností) ukotvená vpravo */
+    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[280px] rounded-2xl flex items-end"
+         style={{ border: "1px solid #00ac93", background: "rgba(0,0,0,0.3)" }}>
+      {article.image && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={article.image}
           alt={article.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          style={{ objectPosition: article.imagePosition ?? "center top" }}
+          className="absolute right-0 h-[105%] w-auto max-w-none object-contain transition-transform duration-500 group-hover:scale-105"
+          style={{ bottom: "-6.3%" }}
         />
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
       )}
-      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.38)" }} />
-      <div className="absolute bottom-0 left-0 right-0 px-4 py-4"
-           style={{ background: "rgba(0,0,0,0.82)" }}>
+      <div className="relative z-10 px-8 pb-12 max-w-[92%]">
         {article.author && (
-          <p className="font-inter text-xs font-normal mb-1.5" style={{ color: "#ffffff" }}>
+          <p className="font-inter text-[21px] font-bold mb-4" style={{ color: "#ffffff" }}>
             {article.author}:
           </p>
         )}
-        <p className="font-inter font-bold text-2xl leading-tight" style={{ color: article.author ? "#00ac93" : "#fff", whiteSpace: "pre-line" }}>
+        <p className="font-inter font-bold text-[32px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
           {article.title}
         </p>
       </div>

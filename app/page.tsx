@@ -64,14 +64,12 @@ export default function Home() {
               title: "Slovo beze slov\nza vězně bez slávy",
               href: "/clanek/kontext-vzniku",
               image: "/Putna-1400×933.png",
-              imagePosition: "65% 10%",
             }}
             article2={{
               author: "Tomáš Glanc",
               title: "Vězení\na bdělost",
               href: "/clanek/politicti-vezni",
               image: "/Glanc-1400×933.png",
-              imagePosition: "55% 15%",
             }}
             reelId="SjevFk_0Txo"
             reelLabel="Short z Avignonu"
@@ -100,10 +98,9 @@ export default function Home() {
             title: "Pantomima\nVáclava Havla",
             href: "/clanek/havel-dramatik",
             image: "/Petiskova-1400×933.png",
-            imagePosition: "50% 10%",
           }}
           article2={{
-            title: "Roman\nZotov-Mikshin:\nPolitické věznění není historická kapitola",
+            title: "Roman\nZotov-Mikshin:\nPolitické věznění\nnení historická\nkapitola",
             href: "/clanek/roman-zotov-mikshin",
             splitAccent: true,
           }}
