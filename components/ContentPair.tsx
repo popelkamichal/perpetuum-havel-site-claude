@@ -10,8 +10,10 @@ interface Article {
   href?: string;
   /** Cesta k obrázku na pozadí karty */
   image?: string;
-  /** Pozice obrázku, např. "center top", "60% 20%" */
+  /** Pozice obrázku ve split layoutu, např. "center top", "60% 20%" */
   imagePosition?: string;
+  /** Doladění rámování fotky u standardní karty — každé PNG má jiné odsazení obsahu */
+  imageFrame?: { height?: string; right?: string; bottom?: string };
   /** Split layout: fotka vlevo, barevný panel vpravo */
   splitAccent?: boolean;
   /** Krátký perex zobrazený v modalu */
@@ -105,26 +107,24 @@ function ArticleCard({ article }: { article: Article }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const card = article.splitAccent ? (
-    /* Split layout: fotka vlevo, tyrkysový panel vpravo */
-    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[280px] rounded-2xl flex flex-row"
+    /* Split layout: fotka přes celou kartu, přes pravou část poloprůhledný tyrkysový panel */
+    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[384px] rounded-2xl"
          style={{ border: "1px solid #00ac93" }}>
-      {/* Levá fotka */}
-      <div className="relative" style={{ width: "38%" }}>
-        {article.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={article.image}
-            alt={article.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            style={{ objectPosition: article.imagePosition ?? "center top" }}
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#060606]" />
-        )}
-        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.25)" }} />
-      </div>
-      {/* Pravý tyrkysový panel */}
-      <div className="flex-1 flex flex-col justify-center px-5 py-5" style={{ background: "#00ac93" }}>
+      {article.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={article.image}
+          alt={article.title}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          style={{ objectPosition: article.imagePosition ?? "center top" }}
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#060606]" />
+      )}
+      <div
+        className="absolute inset-y-0 right-0 flex flex-col justify-center px-6"
+        style={{ width: "63.5%", background: "rgba(0,172,147,0.7)" }}
+      >
         <p className="font-inter font-bold text-[28px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
@@ -132,24 +132,28 @@ function ArticleCard({ article }: { article: Article }) {
     </div>
   ) : (
     /* Standardní layout: text vlevo na tmavém pozadí, fotka (cutout s průhledností) ukotvená vpravo */
-    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[280px] rounded-2xl flex items-end"
+    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[384px] rounded-2xl flex items-end"
          style={{ border: "1px solid #00ac93", background: "rgba(0,0,0,0.3)" }}>
       {article.image && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={article.image}
           alt={article.title}
-          className="absolute right-0 h-[105%] w-auto max-w-none object-contain transition-transform duration-500 group-hover:scale-105"
-          style={{ bottom: "-6.3%" }}
+          className="absolute w-auto max-w-none object-contain transition-transform duration-500 group-hover:scale-105"
+          style={{
+            height: article.imageFrame?.height ?? "105%",
+            right: article.imageFrame?.right ?? "0",
+            bottom: article.imageFrame?.bottom ?? "-6.3%",
+          }}
         />
       )}
-      <div className="relative z-10 px-8 pb-12 max-w-[92%]">
+      <div className="relative z-10 px-8 pb-[41px] max-w-[92%]">
         {article.author && (
-          <p className="font-inter text-[21px] font-bold mb-4" style={{ color: "#ffffff" }}>
+          <p className="font-inter text-[21px] font-bold mb-[18px]" style={{ color: "#ffffff" }}>
             {article.author}:
           </p>
         )}
-        <p className="font-inter font-bold text-[32px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
+        <p className="font-inter font-bold text-[33px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
           {article.title}
         </p>
       </div>
@@ -212,7 +216,7 @@ export default function ContentPair({
 
           {/* Pravý sloupec: reel */}
           <div className="flex flex-col max-w-sm mx-auto w-full md:max-w-none md:mx-0">
-            <div className="bg-white rounded-3xl overflow-hidden flex-1">
+            <div className="bg-white rounded-3xl overflow-hidden self-start w-full">
               {instagramUrl ? (
                 <InstagramEmbed url={instagramUrl} />
               ) : reelId ? (
