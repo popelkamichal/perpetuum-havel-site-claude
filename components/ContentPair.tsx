@@ -125,7 +125,7 @@ function ArticleCard({ article }: { article: Article }) {
       </div>
       {/* Pravý tyrkysový panel */}
       <div className="flex-1 flex flex-col justify-center px-5 py-5" style={{ background: "#00ac93" }}>
-        <p className="font-inter font-bold text-xl leading-snug" style={{ color: "#000000" }}>
+        <p className="font-inter font-bold text-xl leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
@@ -153,7 +153,7 @@ function ArticleCard({ article }: { article: Article }) {
             {article.author}:
           </p>
         )}
-        <p className="font-inter font-bold text-2xl leading-tight" style={{ color: article.author ? "#00ac93" : "#fff" }}>
+        <p className="font-inter font-bold text-2xl leading-tight" style={{ color: article.author ? "#00ac93" : "#fff", whiteSpace: "pre-line" }}>
           {article.title}
         </p>
       </div>

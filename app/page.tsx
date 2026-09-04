@@ -61,16 +61,16 @@ export default function Home() {
             sectionLabel="Kontext, rozhovory a svědectví"
             article1={{
               author: "Martin C. Putna",
-              title: "Slovo beze slov za vězně bez slávy",
+              title: "Slovo beze slov\nza vězně bez slávy",
               href: "/clanek/kontext-vzniku",
-              image: "/Putna-1400×933.jpg",
+              image: "/Putna-1400×933.png",
               imagePosition: "65% 10%",
             }}
             article2={{
               author: "Tomáš Glanc",
-              title: "Vězení a bdělost",
+              title: "Vězení\na bdělost",
               href: "/clanek/politicti-vezni",
-              image: "/Glanc-1400×933.jpg",
+              image: "/Glanc-1400×933.png",
               imagePosition: "55% 15%",
             }}
             reelId="SjevFk_0Txo"
@@ -97,14 +97,13 @@ export default function Home() {
         <ContentPair
           article1={{
             author: "Ladislava Petišková",
-            title: "Pantomima Václava Havla",
+            title: "Pantomima\nVáclava Havla",
             href: "/clanek/havel-dramatik",
-            image: "/Petiskova-1400×933.jpg",
+            image: "/Petiskova-1400×933.png",
             imagePosition: "50% 10%",
           }}
           article2={{
-            author: "Roman Zotov-Mikshin",
-            title: "Politické věznění není historická kapitola",
+            title: "Roman\nZotov-Mikshin:\nPolitické věznění není historická kapitola",
             href: "/clanek/roman-zotov-mikshin",
             splitAccent: true,
           }}
