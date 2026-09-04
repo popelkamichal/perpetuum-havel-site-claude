@@ -120,11 +120,11 @@ function ArticleCard({ article }: { article: Article }) {
       <div className="absolute bottom-0 left-0 right-0 px-4 py-4"
            style={{ background: "rgba(0,0,0,0.82)" }}>
         {article.author && (
-          <p className="font-inter text-[11px] font-medium mb-1" style={{ color: "rgba(255,255,255,0.72)" }}>
+          <p className="font-inter text-xs font-normal mb-1.5" style={{ color: "rgba(255,255,255,0.65)" }}>
             {article.author}:
           </p>
         )}
-        <p className="font-inter font-bold text-xl leading-snug" style={{ color: article.author ? "#00ac93" : "#fff" }}>
+        <p className="font-inter font-bold text-2xl leading-tight" style={{ color: article.author ? "#00ac93" : "#fff" }}>
           {article.title}
         </p>
       </div>
