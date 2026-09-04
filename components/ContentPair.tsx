@@ -117,14 +117,14 @@ function ArticleCard({ article }: { article: Article }) {
       {/* Poloprůhledný overlay */}
       <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.38)" }} />
       {/* Titulek na průhledném černém pruhu dole */}
-      <div className="absolute bottom-0 left-0 right-0 px-4 py-3"
+      <div className="absolute bottom-0 left-0 right-0 px-4 py-4"
            style={{ background: "rgba(0,0,0,0.82)" }}>
         {article.author && (
-          <p className="font-inter text-[10px] font-medium uppercase tracking-widest mb-1" style={{ color: "rgba(255,255,255,0.55)" }}>
-            {article.author}
+          <p className="font-inter text-[11px] font-medium mb-1" style={{ color: "rgba(255,255,255,0.72)" }}>
+            {article.author}:
           </p>
         )}
-        <p className="font-inter font-bold text-base leading-snug" style={{ color: article.author ? "#00ac93" : "#fff" }}>
+        <p className="font-inter font-bold text-xl leading-snug" style={{ color: article.author ? "#00ac93" : "#fff" }}>
           {article.title}
         </p>
       </div>
