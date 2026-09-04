@@ -124,14 +124,9 @@ function ArticleCard({ article }: { article: Article }) {
         <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.25)" }} />
       </div>
       {/* Pravý tyrkysový panel */}
-      <div className="flex-1 flex flex-col justify-center px-4 py-5" style={{ background: "#00ac93" }}>
-        {article.author && (
-          <p className="font-inter text-xs font-normal mb-2" style={{ color: "rgba(0,0,0,0.65)" }}>
-            {article.author}:
-          </p>
-        )}
-        <p className="font-inter font-bold text-xl leading-tight" style={{ color: "#000000" }}>
-          {article.title}
+      <div className="flex-1 flex flex-col justify-center px-5 py-5" style={{ background: "#00ac93" }}>
+        <p className="font-inter font-bold text-xl leading-snug" style={{ color: "#000000" }}>
+          {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
     </div>
