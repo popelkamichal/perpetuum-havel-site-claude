@@ -122,10 +122,10 @@ function ArticleCard({ article }: { article: Article }) {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#060606]" />
       )}
       <div
-        className="absolute inset-y-0 right-0 flex flex-col justify-center px-6"
+        className="absolute inset-y-0 right-0 flex flex-col justify-end px-[19px] pb-[23px]"
         style={{ width: "63.5%", background: "rgba(0,172,147,0.7)" }}
       >
-        <p className="font-inter font-bold text-[28px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
+        <p className="font-inter font-bold text-[32px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
