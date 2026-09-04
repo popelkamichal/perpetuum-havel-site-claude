@@ -60,14 +60,16 @@ export default function Home() {
           <ContentPair
             sectionLabel="Kontext, rozhovory a svědectví"
             article1={{
-              title: "Téma: O kontextu vzniku Perpetuum mobile",
+              author: "Martin C. Putna",
+              title: "Slovo beze slov za vězně bez slávy",
               href: "/clanek/kontext-vzniku",
-              image: "/1766237746-perpetuum-3.jpg",
+              image: "/Putna-1400×933.png",
             }}
             article2={{
-              title: "Téma: Političtí vězni současnosti",
+              author: "Tomáš Glanc",
+              title: "Vězení a bdělost",
               href: "/clanek/politicti-vezni",
-              image: "/1766237746-perpetuum-6.jpg",
+              image: "/Glanc-1400×933.png",
             }}
             reelId="SjevFk_0Txo"
             reelLabel="Short z Avignonu"
@@ -92,14 +94,15 @@ export default function Home() {
       <FadeInSection delay={100}>
         <ContentPair
           article1={{
-            title: "Téma: Václav Havel jako disident a dramatik",
+            author: "Ladislava Petišková",
+            title: "Pantomima Václava Havla",
             href: "/clanek/havel-dramatik",
-            image: "/1766237746-perpetuum-3.jpg",
+            image: "/Petiskova-1400×933.png",
           }}
           article2={{
-            title: "Téma: Roman Zotov-Mikshin",
+            author: "Roman Zotov-Mikshin",
+            title: "Politické věznění není historická kapitola",
             href: "/clanek/roman-zotov-mikshin",
-            image: "/1766237746-perpetuum-6.jpg",
           }}
           instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
           reelLabel="Instagram"
