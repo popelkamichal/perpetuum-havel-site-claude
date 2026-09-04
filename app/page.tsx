@@ -64,14 +64,14 @@ export default function Home() {
               title: "Slovo beze slov za vězně bez slávy",
               href: "/clanek/kontext-vzniku",
               image: "/Putna-1400×933.jpg",
-              imagePosition: "center 20%",
+              imagePosition: "60% 15%",
             }}
             article2={{
               author: "Tomáš Glanc",
               title: "Vězení a bdělost",
               href: "/clanek/politicti-vezni",
               image: "/Glanc-1400×933.jpg",
-              imagePosition: "center 15%",
+              imagePosition: "center 20%",
             }}
             reelId="SjevFk_0Txo"
             reelLabel="Short z Avignonu"
@@ -106,6 +106,7 @@ export default function Home() {
             author: "Roman Zotov-Mikshin",
             title: "Politické věznění není historická kapitola",
             href: "/clanek/roman-zotov-mikshin",
+            splitAccent: true,
           }}
           instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
           reelLabel="Instagram"
