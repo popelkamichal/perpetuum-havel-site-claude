@@ -64,12 +64,14 @@ export default function Home() {
               title: "Slovo beze slov za vězně bez slávy",
               href: "/clanek/kontext-vzniku",
               image: "/Putna-1400×933.jpg",
+              imagePosition: "center 20%",
             }}
             article2={{
               author: "Tomáš Glanc",
               title: "Vězení a bdělost",
               href: "/clanek/politicti-vezni",
               image: "/Glanc-1400×933.jpg",
+              imagePosition: "center 15%",
             }}
             reelId="SjevFk_0Txo"
             reelLabel="Short z Avignonu"
@@ -98,6 +100,7 @@ export default function Home() {
             title: "Pantomima Václava Havla",
             href: "/clanek/havel-dramatik",
             image: "/Petiskova-1400×933.jpg",
+            imagePosition: "center 25%",
           }}
           article2={{
             author: "Roman Zotov-Mikshin",

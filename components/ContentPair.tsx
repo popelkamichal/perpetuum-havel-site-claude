@@ -10,6 +10,8 @@ interface Article {
   href?: string;
   /** Cesta k obrázku na pozadí karty */
   image?: string;
+  /** Pozice obrázku, např. "center top", "50% 30%" */
+  imagePosition?: string;
   /** Krátký perex zobrazený v modalu */
   perex?: string;
   /** Text článku zobrazený v modalu */
@@ -110,6 +112,7 @@ function ArticleCard({ article }: { article: Article }) {
           src={article.image}
           alt={article.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          style={{ objectPosition: article.imagePosition ?? "center top" }}
         />
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
