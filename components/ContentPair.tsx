@@ -6,6 +6,7 @@ import InstagramEmbed from "./InstagramEmbed";
 
 interface Article {
   title: string;
+  author?: string;
   href?: string;
   /** Cesta k obrázku na pozadí karty */
   image?: string;
@@ -100,11 +101,8 @@ function ArticleCard({ article }: { article: Article }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   const card = (
-    <div className="relative flex-1 rounded-2xl overflow-hidden group cursor-pointer min-h-[180px]"
-         style={{
-           background: "linear-gradient(#111, #111) padding-box, linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.06) 100%) border-box",
-           border: "1px solid transparent",
-         }}>
+    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[180px]"
+         style={{ border: "1px solid #00ac93" }}>
       {/* Foto přes celý box */}
       {article.image ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -116,10 +114,17 @@ function ArticleCard({ article }: { article: Article }) {
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
       )}
+      {/* Poloprůhledný overlay */}
+      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.38)" }} />
       {/* Titulek na průhledném černém pruhu dole */}
       <div className="absolute bottom-0 left-0 right-0 px-4 py-3"
-           style={{ background: "rgba(0,0,0,0.72)" }}>
-        <p className="text-white font-inter font-bold text-lg leading-snug">
+           style={{ background: "rgba(0,0,0,0.82)" }}>
+        {article.author && (
+          <p className="font-inter text-[10px] font-medium uppercase tracking-widest mb-1" style={{ color: "rgba(255,255,255,0.55)" }}>
+            {article.author}
+          </p>
+        )}
+        <p className="font-inter font-bold text-base leading-snug" style={{ color: article.author ? "#00ac93" : "#fff" }}>
           {article.title}
         </p>
       </div>
