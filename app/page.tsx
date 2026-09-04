@@ -106,6 +106,7 @@ export default function Home() {
             author: "Roman Zotov-Mikshin",
             title: "Politické věznění není historická kapitola",
             href: "/clanek/roman-zotov-mikshin",
+            splitAccent: true,
           }}
           instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
           reelLabel="Instagram"

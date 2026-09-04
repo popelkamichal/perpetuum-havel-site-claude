@@ -12,6 +12,8 @@ interface Article {
   image?: string;
   /** Pozice obrázku, např. "center top", "60% 20%" */
   imagePosition?: string;
+  /** Split layout: fotka vlevo, barevný panel vpravo */
+  splitAccent?: boolean;
   /** Krátký perex zobrazený v modalu */
   perex?: string;
   /** Text článku zobrazený v modalu */
@@ -102,10 +104,41 @@ function ArticleModal({ article, onClose }: { article: Article; onClose: () => v
 function ArticleCard({ article }: { article: Article }) {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const card = (
+  const card = article.splitAccent ? (
+    /* Split layout: fotka vlevo, tyrkysový panel vpravo */
+    <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[180px] rounded-2xl flex flex-row"
+         style={{ border: "1px solid #00ac93" }}>
+      {/* Levá fotka */}
+      <div className="relative" style={{ width: "45%" }}>
+        {article.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={article.image}
+            alt={article.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ objectPosition: article.imagePosition ?? "center top" }}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#060606]" />
+        )}
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.25)" }} />
+      </div>
+      {/* Pravý tyrkysový panel */}
+      <div className="flex-1 flex flex-col justify-center px-4 py-5" style={{ background: "#00ac93" }}>
+        {article.author && (
+          <p className="font-inter text-xs font-normal mb-2" style={{ color: "rgba(0,0,0,0.65)" }}>
+            {article.author}:
+          </p>
+        )}
+        <p className="font-inter font-bold text-xl leading-tight" style={{ color: "#000000" }}>
+          {article.title}
+        </p>
+      </div>
+    </div>
+  ) : (
+    /* Standardní layout: fotka na pozadí, text dole */
     <div className="relative flex-1 overflow-hidden group cursor-pointer min-h-[180px] rounded-2xl"
          style={{ border: "1px solid #00ac93" }}>
-      {/* Foto přes celý box */}
       {article.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -117,9 +150,7 @@ function ArticleCard({ article }: { article: Article }) {
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] to-[#0d0d0d]" />
       )}
-      {/* Poloprůhledný overlay */}
       <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.38)" }} />
-      {/* Titulek na průhledném černém pruhu dole */}
       <div className="absolute bottom-0 left-0 right-0 px-4 py-4"
            style={{ background: "rgba(0,0,0,0.82)" }}>
         {article.author && (
