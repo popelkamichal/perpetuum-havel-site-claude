@@ -63,13 +63,13 @@ export default function Home() {
               author: "Martin C. Putna",
               title: "Slovo beze slov za vězně bez slávy",
               href: "/clanek/kontext-vzniku",
-              image: "/Putna-1400×933.png",
+              image: "/Putna-1400×933.jpg",
             }}
             article2={{
               author: "Tomáš Glanc",
               title: "Vězení a bdělost",
               href: "/clanek/politicti-vezni",
-              image: "/Glanc-1400×933.png",
+              image: "/Glanc-1400×933.jpg",
             }}
             reelId="SjevFk_0Txo"
             reelLabel="Short z Avignonu"
@@ -97,7 +97,7 @@ export default function Home() {
             author: "Ladislava Petišková",
             title: "Pantomima Václava Havla",
             href: "/clanek/havel-dramatik",
-            image: "/Petiskova-1400×933.png",
+            image: "/Petiskova-1400×933.jpg",
           }}
           article2={{
             author: "Roman Zotov-Mikshin",
