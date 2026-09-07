@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Bebas_Neue } from "next/font/google";
-import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-bebas",
-});
-
-const inter = localFont({
-  src: [
-    { path: "../public/fonts/DINNextLTPro-Regular.otf", weight: "400", style: "normal" },
-    { path: "../public/fonts/DINNextLTPro-Medium.otf",  weight: "500", style: "normal" },
-    { path: "../public/fonts/DINNextLTPro-Bold.otf",    weight: "700", style: "normal" },
-  ],
-  variable: "--font-inter",
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -45,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
-      <body className={`${bebasNeue.variable} ${inter.variable} bg-[#080808] text-white`}>
+      <body className={`${montserrat.variable} font-montserrat bg-[#080808] text-white`}>
         <ScrollIndicator />
         {children}
         <BackToTop />

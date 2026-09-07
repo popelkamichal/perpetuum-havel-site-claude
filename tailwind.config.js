@@ -16,8 +16,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        bebas: ['var(--font-bebas)', 'sans-serif'],
-        inter: ['var(--font-inter)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
       },
     },
   },

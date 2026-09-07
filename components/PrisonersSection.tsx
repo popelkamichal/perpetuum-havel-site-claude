@@ -196,7 +196,7 @@ function Avatar({ member, index, brokenPhotos, onBroken }: {
 
   return (
     <div
-      className="w-40 h-40 rounded-full flex items-center justify-center font-bebas text-black text-4xl flex-shrink-0"
+      className="w-40 h-40 rounded-full flex items-center justify-center font-montserrat text-black text-4xl flex-shrink-0"
       style={{ backgroundColor: "#C89A2A" }}
     >
       {member.initials}
@@ -266,7 +266,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
       <div className="relative max-w-4xl mx-auto px-4 mb-10" style={{ zIndex: 2 }}>
         <div className="flex items-center gap-3">
           <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
-          <span className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium" style={{ color: "#8b1a1a" }}>
+          <span className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium" style={{ color: "#8b1a1a" }}>
             {title}
           </span>
         </div>
@@ -313,17 +313,17 @@ export default function PrisonersSection({ title = "Současní političtí vězn
               >
                 <Avatar member={m} index={i} brokenPhotos={brokenPhotos} onBroken={onBroken} />
                 <div className="text-center" style={{ width: 160 }}>
-                  <p className="text-white font-inter font-bold text-xs uppercase tracking-wider leading-snug">
+                  <p className="text-white font-montserrat font-bold text-xs uppercase tracking-wider leading-snug">
                     {m.name}
                   </p>
-                  <p className="font-inter text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#555" }}>
+                  <p className="font-montserrat text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#555" }}>
                     {m.role}
                   </p>
                 </div>
 
                 {isCenter && m.bio && (
                   <div
-                    className="font-inter"
+                    className="font-montserrat"
                     style={{
                       width: 240,
                       background: "rgba(10,8,5,0.88)",
@@ -371,7 +371,7 @@ export default function PrisonersSection({ title = "Současní političtí vězn
       </div>
 
       <div className="relative flex justify-center mt-4" style={{ zIndex: 2 }}>
-        <span className="text-[9px] font-inter tracking-[0.3em] uppercase" style={{ color: "#2a2a2a" }}>
+        <span className="text-[9px] font-montserrat tracking-[0.3em] uppercase" style={{ color: "#2a2a2a" }}>
           {current + 1} / {n}
         </span>
       </div>

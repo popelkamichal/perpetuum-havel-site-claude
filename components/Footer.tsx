@@ -20,7 +20,7 @@ export default function Footer() {
           />
         </a>
 
-        <p className="text-gray-600 font-inter text-[10px] tracking-[0.25em] uppercase">
+        <p className="text-gray-600 font-montserrat text-[10px] tracking-[0.25em] uppercase">
           © Národní divadlo&nbsp;&nbsp;|&nbsp;&nbsp;Laterna Magika
         </p>
 

@@ -3,7 +3,7 @@ function TickerContent() {
   return (
     <>
       {Array.from({ length: 6 }).map((_, i) => (
-        <span key={i} className="inline-flex items-center gap-4 pr-8 font-inter font-medium text-xs tracking-[0.25em] uppercase">
+        <span key={i} className="inline-flex items-center gap-4 pr-8 font-montserrat font-medium text-xs tracking-[0.25em] uppercase">
           <span style={{ color: "#ffffff" }}>{words[0]}</span>
           <span style={{ color: "#00ac93" }}>{words[1]}</span>
           <span style={{ color: "#00ac93", opacity: 0.5 }}>·</span>

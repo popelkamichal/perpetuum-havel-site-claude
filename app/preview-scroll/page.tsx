@@ -8,7 +8,7 @@ const PROGRESS = 62; // ukázková hodnota
 function DemoBox({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="font-inter text-[9px] tracking-[0.4em] uppercase mb-3" style={{ color: TEAL }}>
+      <p className="font-montserrat text-[9px] tracking-[0.4em] uppercase mb-3" style={{ color: TEAL }}>
         {label}
       </p>
       <div
@@ -41,10 +41,10 @@ export default function PreviewScroll() {
 
   return (
     <main className="min-h-[300vh] bg-[#080808] px-8 py-12">
-      <p className="font-inter text-[10px] tracking-[0.4em] uppercase text-white mb-2">
+      <p className="font-montserrat text-[10px] tracking-[0.4em] uppercase text-white mb-2">
         Scroll indikátor — varianty
       </p>
-      <p className="font-inter text-[9px] text-[#444] mb-10 tracking-widest uppercase">
+      <p className="font-montserrat text-[9px] text-[#444] mb-10 tracking-widest uppercase">
         scrolluj stránku — varianty jsou živé
       </p>
 
@@ -89,7 +89,7 @@ export default function PreviewScroll() {
                     style={{ filter: "drop-shadow(0 0 4px rgba(0,172,147,0.7))" }}
                   />
                 </svg>
-                <span className="absolute font-inter text-[8px] font-bold" style={{ color: TEAL }}>
+                <span className="absolute font-montserrat text-[8px] font-bold" style={{ color: TEAL }}>
                   {Math.round(live)}%
                 </span>
               </div>

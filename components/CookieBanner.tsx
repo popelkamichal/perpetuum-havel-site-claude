@@ -46,7 +46,7 @@ export default function CookieBanner() {
     >
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
         {/* Text */}
-        <p className="flex-1 font-inter text-[11px] leading-relaxed text-[#888]">
+        <p className="flex-1 font-montserrat text-[11px] leading-relaxed text-[#888]">
           {t.message}{" "}
           <a
             href="#"
@@ -61,14 +61,14 @@ export default function CookieBanner() {
         <div className="flex gap-2 flex-shrink-0">
           <button
             onClick={() => handle("necessary")}
-            className="font-inter text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
+            className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
             style={{ borderColor: "#333", color: "#666" }}
           >
             {t.reject}
           </button>
           <button
             onClick={() => handle("all")}
-            className="font-inter text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-200"
+            className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-200"
             style={{ background: "#00ac93", color: "#000" }}
             onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 16px rgba(0,172,147,0.6)")}
             onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}

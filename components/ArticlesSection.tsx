@@ -40,7 +40,7 @@ function ArticleCard({
     <div className="bg-white p-5 mb-[3px] group cursor-pointer hover:bg-gray-50 transition-colors duration-200">
       <div className="flex justify-between items-start mb-3">
         <span
-          className="text-[9px] tracking-[0.3em] uppercase font-inter font-semibold"
+          className="text-[9px] tracking-[0.3em] uppercase font-montserrat font-semibold"
           style={{ color: "#00ac93" }}
         >
           {category}
@@ -51,15 +51,15 @@ function ArticleCard({
           ↗
         </span>
       </div>
-      <h3 className="text-[#111111] font-inter font-bold text-[13px] leading-snug mb-3 uppercase tracking-wide">
+      <h3 className="text-[#111111] font-montserrat font-bold text-[13px] leading-snug mb-3 uppercase tracking-wide">
         {title}
       </h3>
-      <p className="text-[#777] font-inter text-[11px] leading-relaxed mb-4">
+      <p className="text-[#777] font-montserrat text-[11px] leading-relaxed mb-4">
         {description}
       </p>
       <a
         href="#"
-        className="text-[9px] tracking-[0.25em] uppercase font-inter text-[#aaa] group-hover:text-[#00ac93] transition-colors duration-200"
+        className="text-[9px] tracking-[0.25em] uppercase font-montserrat text-[#aaa] group-hover:text-[#00ac93] transition-colors duration-200"
       >
         Číst dál →
       </a>
@@ -75,7 +75,7 @@ export default function ArticlesSection() {
         <div className="flex items-center gap-3 mb-8">
           <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
           <span
-            className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
+            className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium"
             style={{ color: "#00ac93" }}
           >
             Kontext, rozhovory a svědectví
@@ -100,7 +100,7 @@ export default function ArticlesSection() {
               />
             </div>
             <p
-              className="mt-3 text-[9px] tracking-[0.3em] uppercase font-inter text-center"
+              className="mt-3 text-[9px] tracking-[0.3em] uppercase font-montserrat text-center"
               style={{ color: "#00ac93" }}
             >
               Hraj ze zkoušení

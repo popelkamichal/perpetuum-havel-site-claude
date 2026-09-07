@@ -28,36 +28,36 @@ export default function ArticlePage({ tema, autor, image, perex, children }: Art
         {/* Breadcrumb */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-4 h-px" style={{ backgroundColor: "#00ac93" }} />
-          <Link href="/" className="text-[9px] tracking-[0.3em] uppercase font-inter hover:opacity-70 transition-opacity duration-200" style={{ color: "#00ac93" }}>
+          <Link href="/" className="text-[9px] tracking-[0.3em] uppercase font-montserrat hover:opacity-70 transition-opacity duration-200" style={{ color: "#00ac93" }}>
             ← Zpět
           </Link>
         </div>
 
         {/* Titulek */}
-        <h1 className="text-white font-inter font-bold leading-tight mb-3"
+        <h1 className="text-white font-montserrat font-bold leading-tight mb-3"
             style={{ fontSize: "clamp(1.75rem, 5vw, 2.75rem)" }}>
           Téma: {tema}
         </h1>
 
         {/* Autor */}
-        <p className="font-inter text-[11px] tracking-[0.2em] uppercase mb-6" style={{ color: "#00ac93" }}>
+        <p className="font-montserrat text-[11px] tracking-[0.2em] uppercase mb-6" style={{ color: "#00ac93" }}>
           {autor}
         </p>
 
         {/* Perex */}
-        <p className="font-inter text-lg md:text-xl leading-relaxed mb-8 text-[#bbb]">
+        <p className="font-montserrat text-lg md:text-xl leading-relaxed mb-8 text-[#bbb]">
           {perex}
         </p>
 
         <div className="w-full h-px mb-8" style={{ backgroundColor: "#1a1a1a" }} />
 
         {/* Tělo */}
-        <div className="space-y-5 text-[#888] font-inter text-base md:text-[17px] leading-relaxed">
+        <div className="space-y-5 text-[#888] font-montserrat text-base md:text-[17px] leading-relaxed">
           {children}
         </div>
 
         <div className="mt-12 pt-6 border-t border-[#1a1a1a]">
-          <Link href="/" className="text-[9px] tracking-[0.3em] uppercase font-inter hover:opacity-70 transition-opacity duration-200" style={{ color: "#00ac93" }}>
+          <Link href="/" className="text-[9px] tracking-[0.3em] uppercase font-montserrat hover:opacity-70 transition-opacity duration-200" style={{ color: "#00ac93" }}>
             ← Zpět na hlavní stránku
           </Link>
         </div>

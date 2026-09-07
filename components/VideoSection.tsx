@@ -19,7 +19,7 @@ export default function VideoSection() {
           />
         </div>
         <p
-          className="mt-3 text-[9px] tracking-[0.35em] uppercase font-inter text-center"
+          className="mt-3 text-[9px] tracking-[0.35em] uppercase font-montserrat text-center"
           style={{ color: "#00ac93" }}
         >
           Video rozhovor s Petrem Boháčem

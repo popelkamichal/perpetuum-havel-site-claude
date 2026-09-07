@@ -30,7 +30,7 @@ export default function BackToTop() {
       </div>
       {/* Svislý text */}
       <span
-        className="font-inter text-[7px] tracking-[0.3em] uppercase"
+        className="font-montserrat text-[7px] tracking-[0.3em] uppercase"
         style={{
           writingMode: "vertical-rl",
           textOrientation: "mixed",

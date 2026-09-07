@@ -72,26 +72,26 @@ function ArticleModal({ article, onClose }: { article: Article; onClose: () => v
 
         {/* Obsah */}
         <div className="p-6 md:p-8">
-          <h2 className="text-white font-inter font-bold text-lg md:text-xl leading-snug mb-4">
+          <h2 className="text-white font-montserrat font-bold text-lg md:text-xl leading-snug mb-4">
             {article.title}
           </h2>
           {article.perex && (
             <p
-              className="font-inter text-sm italic leading-relaxed mb-5 pl-4 border-l-2 text-[#ccc]"
+              className="font-montserrat text-sm italic leading-relaxed mb-5 pl-4 border-l-2 text-[#ccc]"
               style={{ borderColor: "#00ac93" }}
             >
               {article.perex}
             </p>
           )}
           {article.body && (
-            <p className="font-inter text-sm leading-relaxed text-[#888]">
+            <p className="font-montserrat text-sm leading-relaxed text-[#888]">
               {article.body}
             </p>
           )}
           <div className="mt-6 pt-5 border-t border-[#222] flex justify-end">
             <button
               onClick={onClose}
-              className="text-[9px] tracking-[0.3em] uppercase font-inter transition-colors duration-200"
+              className="text-[9px] tracking-[0.3em] uppercase font-montserrat transition-colors duration-200"
               style={{ color: "#00ac93" }}
             >
               Zavřít ×
@@ -125,7 +125,7 @@ function ArticleCard({ article }: { article: Article }) {
         className="absolute inset-y-0 right-0 flex flex-col justify-end px-[19px] pb-[23px]"
         style={{ width: "63.5%", background: "rgba(0,172,147,0.7)" }}
       >
-        <p className="font-inter font-bold text-[32px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
+        <p className="font-montserrat font-bold text-[26px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
@@ -149,11 +149,11 @@ function ArticleCard({ article }: { article: Article }) {
       )}
       <div className="relative z-10 px-8 pb-[41px] max-w-[92%]">
         {article.author && (
-          <p className="font-inter text-[21px] font-bold mb-[18px]" style={{ color: "#ffffff" }}>
+          <p className="font-montserrat text-[21px] font-bold mb-[18px]" style={{ color: "#ffffff" }}>
             {article.author}:
           </p>
         )}
-        <p className="font-inter font-bold text-[33px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
+        <p className="font-montserrat font-bold text-[32px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
           {article.title}
         </p>
       </div>
@@ -199,7 +199,7 @@ export default function ContentPair({
           <div className="flex items-center gap-3 mb-8">
             <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
             <span
-              className="text-[9px] tracking-[0.35em] uppercase font-inter font-medium"
+              className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium"
               style={{ color: "#00ac93" }}
             >
               {sectionLabel}
@@ -224,7 +224,7 @@ export default function ContentPair({
               ) : null}
             </div>
             <p
-              className="mt-3 text-[9px] tracking-[0.3em] uppercase font-inter text-center"
+              className="mt-3 text-[9px] tracking-[0.3em] uppercase font-montserrat text-center"
               style={{ color: "#00ac93" }}
             >
               {reelLabel}
