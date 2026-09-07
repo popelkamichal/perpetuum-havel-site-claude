@@ -29,8 +29,8 @@ export default function VezniPage() {
       <Navbar />
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
-          <span className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium" style={{ color: "#8b1a1a" }}>
+          <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
+          <span className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium" style={{ color: "#00ac93" }}>
             Amnesty International
           </span>
         </div>

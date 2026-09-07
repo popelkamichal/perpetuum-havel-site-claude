@@ -265,8 +265,8 @@ export default function PrisonersSection({ title = "Současní političtí vězn
 
       <div className="relative max-w-4xl mx-auto px-4 mb-10" style={{ zIndex: 2 }}>
         <div className="flex items-center gap-3">
-          <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
-          <span className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium" style={{ color: "#8b1a1a" }}>
+          <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
+          <span className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium" style={{ color: "#00ac93" }}>
             {title}
           </span>
         </div>

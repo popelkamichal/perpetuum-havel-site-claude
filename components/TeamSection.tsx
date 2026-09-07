@@ -160,10 +160,10 @@ export default function TeamSection({
         {/* Obsah */}
         <div className="relative max-w-4xl mx-auto" style={{ zIndex: 2 }}>
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-8 h-px" style={{ backgroundColor: "#8b1a1a" }} />
+            <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
             <span
               className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium"
-              style={{ color: "#8b1a1a" }}
+              style={{ color: "#00ac93" }}
             >
               {title}
             </span>
