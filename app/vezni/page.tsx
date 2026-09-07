@@ -34,7 +34,7 @@ export default function VezniPage() {
             Amnesty International
           </span>
         </div>
-        <h1 className="font-montserrat text-4xl md:text-5xl text-white mb-2 tracking-wide">
+        <h1 className="font-montserrat font-bold text-4xl md:text-5xl text-white mb-2 tracking-tight">
           Současní političtí vězni
         </h1>
         <p className="font-montserrat text-sm mb-12" style={{ color: "#555" }}>
