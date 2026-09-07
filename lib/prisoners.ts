@@ -13,7 +13,7 @@ export const members: Member[] = [
     bio: "Vězeň svědomí; novinář odsouzený na 22 let za údajnou velezradu. Amnesty uvádí, že jde o trest za novinářskou práci a svobodu projevu.",
   },
   {
-    initials: "AG", name: "Aleksei Gorinov", role: "Zastupitel, Rusko", photo: "aleksei-gorinov.jpg",
+    initials: "AG", name: "Aleksei Gorinov", role: "Rusko", photo: "aleksei-gorinov.jpg",
     bio: "Protiválečný komunální politik; vězněn za veřejnou kritiku války proti Ukrajině. Amnesty jej dlouhodobě uvádí mezi nespravedlivě vězněnými za pokojný projev.",
   },
   {
@@ -167,7 +167,7 @@ export const members: Member[] = [
   },
   // Eswatini
   {
-    initials: "MM", name: "Mduduzi Bacede Mabuza", role: "Poslanec, Eswatini", photo: "mduduzi-bacede-mabuza.jpg",
+    initials: "MM", name: "Mduduzi Bacede Mabuza", role: "Eswatini", photo: "mduduzi-bacede-mabuza.jpg",
     bio: "Bývalý poslanec; Amnesty jej označila za vězně svědomí; 85 let, efektivně 25 let.",
   },
 ];
