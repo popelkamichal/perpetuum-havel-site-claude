@@ -31,7 +31,7 @@ export const members: Member[] = [
     bio: "Umělec a lídr hnutí San Isidro; vězeň svědomí, 5 let vězení za pokojný umělecký a občanský projev.",
   },
   {
-    initials: "MC", name: "Maykel Castillo Pérez", role: "Hudebník, Kuba", photo: "maykel-castillo.jpg",
+    initials: "MC", name: "Maykel Castillo Pérez „Osorbo“", role: "Hudebník, Kuba", photo: "maykel-castillo.jpg",
     bio: "Hudebník a aktivista; vězeň svědomí, 9 let vězení.",
   },
   {
@@ -39,7 +39,7 @@ export const members: Member[] = [
     bio: "Politický disident; vězeň svědomí, 9 let vězení; Amnesty zmiňuje návrat do vězení po zrušení podmínky.",
   },
   {
-    initials: "SN", name: "Sayli Navarro Álvarez", role: "Aktivistka, Kuba", photo: "sayli-navarro.jpg",
+    initials: "SN", name: "Saylí Navarro Álvarez", role: "Aktivistka, Kuba", photo: "sayli-navarro.jpg",
     bio: "Aktivistka a spoluzakladatelka Damas de Blanco; vězeňkyně svědomí, 8 let vězení.",
   },
   {
@@ -60,11 +60,11 @@ export const members: Member[] = [
   },
   // Hongkong / Čína
   {
-    initials: "JL", name: "Jimmy Lai", role: "Novinář, Hongkong", photo: "jimmy-lai.jpg",
+    initials: "JL", name: "Jimmy Lai", role: "Novinář, Hongkong / Čína", photo: "jimmy-lai.jpg",
     bio: "Vydavatel a obhájce svobody médií; Amnesty jej označila za vězně svědomí.",
   },
   {
-    initials: "CH", name: "Chow Hang-tung", role: "Právnička, Hongkong", photo: "chow-hang-tung.jpg",
+    initials: "CH", name: "Chow Hang-tung", role: "Právnička, Hongkong / Čína", photo: "chow-hang-tung.jpg",
     bio: "Právnička a aktivistka připomínající Tchien-an-men; Amnesty ji označila za vězeňkyni svědomí.",
   },
   {
@@ -136,7 +136,7 @@ export const members: Member[] = [
     bio: "Environmentální právník; odsouzen na 5 let za údajné daňové úniky, Amnesty jej vede v kampani Write for Rights.",
   },
   {
-    initials: "HB", name: "Hoàng Đức Binh", role: "Ekologický aktivista, Vietnam", photo: "hoang-duc-binh.jpg",
+    initials: "HB", name: "Hoàng Đức Bình", role: "Ekologický aktivista, Vietnam", photo: "hoang-duc-binh.jpg",
     bio: "Environmentální a pracovněprávní aktivista; 14 let vězení, Amnesty jej uvádí mezi vězněnými obránci práv.",
   },
   // Kambodža
@@ -155,5 +155,19 @@ export const members: Member[] = [
   {
     initials: "LC", name: "Ly Chandaravuth", role: "Aktivista, Kambodža", photo: "ly-chandaravuth.jpg",
     bio: "Mother Nature Cambodia; environmentální aktivista, 6 let vězení.",
+  },
+  {
+    initials: "YL", name: "Yim Leanghy", role: "Aktivista, Kambodža",
+    bio: "Mother Nature Cambodia; environmentální aktivista, 8 let vězení.",
+  },
+  // Salvador
+  {
+    initials: "RL", name: "Ruth López", role: "Právnička, Salvador",
+    bio: "Právnička a protikorupční obhájkyně; Amnesty ji označuje za vězeňkyni svědomí a žádá okamžité propuštění.",
+  },
+  // Eswatini
+  {
+    initials: "MM", name: "Mduduzi Bacede Mabuza", role: "Poslanec, Eswatini",
+    bio: "Bývalý poslanec; Amnesty jej označila za vězně svědomí; 85 let, efektivně 25 let.",
   },
 ];
