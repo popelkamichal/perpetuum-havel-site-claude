@@ -14,9 +14,9 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-black border-b border-[#1a1a1a]">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between py-3">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between py-3">
         {/* Logo + Úvod */}
-        <div className="flex items-center gap-4 flex-shrink-0">
+        <div className="flex items-center gap-4 min-w-0">
           <a
             href="https://www.narodni-divadlo.cz"
             target="_blank"
@@ -28,13 +28,13 @@ export default function Navbar() {
               alt="Národní divadlo"
               width={100}
               height={40}
-              className="h-8 w-auto"
+              className="h-6 md:h-8 w-auto"
             />
           </a>
-          <div className="w-px h-5 bg-[#2a2a2a]" />
+          <div className="hidden md:block w-px h-5 bg-[#2a2a2a]" />
           <a
             href="/"
-            className="text-white font-inter text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+            className="hidden md:block text-white font-inter text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
           >
             Úvod
           </a>
@@ -91,7 +91,14 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden bg-black border-t border-[#1a1a1a] px-6 py-4 flex flex-col gap-5">
+        <div className="md:hidden bg-black border-t border-[#1a1a1a] px-4 py-4 flex flex-col gap-5">
+          <a
+            href="/"
+            className="text-white font-inter text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+            onClick={() => setOpen(false)}
+          >
+            Úvod
+          </a>
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}
