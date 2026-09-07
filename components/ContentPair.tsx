@@ -122,10 +122,10 @@ function ArticleCard({ article }: { article: Article }) {
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#060606]" />
       )}
       <div
-        className="absolute inset-y-0 right-0 flex flex-col justify-end px-[19px] pb-[23px]"
+        className="absolute inset-y-0 right-0 flex flex-col justify-end px-3 pb-4 md:px-[15px] md:pb-[19px] lg:px-[19px] lg:pb-[23px]"
         style={{ width: "63.5%", background: "rgba(0,172,147,0.7)" }}
       >
-        <p className="font-montserrat font-bold text-[26px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
+        <p className="font-montserrat font-bold text-[19px] md:text-[20px] lg:text-[26px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
@@ -147,13 +147,13 @@ function ArticleCard({ article }: { article: Article }) {
           }}
         />
       )}
-      <div className="relative z-10 px-8 pb-[41px] max-w-[92%]">
+      <div className="relative z-10 px-5 pb-[26px] md:px-6 md:pb-[32px] lg:px-8 lg:pb-[41px] max-w-[92%]">
         {article.author && (
-          <p className="font-montserrat text-[21px] font-bold mb-[18px]" style={{ color: "#ffffff" }}>
+          <p className="font-montserrat text-[15px] mb-[10px] md:text-[17px] md:mb-[13px] lg:text-[21px] lg:mb-[18px] font-bold" style={{ color: "#ffffff" }}>
             {article.author}:
           </p>
         )}
-        <p className="font-montserrat font-bold text-[32px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
+        <p className="font-montserrat font-bold text-[23px] md:text-[25px] lg:text-[32px] leading-tight" style={{ color: "#00ac93", whiteSpace: "pre-line" }}>
           {article.title}
         </p>
       </div>
