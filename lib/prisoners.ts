@@ -157,7 +157,7 @@ export const members: Member[] = [
     bio: "Mother Nature Cambodia; environmentální aktivista, 6 let vězení.",
   },
   {
-    initials: "YL", name: "Yim Leanghy", role: "Aktivista, Kambodža",
+    initials: "YL", name: "Yim Leanghy", role: "Aktivista, Kambodža", photo: "yim-leanghy.jpg",
     bio: "Mother Nature Cambodia; environmentální aktivista, 8 let vězení.",
   },
   // Salvador
