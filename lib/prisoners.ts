@@ -162,12 +162,12 @@ export const members: Member[] = [
   },
   // Salvador
   {
-    initials: "RL", name: "Ruth López", role: "Právnička, Salvador",
+    initials: "RL", name: "Ruth López", role: "Právnička, Salvador", photo: "ruth-lopez.jpg",
     bio: "Právnička a protikorupční obhájkyně; Amnesty ji označuje za vězeňkyni svědomí a žádá okamžité propuštění.",
   },
   // Eswatini
   {
-    initials: "MM", name: "Mduduzi Bacede Mabuza", role: "Poslanec, Eswatini",
+    initials: "MM", name: "Mduduzi Bacede Mabuza", role: "Poslanec, Eswatini", photo: "mduduzi-bacede-mabuza.jpg",
     bio: "Bývalý poslanec; Amnesty jej označila za vězně svědomí; 85 let, efektivně 25 let.",
   },
 ];
