@@ -107,7 +107,7 @@ export default function Home() {
             href: "/clanek/roman-zotov-mikshin",
             splitAccent: true,
             image: "/mozotov.jpg",
-            imageFrame: { height: "130%", left: "-30%", top: "-10%" },
+            imageFrame: { height: "100%", left: "-14%", top: "0%" },
           }}
           instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
           reelLabel="Instagram"

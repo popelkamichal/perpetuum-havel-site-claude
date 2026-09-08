@@ -127,9 +127,9 @@ function ArticleCard({ article }: { article: Article }) {
       )}
       <div
         className="absolute inset-y-0 right-0 flex flex-col justify-end px-3 pb-4 md:px-[15px] md:pb-[19px] lg:px-[19px] lg:pb-[23px]"
-        style={{ width: "63.5%", background: "rgba(0,172,147,0.7)" }}
+        style={{ width: "58%", background: "rgba(0,172,147,0.7)" }}
       >
-        <p className="font-montserrat font-bold text-[19px] md:text-[20px] lg:text-[26px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
+        <p className="font-montserrat font-bold text-[17px] lg:text-[24px] leading-snug" style={{ color: "#000000", whiteSpace: "pre-line" }}>
           {article.author ? `${article.author}: ` : ""}{article.title}
         </p>
       </div>
