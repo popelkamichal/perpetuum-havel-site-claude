@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
+import Analytics from "@/components/Analytics";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import "./globals.css";
 
@@ -40,6 +41,7 @@ export default function RootLayout({
         {children}
         <BackToTop />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,18 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { CONSENT_EVENT, getConsent, setConsent } from "@/lib/consent";
 
 const texts = {
   cs: {
     message:
-      "Tento web používá cookies pro zajištění základní funkčnosti a analýzu návštěvnosti.",
+      "Tento web ukládá jen údaje nutné pro svůj provoz. Vložený obsah z Instagramu se načte až s vaším souhlasem.",
     accept: "Přijmout vše",
     reject: "Pouze nezbytné",
     policy: "Zásady cookies",
   },
   en: {
     message:
-      "This website uses cookies to ensure basic functionality and analyse traffic.",
+      "This site stores only what it needs to run. Embedded Instagram content loads only with your consent.",
     accept: "Accept all",
     reject: "Necessary only",
     policy: "Cookie policy",
@@ -24,16 +26,15 @@ export default function CookieBanner() {
   const [lang, setLang] = useState<"cs" | "en">("cs");
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) setVisible(true);
+    if (!getConsent()) setVisible(true);
     const browserLang = navigator.language?.toLowerCase() ?? "";
     setLang(browserLang.startsWith("cs") || browserLang.startsWith("sk") ? "cs" : "en");
-  }, []);
 
-  const handle = (value: "all" | "necessary") => {
-    localStorage.setItem("cookie-consent", value);
-    setVisible(false);
-  };
+    // Odvolání souhlasu na stránce se zásadami banner zase vyvolá
+    const onChange = (e: Event) => setVisible(!(e as CustomEvent).detail);
+    window.addEventListener(CONSENT_EVENT, onChange);
+    return () => window.removeEventListener(CONSENT_EVENT, onChange);
+  }, []);
 
   if (!visible) return null;
 
@@ -48,26 +49,26 @@ export default function CookieBanner() {
         {/* Text */}
         <p className="flex-1 font-montserrat text-[11px] leading-relaxed text-[#888]">
           {t.message}{" "}
-          <a
-            href="#"
+          <Link
+            href="/zasady-cookies"
             className="underline underline-offset-2 transition-colors duration-200"
             style={{ color: "#00ac93" }}
           >
             {t.policy}
-          </a>
+          </Link>
         </p>
 
         {/* Tlačítka */}
         <div className="flex gap-2 flex-shrink-0">
           <button
-            onClick={() => handle("necessary")}
+            onClick={() => setConsent("necessary")}
             className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
             style={{ borderColor: "#333", color: "#666" }}
           >
             {t.reject}
           </button>
           <button
-            onClick={() => handle("all")}
+            onClick={() => setConsent("all")}
             className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-200"
             style={{ background: "#00ac93", color: "#000" }}
             onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 16px rgba(0,172,147,0.6)")}
