@@ -51,9 +51,8 @@ export default function Footer() {
 
         {/* Mecenášský klub ND */}
         <section>
-          <Label>Partner inscenace</Label>
-          <p className="font-montserrat text-[13px] leading-relaxed mb-4" style={{ color: "#cfcfcf" }}>
-            Mecenášský klub ND
+          <p className="font-montserrat text-[13px] leading-relaxed mb-5" style={{ color: "#cfcfcf" }}>
+            Partnerem inscenace je Mecenášský klub ND, členové Mecenášského klubu ND:
           </p>
           <ul
             className="font-montserrat text-[11px] leading-[1.9] columns-2 sm:columns-3 lg:columns-4 gap-x-8"
