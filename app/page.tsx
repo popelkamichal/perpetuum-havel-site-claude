@@ -73,7 +73,7 @@ export default function Home() {
               image: "/Glanc-1400×933.png",
               imageFrame: { right: "-7.7%", bottom: "-2.8%" },
             }}
-            reelId="SjevFk_0Txo"
+            reelId="oS-HxPSIhg0"
             reelLabel="Short z Avignonu"
           />
         </div>
