@@ -62,7 +62,7 @@ export default function Home() {
             article1={{
               author: "Martin C. Putna",
               title: "Slovo beze slov\nza vězně bez slávy",
-              href: "/clanek/kontext-vzniku",
+              href: "/clanek/havel-dramatik",
               image: "/Putna-1400×933.png",
               imageFrame: { height: "116.5%", bottom: "-13.9%" },
             }}
@@ -98,7 +98,7 @@ export default function Home() {
           article1={{
             author: "Ladislava Petišková",
             title: "Pantomima\nVáclava Havla",
-            href: "/clanek/havel-dramatik",
+            href: "/clanek/kontext-vzniku",
             image: "/Petiskova-1400×933.png",
             imageFrame: { height: "110%", right: "-9.3%", bottom: "-4.7%" },
           }}

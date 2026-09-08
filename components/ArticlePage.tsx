@@ -36,7 +36,7 @@ export default function ArticlePage({ tema, autor, image, perex, children }: Art
         {/* Titulek */}
         <h1 className="text-white font-montserrat font-bold leading-tight mb-3"
             style={{ fontSize: "clamp(1.75rem, 5vw, 2.75rem)" }}>
-          Téma: {tema}
+          {tema}
         </h1>
 
         {/* Autor */}
