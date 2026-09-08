@@ -12,8 +12,8 @@ export default function VideoSection() {
           }}
         >
           <YoutubeEmbed
-            videoId="ZAPgtShs3dY"
-            title="Video rozhovor s Petrem Boháčem – Perpetuum Havel"
+            videoId="sxslAs_JLoo"
+            title="Rozhovor s Romanem Zotovem-Mikshinem – Perpetuum Havel"
             variant="ghost"
             label="Přehrát rozhovor"
           />
@@ -22,7 +22,7 @@ export default function VideoSection() {
           className="mt-3 text-[9px] tracking-[0.35em] uppercase font-montserrat text-center"
           style={{ color: "#00ac93" }}
         >
-          Video rozhovor s Petrem Boháčem
+          Rozhovor s Romanem Zotovem-Mikshinem
         </p>
       </div>
     </section>
