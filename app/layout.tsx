@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Perpetuum Havel | Laterna Magika | Národní divadlo",
   description:
-    "Scénická meditace o moci, paměti a svobodě. Inscenace inspirovaná odkazem Václava Havla, premiéra v hlavní sezóně Národního divadla.",
+    "Jedna cela a politický vězeň jako symbol vzdoru. Na motivy jediné předlohy pro pohybové divadlo z pera Václava Havla.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

@@ -7,8 +7,8 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Subtitle */}
         <p className="text-[#aaa] font-montserrat text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed">
-          Scénická meditace o moci, paměti a svobodě. Inscenace inspirovaná
-          odkazem Václava Havla, premiéra v hlavní sezóně Národního divadla.
+          Jedna cela a politický vězeň jako symbol vzdoru. Na motivy jediné
+          předlohy pro pohybové divadlo z pera Václava Havla.
         </p>
 
         {/* Video embed */}
