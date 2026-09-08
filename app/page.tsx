@@ -106,6 +106,8 @@ export default function Home() {
             title: "Roman\nZotov-Mikshin:\nPolitické věznění\nnení historická\nkapitola",
             href: "/clanek/roman-zotov-mikshin",
             splitAccent: true,
+            image: "/mozotov.jpg",
+            imageFrame: { height: "130%", left: "-30%", top: "-10%" },
           }}
           instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
           reelLabel="Instagram"

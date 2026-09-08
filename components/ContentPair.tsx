@@ -12,8 +12,8 @@ interface Article {
   image?: string;
   /** Pozice obrázku ve split layoutu, např. "center top", "60% 20%" */
   imagePosition?: string;
-  /** Doladění rámování fotky u standardní karty — každé PNG má jiné odsazení obsahu */
-  imageFrame?: { height?: string; right?: string; bottom?: string };
+  /** Doladění rámování fotky — každá má jiné odsazení obsahu */
+  imageFrame?: { height?: string; right?: string; bottom?: string; left?: string; top?: string };
   /** Split layout: fotka vlevo, barevný panel vpravo */
   splitAccent?: boolean;
   /** Krátký perex zobrazený v modalu */
@@ -115,8 +115,12 @@ function ArticleCard({ article }: { article: Article }) {
         <img
           src={article.image}
           alt={article.title}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          style={{ objectPosition: article.imagePosition ?? "center top" }}
+          className="absolute w-auto max-w-none object-contain transition-transform duration-500 group-hover:scale-105"
+          style={{
+            height: article.imageFrame?.height ?? "100%",
+            left: article.imageFrame?.left ?? "0",
+            top: article.imageFrame?.top ?? "0",
+          }}
         />
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#060606]" />
