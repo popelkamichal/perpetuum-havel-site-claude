@@ -78,7 +78,7 @@ export default function Ticker() {
       className="w-full overflow-hidden py-7 rounded-2xl my-8"
       style={{
         // Tmavý podklad oddělí citace od fotky pod nimi
-        background: "rgba(0,0,0,0.55)",
+        background: "rgba(0,0,0,0.15)",
         backdropFilter: "blur(3px)",
         WebkitBackdropFilter: "blur(3px)",
         border: "1px solid #222",
