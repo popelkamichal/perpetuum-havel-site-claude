@@ -13,10 +13,32 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+const SITE_URL = "https://www.perpetuumhavel.cz";
+const TITLE = "Perpetuum Havel | Laterna Magika | Národní divadlo";
+const DESCRIPTION =
+  "Jedna cela a politický vězeň jako symbol vzdoru. Na motivy jediné předlohy pro pohybové divadlo z pera Václava Havla.";
+
 export const metadata: Metadata = {
-  title: "Perpetuum Havel | Laterna Magika | Národní divadlo",
-  description:
-    "Jedna cela a politický vězeň jako symbol vzdoru. Na motivy jediné předlohy pro pohybové divadlo z pera Václava Havla.",
+  // Bez metadataBase by náhledy odkazů dostaly relativní cesty a obrázek by se nezobrazil
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "cs_CZ",
+    url: SITE_URL,
+    siteName: "Perpetuum Havel",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [{ url: "/perpetuum-havel-thumb.jpg", width: 2560, height: 1440, alt: "Perpetuum Havel" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/perpetuum-havel-thumb.jpg"],
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
