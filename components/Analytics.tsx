@@ -6,11 +6,14 @@ import { CONSENT_EVENT, getConsent } from "@/lib/consent";
 /**
  * Google Analytics 4 — načte se výhradně po souhlasu „Přijmout vše“.
  *
- * Zapne se, jakmile je v prostředí nastavené NEXT_PUBLIC_GA_ID
- * (např. NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX). Bez něj se nenačte nic.
+ * ID měření je uvedené přímo zde, ne v proměnné prostředí: NEXT_PUBLIC_*
+ * se dosazuje při buildu, takže by ho stejně nešlo měnit za běhu, a jde
+ * o veřejný údaj — putuje v HTML každé stránky.
  */
+const GA_ID = "G-ZL8SGX59RM";
+
 export default function Analytics() {
-  const id = process.env.NEXT_PUBLIC_GA_ID;
+  const id = GA_ID;
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {

@@ -60,16 +60,24 @@ export default function Page() {
             zařízení, nikam se neodesílá a neumožňuje vás identifikovat.
           </p>
           <p>
-            Žádné vlastní cookies web nenastavuje.
+            Web sám žádné cookies nenastavuje. Cookies může uložit až měření
+            návštěvnosti a vložený obsah — obojí popisujeme níže a obojí se
+            spustí jen s vaším souhlasem.
           </p>
 
           <H2>Měření návštěvnosti</H2>
           <p>
-            Web v tuto chvíli návštěvnost neměří a nepoužívá žádné reklamní
-            systémy. Připravené je měření pomocí služby Google Analytics 4;
-            pokud ho zapneme, načte se výhradně poté, co zvolíte „Přijmout
-            vše“. Při volbě „Pouze nezbytné“ se nespustí vůbec a odvoláním
-            souhlasu se vypne. IP adresa se v něm anonymizuje.
+            K měření návštěvnosti používáme službu{" "}
+            <span className="text-[#cfcfcf]">Google Analytics 4</span>. Zajímá
+            nás z ní jen to, kolik lidí na web přišlo, odkud a které stránky si
+            přečetli — nikoho neidentifikujeme a data nepoužíváme k reklamě.
+          </p>
+          <p>
+            Analytics se načte <span className="text-[#cfcfcf]">výhradně
+            poté, co zvolíte „Přijmout vše“</span>. Při volbě „Pouze nezbytné“
+            se nespustí vůbec a odvoláním souhlasu se vypne. Vaše IP adresa se
+            v něm anonymizuje. Google při měření ukládá vlastní cookies a
+            zpracovává údaje podle svých pravidel.
           </p>
 
           <H2>Obsah třetích stran</H2>
