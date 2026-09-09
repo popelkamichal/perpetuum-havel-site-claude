@@ -38,9 +38,17 @@ export default function Analytics() {
     document.head.appendChild(s);
 
     w.dataLayer = w.dataLayer || [];
-    function gtag(...args: any[]) { w.dataLayer.push(args); }
+
+    // Do dataLayer musí přijít objekt `arguments`, ne obyčejné pole — gtag.js
+    // podle toho pozná příkaz. Proto tady schválně žádné rest parametry.
+    function push(this: unknown) {
+      // eslint-disable-next-line prefer-rest-params
+      w.dataLayer.push(arguments);
+    }
+    const gtag = push as (...args: unknown[]) => void;
+
     gtag("js", new Date());
-    gtag("config", id, { anonymize_ip: true });
+    gtag("config", id);
     w.__gaLoaded = true;
   }, [allowed, id]);
 
