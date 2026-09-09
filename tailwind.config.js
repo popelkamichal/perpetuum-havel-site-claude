@@ -16,7 +16,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        din: ['var(--font-din)', 'sans-serif'],
       },
     },
   },

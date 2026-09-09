@@ -14,7 +14,7 @@ function GhostButton() {
           </svg>
         </div>
       </div>
-      <span className="text-white/70 text-[8px] tracking-[0.3em] uppercase font-montserrat">
+      <span className="text-white/70 text-[8px] tracking-[0.3em] uppercase font-din">
         Přehrát trailer
       </span>
     </div>
@@ -24,7 +24,7 @@ function GhostButton() {
 function VideoBox({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="font-montserrat text-[9px] tracking-[0.35em] uppercase mb-3" style={{ color: "#00ac93" }}>
+      <p className="font-din text-[9px] tracking-[0.35em] uppercase mb-3" style={{ color: "#00ac93" }}>
         {label}
       </p>
       <div
@@ -41,7 +41,7 @@ function VideoBox({ label, children }: { label: string; children: React.ReactNod
 export default function PreviewPage() {
   return (
     <main className="min-h-screen bg-[#080808] px-8 py-12">
-      <p className="font-montserrat text-[10px] tracking-[0.4em] uppercase text-white mb-10">
+      <p className="font-din text-[10px] tracking-[0.4em] uppercase text-white mb-10">
         Varianty náhledu v traileru
       </p>
 

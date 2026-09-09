@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="w-full px-6 pb-20 pt-10">
       <div className="max-w-4xl mx-auto text-center">
         {/* Subtitle */}
-        <p className="text-[#aaa] font-montserrat text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed">
+        <p className="text-[#aaa] font-din text-sm md:text-base max-w-md mx-auto mb-10 leading-relaxed">
           Jedna cela a politický vězeň jako symbol vzdoru. Na motivy jediné
           předlohy pro pohybové divadlo z pera Václava Havla.
         </p>

@@ -85,20 +85,20 @@ function AvatarCard({ initials, name, role, href }: Member) {
   const inner = (
     <>
       <div
-        className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center font-montserrat text-black text-xl md:text-2xl tracking-wide"
+        className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full flex items-center justify-center font-din text-black text-xl md:text-2xl tracking-wide"
         style={{ backgroundColor: "#C89A2A" }}
       >
         {initials}
       </div>
       <div className="text-center">
-        <p className="text-white font-montserrat font-bold text-xs uppercase tracking-wider leading-snug group-hover:text-[#C89A2A] transition-colors duration-200">
+        <p className="text-white font-din font-bold text-xs uppercase tracking-wider leading-snug group-hover:text-[#C89A2A] transition-colors duration-200">
           {name}
         </p>
         <div
           className="mt-1 h-px origin-center scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
           style={{ backgroundColor: "#00ac93" }}
         />
-        <p className="text-[#444] font-montserrat text-[10px] uppercase tracking-widest mt-1">
+        <p className="text-[#444] font-din text-[10px] uppercase tracking-widest mt-1">
           {role}
         </p>
       </div>
@@ -162,12 +162,12 @@ export default function TeamSection({
           <div className="flex items-center gap-3 mb-8">
             <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
             <span
-              className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium"
+              className="text-[9px] tracking-[0.35em] uppercase font-din font-medium"
               style={{ color: "#00ac93" }}
             >
               {title}
             </span>
-            <span className="text-[8px] font-montserrat tracking-[0.2em] uppercase" style={{ color: "#2a2a2a" }}>
+            <span className="text-[8px] font-din tracking-[0.2em] uppercase" style={{ color: "#2a2a2a" }}>
               — fiktivní data
             </span>
           </div>
@@ -188,7 +188,7 @@ export default function TeamSection({
         <div className="flex items-center gap-3 mb-8">
           <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
           <span
-            className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium"
+            className="text-[9px] tracking-[0.35em] uppercase font-din font-medium"
             style={{ color: "#00ac93" }}
           >
             {title}
