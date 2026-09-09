@@ -75,7 +75,14 @@ export default function Ticker() {
 
   return (
     <div
-      className="w-full overflow-hidden py-7 border-t border-b border-[#1a1a1a] my-8"
+      className="w-full overflow-hidden py-7 rounded-2xl my-8"
+      style={{
+        // Tmavý podklad oddělí citace od fotky pod nimi
+        background: "rgba(0,0,0,0.55)",
+        backdropFilter: "blur(3px)",
+        WebkitBackdropFilter: "blur(3px)",
+        border: "1px solid #222",
+      }}
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
     >
