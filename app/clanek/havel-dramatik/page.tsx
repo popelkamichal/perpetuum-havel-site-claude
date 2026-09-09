@@ -1,4 +1,13 @@
 import ArticlePage from "@/components/ArticlePage";
+import { articleMetadata } from "@/lib/articleMeta";
+
+export const metadata = articleMetadata({
+  slug: "havel-dramatik",
+  title: "Slovo beze slov za vězně bez slávy",
+  description:
+    "České jaro 1989. Nadějeplné jaro. Obavplné jaro. Jako předtím jaro 1968 a jaro 1945 a jaro 1848 a třeba také jaro 1620. Bude lépe? Většinou nebylo. Píše Martin C. Putna.",
+  image: "/1766237746-perpetuum-3.jpg",
+});
 
 const ODSTAVCE = [
   "České jaro 1989. Nadějeplné jaro. Řada disidentských spisovatelů a dramatiků už smí být vydávána a hrána. Řada povolených umělců už více či méně otevřeně podporuje proměnu společnosti. Ale i obavplné jaro. V lednu byly tvrdě potlačeny demonstrace u příležitosti výročí sebeupálení Jana Palacha, který protestoval ani ne přímo proti ruským tankům, ale proti českým srabům, kolaborujícím s okupací. V lednu byl během těchto demonstrací zatčen a ve vězení znovu sedí Václav Havel.",
@@ -40,6 +49,7 @@ const BASEN = [
 export default function Page() {
   return (
     <ArticlePage
+      slug="havel-dramatik"
       tema="Slovo beze slov za vězně bez slávy"
       autor="Martin C. Putna"
       image="/1766237746-perpetuum-3.jpg"

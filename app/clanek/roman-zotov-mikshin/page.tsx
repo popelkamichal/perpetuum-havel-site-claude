@@ -1,4 +1,13 @@
 import ArticlePage from "@/components/ArticlePage";
+import { articleMetadata } from "@/lib/articleMeta";
+
+export const metadata = articleMetadata({
+  slug: "roman-zotov-mikshin",
+  title: "Pro politické vězně je tělo a mysl nástroj společenské změny",
+  description:
+    "Před osmnácti lety opustil rodné Rusko, dnes je hlasem politických vězňů v Národním divadle. Rozhovor s Romanem Zotovem-Mikshinem, jediným účinkujícím inscenace Perpetuum Havel.",
+  image: "/1766237746-perpetuum-6.jpg",
+});
 
 const BLOKY: { q: boolean; t: string }[] = [
   { q: true, t: "Romane, jaká byla premiéra?" },
@@ -45,6 +54,7 @@ const BLOKY: { q: boolean; t: string }[] = [
 export default function Page() {
   return (
     <ArticlePage
+      slug="roman-zotov-mikshin"
       tema="Pro politické vězně je tělo a mysl nástroj společenské změny"
       autor="Martina Sedláková"
       image="/1766237746-perpetuum-6.jpg"

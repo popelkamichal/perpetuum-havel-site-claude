@@ -1,4 +1,13 @@
 import ArticlePage from "@/components/ArticlePage";
+import { articleMetadata } from "@/lib/articleMeta";
+
+export const metadata = articleMetadata({
+  slug: "politicti-vezni",
+  title: "Vězení a bdělost",
+  description:
+    "Václav Havel ve své pantomimě, jejíž libreto napsal ve vězení, zaujímá k situaci uvěznění emancipující odstup. Píše Tomáš Glanc.",
+  image: "/1766237746-perpetuum-6.jpg",
+});
 
 const ODSTAVCE = [
   "Psaní ve vězení je historicky pro umělce a intelektuála něčím téměř paradigmatickým. Tedy za předpokladu, že podmínky věznění samotný akt psaní umožňují a podaří se vyřešit předání nebo vynesení textu „ven“. Vzniká tak svérázný kánon „vězeňské literatury“, pro který je příznačné stupňování významu díla překážkami a příkořím, které jeho vznik provázejí. I u Havla je součástí významu scénáře pantomimy fakt, že první verzi cenzura zabavila, autor musel do dopisu rozsah radikálně redukovat a podobně.",
@@ -16,6 +25,7 @@ const ODSTAVCE = [
 export default function Page() {
   return (
     <ArticlePage
+      slug="politicti-vezni"
       tema="Vězení a bdělost"
       autor="Tomáš Glanc"
       image="/1766237746-perpetuum-6.jpg"

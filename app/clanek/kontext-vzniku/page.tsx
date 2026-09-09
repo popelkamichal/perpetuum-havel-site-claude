@@ -1,4 +1,13 @@
 import ArticlePage from "@/components/ArticlePage";
+import { articleMetadata } from "@/lib/articleMeta";
+
+export const metadata = articleMetadata({
+  slug: "kontext-vzniku",
+  title: "Pantomima Václava Havla",
+  description:
+    "O uvedení Havlova takřka zapomenutého dílka — pantomimického libreta Pan A (7 dní ve vězení). Píše Ladislava Petišková pro Taneční zónu.",
+  image: "/1766237746-perpetuum-3.jpg",
+});
 
 const ODSTAVCE = [
   "Libreto doporučila k nastudování externí pedagožka Katedry Ladislava Petišková, která získala Havlův text díky laskavosti Knihovny Václava Havla. Petišková také otiskla jeho rukopisnou verzi a vlastní komentář v časopise Taneční zóna. Závazný autorsky chráněný text je nadále k dispozici v Knihovně Václava Havla.",
@@ -15,6 +24,7 @@ const ODSTAVCE = [
 export default function Page() {
   return (
     <ArticlePage
+      slug="kontext-vzniku"
       tema="Pantomima Václava Havla"
       autor="Ladislava Petišková · Taneční zóna, říjen 2014"
       image="/1766237746-perpetuum-3.jpg"

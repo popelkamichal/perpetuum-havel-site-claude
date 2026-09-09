@@ -1,16 +1,19 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ShareButtons from "@/components/ShareButtons";
 
 interface ArticlePageProps {
   tema: string;
   autor: string;
   image: string;
   perex: string;
+  /** Adresář článku pod /clanek/ — potřebný pro sdílecí odkazy */
+  slug: string;
   children: React.ReactNode;
 }
 
-export default function ArticlePage({ tema, autor, image, perex, children }: ArticlePageProps) {
+export default function ArticlePage({ tema, autor, image, perex, slug, children }: ArticlePageProps) {
   return (
     <main className="min-h-screen bg-[#080808]">
 
@@ -56,7 +59,9 @@ export default function ArticlePage({ tema, autor, image, perex, children }: Art
           {children}
         </div>
 
-        <div className="mt-12 pt-6 border-t border-[#1a1a1a]">
+        <ShareButtons slug={slug} title={tema} />
+
+        <div className="mt-8 pt-6 border-t border-[#1a1a1a]">
           <Link href="/" className="text-[9px] tracking-[0.3em] uppercase font-montserrat hover:opacity-70 transition-opacity duration-200" style={{ color: "#00ac93" }}>
             ← Zpět na hlavní stránku
           </Link>
