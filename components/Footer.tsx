@@ -1,18 +1,17 @@
 import Image from "next/image";
 
-const MECENASI = [
-  "prof. Dr. Dadja Altenburg-Kohl", "Jan Fagerberg", "Olga a Václav Foglarovi",
-  "Marta Guthová", "Silke Horáková", "Eva Hnilicová", "Zuzana Janeček",
-  "Karel Janeček", "Naďa Kalinovská Vanišová", "Vít Kučera", "Jiří Kyrian",
-  "Romana Leitgebová", "Hana Malešová", "Roman Malivánek", "Barbora Marečková",
-  "Roman Mytryuk", "Dita a Karel Pacourkovi", "Jitka Pantůčková",
-  "Jana Poljaková", "Marcela Růzhová", "Marie Sorokina", "Magdalena Souček",
-  "Evžen a Nikolaj Steinovi", "David Šilar a Tibor Rozsnyó", "Alice Šikošová",
-  "Jiří Šiler", "Pavla Šmídová", "Petr Šobotník", "Dita Šulcová",
-  "Michael Trask", "Lucie Valešová a Petr Kuchař", "Zdislav Vaněček",
-  "Ondřej Vozár", "Věra a František Výtvarovi", "Berenika Wünschová",
-  "Kateřina Zapletalová", "Lubor Žalman",
-];
+const MECENASI =
+  "prof. Dr. Dadje Altenburg-Kohl, Janu Fagerbergovi, Olze Foglarové, " +
+  "Martě Guthové, Evě Hnilicové, Silke Horákové, Zuzaně Janeček, " +
+  "Karlu Janečkovi, Vítu Kučerovi, Jiřímu Kyrianovi, Romaně Leitgebové, " +
+  "Miroslavu Lukešovi, Haně Malešové, Romanu Malivánkovi, Barboře Marečkové, " +
+  "Romanu Mytryukovi, Ditě Pacourkové, Jitce Pantůčkové, Marcele Růzhové, " +
+  "Janisi Sidovskému, Ladislavu Smejkalovi, Marii Sorokině, Magdaleně Souček, " +
+  "Evženu a Nikolaji Steinovým, Alici Šikošové, Davidu Šilarovi, Jiřímu Šilerovi, " +
+  "Alexandře a Ivu Šlosarčíkovým, Pavle Šmídové, Petru Šobotníkovi, Ditě Šulcové, " +
+  "Lucii Valešové a Petru Kuchařovi, Zdislavu Vaněčkovi, Ondřeji Vozárovi, " +
+  "Věře a Františku Výtvarovým, Berenice Wünschové, Kateřině Zapletalové " +
+  "a Luboru Žalmanovi, členům Mecenášského klubu ND.";
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
@@ -51,17 +50,17 @@ export default function Footer() {
 
         {/* Mecenášský klub ND */}
         <section>
-          <p className="font-montserrat text-[13px] leading-relaxed mb-5" style={{ color: "#cfcfcf" }}>
-            Partnerem inscenace je Mecenášský klub ND, členové Mecenášského klubu ND:
+          <p className="font-montserrat font-bold text-[13px] leading-relaxed mb-4" style={{ color: "#e2e2e2" }}>
+            Partnerem inscenace je Mecenášský klub ND, Národní divadlo děkuje za
+            významnou podporu
           </p>
-          <ul
-            className="font-montserrat text-[11px] leading-[1.9] columns-2 sm:columns-3 lg:columns-4 gap-x-8"
+          {/* Souvislá věta se jmény ve 3. pádu — nelze rozdělit do sloupců */}
+          <p
+            className="font-montserrat text-[12px] leading-relaxed max-w-4xl"
             style={{ color: "#6b6b6b" }}
           >
-            {MECENASI.map((m) => (
-              <li key={m} className="break-inside-avoid">{m}</li>
-            ))}
-          </ul>
+            {MECENASI}
+          </p>
         </section>
 
       </div>

@@ -109,8 +109,8 @@ export default function Home() {
             image: "/mozotov.jpg",
             imageFrame: { height: "100%", left: "-14%", top: "0%" },
           }}
-          instagramUrl="https://www.instagram.com/p/DX_7UqUScK7/"
-          reelLabel="Instagram"
+          reelId="XQ5VTTR8qmc"
+          reelLabel="Short"
         />
       </FadeInSection>
 
