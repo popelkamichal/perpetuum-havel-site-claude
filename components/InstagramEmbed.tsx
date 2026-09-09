@@ -37,13 +37,13 @@ export default function InstagramEmbed({ url }: InstagramEmbedProps) {
   if (!allowed) {
     return (
       <div className="w-full aspect-[4/5] flex flex-col items-center justify-center text-center px-6 gap-4 bg-[#111]">
-        <p className="font-din text-[12px] leading-relaxed text-[#888] max-w-xs">
+        <p className="font-montserrat text-[12px] leading-relaxed text-[#888] max-w-xs">
           Zde je vložený příspěvek z Instagramu. Jeho zobrazením se načte obsah
           ze serverů Instagramu, který může nastavit cookies.
         </p>
         <button
           onClick={showOnce}
-          className="font-din text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-200"
+          className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-all duration-200"
           style={{ background: "#00ac93", color: "#000" }}
         >
           Zobrazit příspěvek
@@ -52,7 +52,7 @@ export default function InstagramEmbed({ url }: InstagramEmbedProps) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-din text-[10px] tracking-[0.2em] uppercase underline underline-offset-2"
+          className="font-montserrat text-[10px] tracking-[0.2em] uppercase underline underline-offset-2"
           style={{ color: "#00ac93" }}
         >
           Otevřít na Instagramu

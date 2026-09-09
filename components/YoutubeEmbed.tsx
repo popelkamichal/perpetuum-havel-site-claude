@@ -75,7 +75,7 @@ export default function YoutubeEmbed({
           </div>
           {/* Popis */}
           {label !== "" && (
-            <span className="text-white/80 text-[10px] tracking-[0.3em] uppercase font-din">
+            <span className="text-white/80 text-[10px] tracking-[0.3em] uppercase font-montserrat">
               {label ?? "Přehrát trailer"}
             </span>
           )}

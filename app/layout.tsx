@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import CookieBanner from "@/components/CookieBanner";
 import Analytics from "@/components/Analytics";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import "./globals.css";
 
-const din = localFont({
-  src: [
-    { path: "../public/fonts/DINNextLTPro-Regular.woff", weight: "400", style: "normal" },
-    { path: "../public/fonts/DINNextLTPro-Medium.woff", weight: "500", style: "normal" },
-    { path: "../public/fonts/DINNextLTPro-Bold.woff", weight: "700", style: "normal" },
-  ],
-  variable: "--font-din",
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -39,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
-      <body className={`${din.variable} font-din bg-[#080808] text-white`}>
+      <body className={`${montserrat.variable} font-montserrat bg-[#080808] text-white`}>
         <ScrollIndicator />
         {children}
         <BackToTop />

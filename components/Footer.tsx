@@ -19,7 +19,7 @@ function Label({ children }: { children: React.ReactNode }) {
     <div className="flex items-center gap-3 mb-5">
       <div className="w-8 h-px flex-shrink-0" style={{ backgroundColor: "#00ac93" }} />
       <span
-        className="text-[9px] tracking-[0.35em] uppercase font-din font-medium"
+        className="text-[9px] tracking-[0.35em] uppercase font-montserrat font-medium"
         style={{ color: "#00ac93" }}
       >
         {children}
@@ -37,7 +37,7 @@ export default function Footer() {
         {/* Poděkování pamětnicím */}
         <section className="mb-12">
           <Label>Poděkování</Label>
-          <p className="font-din text-[13px] leading-relaxed max-w-3xl" style={{ color: "#7d7d7d" }}>
+          <p className="font-montserrat text-[13px] leading-relaxed max-w-3xl" style={{ color: "#7d7d7d" }}>
             Na vzniku inscenace se svými autentickými vzpomínkami a zkušenostmi
             podílely také bývalé politické vězenkyně z Běloruska{" "}
             <span style={{ color: "#cfcfcf" }}>
@@ -51,11 +51,11 @@ export default function Footer() {
 
         {/* Mecenášský klub ND */}
         <section>
-          <p className="font-din text-[13px] leading-relaxed mb-5" style={{ color: "#cfcfcf" }}>
+          <p className="font-montserrat text-[13px] leading-relaxed mb-5" style={{ color: "#cfcfcf" }}>
             Partnerem inscenace je Mecenášský klub ND, členové Mecenášského klubu ND:
           </p>
           <ul
-            className="font-din text-[11px] leading-[1.9] columns-2 sm:columns-3 lg:columns-4 gap-x-8"
+            className="font-montserrat text-[11px] leading-[1.9] columns-2 sm:columns-3 lg:columns-4 gap-x-8"
             style={{ color: "#6b6b6b" }}
           >
             {MECENASI.map((m) => (
@@ -83,7 +83,7 @@ export default function Footer() {
               className="h-9 w-auto"
             />
           </a>
-          <p className="text-gray-600 font-din text-[10px] tracking-[0.25em] uppercase">
+          <p className="text-gray-600 font-montserrat text-[10px] tracking-[0.25em] uppercase">
             © Národní divadlo&nbsp;&nbsp;|&nbsp;&nbsp;Laterna Magika
           </p>
         </div>

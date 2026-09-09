@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-din font-bold text-white text-lg mt-10 mb-3">
+    <h2 className="font-montserrat font-bold text-white text-lg mt-10 mb-3">
       {children}
     </h2>
   );
@@ -29,7 +29,7 @@ export default function Page() {
           <div className="w-8 h-px" style={{ backgroundColor: "#00ac93" }} />
           <Link
             href="/"
-            className="text-[9px] tracking-[0.3em] uppercase font-din hover:opacity-70 transition-opacity duration-200"
+            className="text-[9px] tracking-[0.3em] uppercase font-montserrat hover:opacity-70 transition-opacity duration-200"
             style={{ color: "#00ac93" }}
           >
             ← Zpět
@@ -37,13 +37,13 @@ export default function Page() {
         </div>
 
         <h1
-          className="text-white font-din font-bold leading-tight mb-8"
+          className="text-white font-montserrat font-bold leading-tight mb-8"
           style={{ fontSize: "clamp(1.75rem, 5vw, 2.5rem)" }}
         >
           Zásady cookies
         </h1>
 
-        <div className="font-din text-[15px] leading-relaxed text-[#8d8d8d] space-y-4">
+        <div className="font-montserrat text-[15px] leading-relaxed text-[#8d8d8d] space-y-4">
           <p>
             Tyto stránky provozuje Národní divadlo jako doprovodný web
             k inscenaci Perpetuum Havel. Snažíme se na nich shromažďovat co
@@ -133,7 +133,7 @@ export default function Page() {
         <div className="mt-12 pt-6 border-t border-[#1a1a1a]">
           <Link
             href="/"
-            className="text-[9px] tracking-[0.3em] uppercase font-din hover:opacity-70 transition-opacity duration-200"
+            className="text-[9px] tracking-[0.3em] uppercase font-montserrat hover:opacity-70 transition-opacity duration-200"
             style={{ color: "#00ac93" }}
           >
             ← Zpět na hlavní stránku

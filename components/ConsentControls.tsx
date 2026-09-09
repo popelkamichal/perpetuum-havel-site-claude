@@ -25,20 +25,20 @@ export default function ConsentControls() {
 
   return (
     <div className="border border-[#1f1f1f] rounded-lg p-5 my-6 bg-[#0d0d0d]">
-      <p className="font-din text-[13px] mb-4" style={{ color: "#cfcfcf" }}>
+      <p className="font-montserrat text-[13px] mb-4" style={{ color: "#cfcfcf" }}>
         {consent ? `Vaše nastavení: ${POPIS[consent]}` : "Zatím jste volbu neprovedli."}
       </p>
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => setConsent("all")}
-          className="font-din text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-opacity duration-200 hover:opacity-80"
+          className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 transition-opacity duration-200 hover:opacity-80"
           style={{ background: "#00ac93", color: "#000" }}
         >
           Přijmout vše
         </button>
         <button
           onClick={() => setConsent("necessary")}
-          className="font-din text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
+          className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
           style={{ borderColor: "#333", color: "#888" }}
         >
           Pouze nezbytné
@@ -46,7 +46,7 @@ export default function ConsentControls() {
         {consent && (
           <button
             onClick={clearConsent}
-            className="font-din text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
+            className="font-montserrat text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-colors duration-200 hover:border-white hover:text-white"
             style={{ borderColor: "#333", color: "#888" }}
           >
             Odvolat souhlas

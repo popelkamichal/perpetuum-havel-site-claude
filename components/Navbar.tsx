@@ -34,7 +34,7 @@ export default function Navbar() {
           <div className="hidden md:block w-px h-5 bg-[#2a2a2a]" />
           <a
             href="/"
-            className="hidden md:block text-white font-din text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+            className="hidden md:block text-white font-montserrat text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
           >
             Úvod
           </a>
@@ -46,7 +46,7 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-white font-din text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+              className="text-white font-montserrat text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
             href="https://www.narodni-divadlo.cz/cs/predstaveni/perpetuum-havel-UmymnrWnRvC2a_KyhqKeWQ"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-din text-[11px] tracking-[0.2em] uppercase text-white px-4 py-2 rounded transition-opacity duration-200 hover:opacity-80"
+            className="font-montserrat text-[11px] tracking-[0.2em] uppercase text-white px-4 py-2 rounded transition-opacity duration-200 hover:opacity-80"
             style={{ backgroundColor: "#8a732e" }}
           >
             Koupit vstupenky
@@ -68,7 +68,7 @@ export default function Navbar() {
             href="https://www.narodni-divadlo.cz/cs/predstaveni/perpetuum-havel-UmymnrWnRvC2a_KyhqKeWQ"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-din text-[10px] tracking-[0.15em] uppercase text-white px-3 py-1.5 rounded transition-opacity duration-200 hover:opacity-80"
+            className="font-montserrat text-[10px] tracking-[0.15em] uppercase text-white px-3 py-1.5 rounded transition-opacity duration-200 hover:opacity-80"
             style={{ backgroundColor: "#8a732e" }}
           >
             Vstupenky
@@ -94,7 +94,7 @@ export default function Navbar() {
         <div className="md:hidden bg-black border-t border-[#1a1a1a] px-4 py-4 flex flex-col gap-5">
           <a
             href="/"
-            className="text-white font-din text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+            className="text-white font-montserrat text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
             onClick={() => setOpen(false)}
           >
             Úvod
@@ -103,7 +103,7 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-white font-din text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
+              className="text-white font-montserrat text-[11px] tracking-[0.2em] uppercase hover:text-[#00ac93] transition-colors duration-200"
               onClick={() => setOpen(false)}
             >
               {item.label}
@@ -113,7 +113,7 @@ export default function Navbar() {
             href="https://www.narodni-divadlo.cz/cs/predstaveni/perpetuum-havel-UmymnrWnRvC2a_KyhqKeWQ"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-din text-[11px] tracking-[0.2em] uppercase text-white text-center px-4 py-2 rounded transition-opacity duration-200 hover:opacity-80"
+            className="font-montserrat text-[11px] tracking-[0.2em] uppercase text-white text-center px-4 py-2 rounded transition-opacity duration-200 hover:opacity-80"
             style={{ backgroundColor: "#8a732e" }}
             onClick={() => setOpen(false)}
           >

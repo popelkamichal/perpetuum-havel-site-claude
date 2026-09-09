@@ -97,12 +97,12 @@ export default function Ticker() {
         >
           {/* Na širokém displeji se celá citace vejde na jeden řádek */}
           <p
-            className="font-din text-[15px] md:text-[17px] leading-relaxed md:whitespace-nowrap"
+            className="font-montserrat text-[15px] md:text-[17px] leading-relaxed md:whitespace-nowrap"
             style={{ color: "#ffffff", textShadow: SHADOW }}
           >
             „{q.text}“
             <span
-              className="font-din text-[10px] tracking-[0.2em] uppercase font-medium md:ml-4 block md:inline"
+              className="font-montserrat text-[10px] tracking-[0.2em] uppercase font-medium md:ml-4 block md:inline"
               style={{ color: "#00ac93", textShadow: SHADOW }}
             >
               {q.source}
