@@ -82,30 +82,16 @@ export default function Page() {
 
           <H2>Obsah třetích stran</H2>
           <p>
-            Součástí stránek je vložené video z YouTube a příspěvek
-            z Instagramu. Obojí jsou služby provozované jinými společnostmi,
-            které při načtení mohou nastavit vlastní cookies a zpracovávat
-            údaje podle vlastních pravidel.
+            Součástí stránek jsou vložená videa z{" "}
+            <span className="text-[#cfcfcf]">YouTube</span>. Jde o službu
+            provozovanou jinou společností, která při načtení může nastavit
+            vlastní cookies a zpracovávat údaje podle vlastních pravidel.
           </p>
           <p>
-            Proto se nenačítají samy od sebe:
-          </p>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>
-              <span className="text-[#cfcfcf]">YouTube</span> — dokud
-              nekliknete na tlačítko přehrávání, zobrazuje se pouze náhledový
-              obrázek. Přehrávač se načte až po kliknutí.
-            </li>
-            <li>
-              <span className="text-[#cfcfcf]">Instagram</span> — příspěvek se
-              načte, jen když v liště zvolíte „Přijmout vše“, nebo když u něj
-              kliknete na „Zobrazit příspěvek“. Bez toho se na servery
-              Instagramu nic neodesílá.
-            </li>
-          </ul>
-          <p>
-            Zvolíte-li „Pouze nezbytné“, vložený obsah zůstane skrytý a web
-            funguje beze změny.
+            Proto se nenačítají samy od sebe: dokud nekliknete na tlačítko
+            přehrávání, zobrazuje se pouze náhledový obrázek. Přehrávač se
+            načte až po kliknutí — a to bez ohledu na to, jak jste se
+            rozhodli v liště se souhlasem.
           </p>
 
           <H2>Změna volby</H2>

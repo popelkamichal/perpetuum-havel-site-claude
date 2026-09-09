@@ -7,14 +7,14 @@ import { CONSENT_EVENT, getConsent, setConsent } from "@/lib/consent";
 const texts = {
   cs: {
     message:
-      "Tento web ukládá jen údaje nutné pro svůj provoz. Vložený obsah z Instagramu se načte až s vaším souhlasem.",
+      "Kromě údajů nutných pro provoz webu měříme návštěvnost pomocí Google Analytics. To se spustí až s vaším souhlasem.",
     accept: "Přijmout vše",
     reject: "Pouze nezbytné",
     policy: "Zásady cookies",
   },
   en: {
     message:
-      "This site stores only what it needs to run. Embedded Instagram content loads only with your consent.",
+      "Beyond what the site needs to run, we measure traffic with Google Analytics. That starts only with your consent.",
     accept: "Accept all",
     reject: "Necessary only",
     policy: "Cookie policy",
