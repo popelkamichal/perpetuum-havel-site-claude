@@ -3,11 +3,8 @@
   "compatibility_date": "2026-08-04",
   "assets": {
     "directory": "./out"
-  },
-  // Vlastní domény. Nasazení na nich projde jen se zónou ve stavu Active —
-  // dokud registr vydává cizí nameservery, build na tomhle selže.
-  "routes": [
-    { "pattern": "perpetuumhavel.cz", "custom_domain": true },
-    { "pattern": "www.perpetuumhavel.cz", "custom_domain": true }
-  ]
+  }
+  // Domény perpetuumhavel.cz a www.perpetuumhavel.cz jsou připojené přes
+  // dashboard a patří tam. Nepřidávat je sem jako "routes" — dvakrát to
+  // shodilo nasazení a web zůstal bez verze, i se zónou ve stavu Active.
 }
