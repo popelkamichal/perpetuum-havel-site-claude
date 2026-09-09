@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import { CONSENT_EVENT, getConsent } from "@/lib/consent";
 
 /**
- * Google Analytics 4 — načte se výhradně po souhlasu „Přijmout vše“.
+ * Google Analytics 4.
+ *
+ * Vkládá se doslova oficiální úryvek z Google Analytics — obě značky
+ * i kód mezi nimi jsou znak po znaku stejné. Jediný rozdíl je, kdy se
+ * spustí: až po volbě „Přijmout vše“, ne hned při načtení stránky.
+ * Tak to slibuje lišta se souhlasem i stránka se zásadami cookies.
  *
  * ID měření je uvedené přímo zde, ne v proměnné prostředí: NEXT_PUBLIC_*
  * se dosazuje při buildu, takže by ho stejně nešlo měnit za běhu, a jde
@@ -12,8 +17,16 @@ import { CONSENT_EVENT, getConsent } from "@/lib/consent";
  */
 const GA_ID = "G-ZL8SGX59RM";
 
+/* eslint-disable no-useless-concat */
+const SNIPPET = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${GA_ID}');
+`;
+
 export default function Analytics() {
-  const id = GA_ID;
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
@@ -24,33 +37,26 @@ export default function Analytics() {
   }, []);
 
   useEffect(() => {
-    if (!id) return;
-    const w = window as any;
+    const w = window as unknown as Record<string, unknown>;
 
     // Odvolání souhlasu: gtag necháme vypnutý do příštího načtení stránky.
     // Skript už z paměti odstranit nelze, ale přestane cokoli odesílat.
-    w[`ga-disable-${id}`] = !allowed;
+    w[`ga-disable-${GA_ID}`] = !allowed;
     if (!allowed || w.__gaLoaded) return;
 
-    const s = document.createElement("script");
-    s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-    s.async = true;
-    document.head.appendChild(s);
+    // <script async src="https://www.googletagmanager.com/gtag/js?id=…">
+    const tag = document.createElement("script");
+    tag.async = true;
+    tag.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(tag);
 
-    w.dataLayer = w.dataLayer || [];
+    // <script> … </script> — prohlížeč ho provede stejně, jako by stál v <head>
+    const init = document.createElement("script");
+    init.text = SNIPPET;
+    document.head.appendChild(init);
 
-    // Do dataLayer musí přijít objekt `arguments`, ne obyčejné pole — gtag.js
-    // podle toho pozná příkaz. Proto tady schválně žádné rest parametry.
-    function push(this: unknown) {
-      // eslint-disable-next-line prefer-rest-params
-      w.dataLayer.push(arguments);
-    }
-    const gtag = push as (...args: unknown[]) => void;
-
-    gtag("js", new Date());
-    gtag("config", id);
     w.__gaLoaded = true;
-  }, [allowed, id]);
+  }, [allowed]);
 
   return null;
 }
