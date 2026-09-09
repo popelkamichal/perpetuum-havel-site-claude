@@ -3,5 +3,11 @@
   "compatibility_date": "2026-08-04",
   "assets": {
     "directory": "./out"
-  }
+  },
+  // Vlastní doména. Zóna perpetuumhavel.cz musí být v účtu aktivní,
+  // jinak nasazení selže.
+  "routes": [
+    { "pattern": "perpetuumhavel.cz", "custom_domain": true },
+    { "pattern": "www.perpetuumhavel.cz", "custom_domain": true }
+  ]
 }
