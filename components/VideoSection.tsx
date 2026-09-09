@@ -14,6 +14,7 @@ export default function VideoSection() {
           <YoutubeEmbed
             videoId="sxslAs_JLoo"
             title="Rozhovor s Romanem Zotovem-Mikshinem – Perpetuum Havel"
+            thumbnail="/video2-screen.jpg"
             variant="ghost"
             label="Přehrát rozhovor"
           />

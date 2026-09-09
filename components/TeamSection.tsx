@@ -21,7 +21,7 @@ const team: Member[] = [
   {
     initials: "RV",
     name: "Radim Vizváry",
-    role: "Pohybová spolupráce",
+    role: "Námět",
     href: "https://www.narodni-divadlo.cz/cs/profil/radim-vizvary-1609468",
   },
   {
@@ -48,7 +48,7 @@ const politicalPrisoners: Member[] = [
   // původních 6 (placeholdery — nahradit reálnými daty)
   { initials: "PB", name: "Petr Boháč",          role: "Námět, scénář a režie",       href: "https://www.narodni-divadlo.cz/cs/profil/petr-bohac-Av4PuxCESv6gxfTq0mGI2w" },
   { initials: "RZ", name: "Roman Zotov-Mikshin", role: "Spolupráce na scénáři",        href: "https://www.narodni-divadlo.cz/cs/profil/roman-zotov-mikshin-KFqQzepjQqaeeWHt78UIAg" },
-  { initials: "RV", name: "Radim Vizváry",        role: "Pohybová spolupráce",          href: "https://www.narodni-divadlo.cz/cs/profil/radim-vizvary-1609468" },
+  { initials: "RV", name: "Radim Vizváry",        role: "Námět",                                  href: "https://www.narodni-divadlo.cz/cs/profil/radim-vizvary-1609468" },
   { initials: "PČ", name: "Pavlína Chroňáková",  role: "Scéna a kostýmy",              href: "https://www.narodni-divadlo.cz/cs/profil/pavlina-chronakova-eZF3YRxtQzWKeGDRLFIJLQ" },
   { initials: "MH", name: "Martin Hůla",          role: "Video, hudba a zvukový design", href: "https://www.narodni-divadlo.cz/cs/profil/martin-hula-JAxNGFvTTQOu1NIpeRxxzw" },
   { initials: "FH", name: "Filip Horn",           role: "Světelný design",              href: "https://www.narodni-divadlo.cz/cs/profil/filip-horn-KRPcCcwAR42ONPuf2PjIFg" },

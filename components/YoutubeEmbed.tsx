@@ -57,6 +57,19 @@ export default function YoutubeEmbed({
         role="button"
         aria-label={`Přehrát video: ${title}`}
       >
+        {/* Vlastní úvodní obrázek. Bez něj zůstává varianta průhledná —
+            v hero přes ni prosvítá fotka na pozadí sekce. */}
+        {thumbnail && (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={thumbnail}
+              alt={title}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-200" />
+          </>
+        )}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
           {/* Kroužek s trojúhelníkem — pulzuje */}
           <div className="relative flex items-center justify-center">
