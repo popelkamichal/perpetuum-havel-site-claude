@@ -6,7 +6,9 @@ export const metadata = articleMetadata({
   title: "Pantomima Václava Havla",
   description:
     "O uvedení Havlova takřka zapomenutého dílka — pantomimického libreta Pan A (7 dní ve vězení). Píše Ladislava Petišková pro Taneční zónu.",
-  image: "/1766237746-perpetuum-3.jpg",
+  image: "/FOTO3.jpg",
+  width: 2000,
+  height: 1333,
 });
 
 const ODSTAVCE = [
@@ -27,7 +29,7 @@ export default function Page() {
       slug="kontext-vzniku"
       tema="Pantomima Václava Havla"
       autor="Ladislava Petišková · Taneční zóna, říjen 2014"
-      image="/1766237746-perpetuum-3.jpg"
+      image="/FOTO3.jpg"
       perex="Programové zacílení vzdělávacího cyklu pod názvem Výzvy, paradoxy, hry Václava Havla otevřela Anna Freimannová 6. 10. 2014 v novém sále Knihovny Václava Havla. Umožnila tak uvedení Havlova takřka zapomenutého dílka, pantomimického libreta nazvaného Pan A (7 dní ve vězení) v nastudování absolventa Katedry nonverbálního divadla Vojtěcha Svobody a v režii jeho pedagoga, Radima Vizváry."
     >
   {ODSTAVCE.map((t, i) => <p key={i}>{t}</p>)}

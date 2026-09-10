@@ -6,7 +6,9 @@ export const metadata = articleMetadata({
   title: "Slovo beze slov za vězně bez slávy",
   description:
     "České jaro 1989. Nadějeplné jaro. Obavplné jaro. Jako předtím jaro 1968 a jaro 1945 a jaro 1848 a třeba také jaro 1620. Bude lépe? Většinou nebylo. Píše Martin C. Putna.",
-  image: "/1766237746-perpetuum-3.jpg",
+  image: "/FOTO1.jpg",
+  width: 2000,
+  height: 1333,
 });
 
 const ODSTAVCE = [
@@ -50,9 +52,10 @@ export default function Page() {
   return (
     <ArticlePage
       slug="havel-dramatik"
+      imagePosition="center 85%"
       tema="Slovo beze slov za vězně bez slávy"
       autor="Martin C. Putna"
-      image="/1766237746-perpetuum-3.jpg"
+      image="/FOTO1.jpg"
       perex="České jaro 1989. Nadějeplné jaro. Obavplné jaro. Jako předtím jaro 1968 a jaro 1945 a jaro 1848 a třeba také jaro 1620. Bude lépe? Většinou nebylo. Roku 1968 přijely ruské tanky, roku 1848 generál Windischgrätz, roku 1620 žoldnéři, kterým dle habsburských legend velela sama pomstychtivá Panna Maria. Roku 1945 byly ruské tanky většinou zprvu vítány, a jen menší část si uvědomovala, že i to jsou tanky okupační."
     >
       {ODSTAVCE.slice(0, 10).map((t, i) => <p key={i}>{t}</p>)}

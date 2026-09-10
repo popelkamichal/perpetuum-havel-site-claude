@@ -6,7 +6,9 @@ export const metadata = articleMetadata({
   title: "Pro politické vězně je tělo a mysl nástroj společenské změny",
   description:
     "Před osmnácti lety opustil rodné Rusko, dnes je hlasem politických vězňů v Národním divadle. Rozhovor s Romanem Zotovem-Mikshinem, jediným účinkujícím inscenace Perpetuum Havel.",
-  image: "/1766237746-perpetuum-6.jpg",
+  image: "/FOTO4.jpg",
+  width: 2000,
+  height: 1333,
 });
 
 const BLOKY: { q: boolean; t: string }[] = [
@@ -57,7 +59,7 @@ export default function Page() {
       slug="roman-zotov-mikshin"
       tema="Pro politické vězně je tělo a mysl nástroj společenské změny"
       autor="Martina Sedláková"
-      image="/1766237746-perpetuum-6.jpg"
+      image="/FOTO4.jpg"
       perex="Před osmnácti lety opustil rodné Rusko, dnes je hlasem politických vězňů v Národním divadle. Roman Zotov-Mikshin je jediným účinkujícím inscenace Perpetuum Havel, která měla světovou premiéru 4. července v rámci Off programu divadelního festivalu v Avignonu. S performerem, jehož výkon si vysloužil chválu francouzských kritiků v bezmála desítce recenzí, jsme si povídali den po premiéře přímo v centru festivalového dění."
     >
       {BLOKY.map((b, i) =>

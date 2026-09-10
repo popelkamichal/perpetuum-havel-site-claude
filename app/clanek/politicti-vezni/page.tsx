@@ -6,7 +6,9 @@ export const metadata = articleMetadata({
   title: "Vězení a bdělost",
   description:
     "Václav Havel ve své pantomimě, jejíž libreto napsal ve vězení, zaujímá k situaci uvěznění emancipující odstup. Píše Tomáš Glanc.",
-  image: "/1766237746-perpetuum-6.jpg",
+  image: "/FOTO2.jpg",
+  width: 2000,
+  height: 1333,
 });
 
 const ODSTAVCE = [
@@ -26,9 +28,10 @@ export default function Page() {
   return (
     <ArticlePage
       slug="politicti-vezni"
+      imagePosition="center 25%"
       tema="Vězení a bdělost"
       autor="Tomáš Glanc"
-      image="/1766237746-perpetuum-6.jpg"
+      image="/FOTO2.jpg"
       perex="Václav Havel ve své pantomimě, jejíž libreto napsal ve vězení, zaujímá k situaci uvěznění emancipující odstup. Zdůrazňuje vězení jako obecně svízelnou situaci jedince, jak o tom svědčí titul Perpetuum mobile i zmínka o Sisyfovi v režijní poznámce. Nezabývá se svým politicky motivovaným uvězněním, nýbrž spíš obecně lidským přesahem, který zkušenost vězně nabízí. Odstup mimochodem zaujímá nejen k motivům uvěznění, ale i k divadelním prostředkům, kterými přitom disponuje. Ve chvíli, kdy Havel na jaře 1989 na svém díle pracuje, má za sebou už pětadvacet let mezinárodně úspěšné kariéry dramatika. Nicméně v tomto případě divadelní prostředky, v Havlově případě především slovo, jazyk, redukuje de fakto na nulu a pouští se na tenký, pro jeho poetiku netypický led nonverbálního divadla s prvky klauniády. Jako by se nejen na svou situaci vězně, ale i na divadlo, které je základním východiskem jeho uměleckého vyjadřování, podíval zvenčí a z nové perspektivy."
     >
   {ODSTAVCE.map((t, i) => <p key={i}>{t}</p>)}

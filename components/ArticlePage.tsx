@@ -10,10 +10,17 @@ interface ArticlePageProps {
   perex: string;
   /** Adresář článku pod /clanek/ — potřebný pro sdílecí odkazy */
   slug: string;
+  /**
+   * Kam se má ořez hero fotky přitáhnout, když se nevejde celá.
+   * Hodí se u snímků, kde je hlava vysoko a střed by ji uřízl.
+   */
+  imagePosition?: string;
   children: React.ReactNode;
 }
 
-export default function ArticlePage({ tema, autor, image, perex, slug, children }: ArticlePageProps) {
+export default function ArticlePage({
+  tema, autor, image, perex, slug, imagePosition = "center", children,
+}: ArticlePageProps) {
   return (
     <main className="min-h-screen bg-[#080808]">
 
@@ -22,7 +29,12 @@ export default function ArticlePage({ tema, autor, image, perex, slug, children 
       {/* Hero foto — max 50vh na desktopu */}
       <div className="w-full overflow-hidden relative" style={{ maxHeight: "50vh", minHeight: "220px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image} alt={tema} className="w-full h-full object-cover" style={{ maxHeight: "50vh" }} />
+        <img
+          src={image}
+          alt={tema}
+          className="w-full h-full object-cover"
+          style={{ maxHeight: "50vh", objectPosition: imagePosition }}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-black/10 to-transparent" />
       </div>
 
