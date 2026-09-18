@@ -41,10 +41,9 @@ export default function Footer() {
             podílely také bývalé politické vězenkyně z Běloruska{" "}
             <span style={{ color: "#cfcfcf" }}>
               Palina Šarenda-Panasjuk, Maria Nesterova, Iryna Harashyna
-              a Volha Kukushkina
-            </span>
-            . Děkujeme jim za odvahu sdílet své zkušenosti a za důvěru, kterou
-            nám daly.
+            </span>{" "}
+            a další. Děkujeme jim za odvahu sdílet své zkušenosti a za důvěru,
+            kterou nám daly.
           </p>
         </section>
 
