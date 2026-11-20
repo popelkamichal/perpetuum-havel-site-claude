@@ -25,12 +25,11 @@ Statický propagační microsite v češtině.
 
 | Větev | K čemu je | Stav |
 |---|---|---|
-| **`cloudflare`** | **produkce** — vše, co je na webu | aktuální |
-| `claude/cool-albattani-C67qZ` | původní větev pro Vercel | **zastaralá**, viz §3 |
+| **`cloudflare`** | **produkce** — vše, co je na webu; zároveň výchozí větev | aktuální |
 | `varianta-din` | záloha s písmem DIN Next LT Pro | zmrazená, viz §6 |
 
-> **Nejdůležitější věta celého dokumentu:** pracuj na `cloudflare`.
-> Push do `claude/cool-albattani-C67qZ` se na webu **neprojeví**.
+Jiné větve repozitář nemá. Původní větev pro Vercel (`claude/cool-albattani-C67qZ`)
+byla 20. 11. 2026 smazána — viz §3.
 
 ---
 
@@ -88,10 +87,15 @@ Kdyby se k němu někdo vracel, tady je stav:
 Díky tomu push do `cloudflare` nespouští paralelní nasazení na Vercelu.
 Kdyby se to mělo obnovit, stačí `ignoreCommand` odstranit.
 
-### Větev pro Vercel je dva měsíce pozadu
+### Větev pro Vercel už neexistuje
 
-`claude/cool-albattani-C67qZ` má poslední commit z **8. 9. 2026**, produkce z 18. 9.
-Oproti produkci jí **chybí** (nic naopak — je striktně pozadu):
+`claude/cool-albattani-C67qZ` byla **20. 11. 2026 smazána**. Byla to do té doby
+výchozí větev repozitáře, takže se nejdřív musela výchozí přepnout na `cloudflare`
+(Settings → General → Default branch) — GitHub výchozí větev smazat nedovolí.
+
+Důvod: měla poslední commit z **8. 9. 2026**, zatímco produkce z 18. 9., a byla
+oproti ní **striktně pozadu** — 27 commitů navíc v historii, ale v obsahu nic,
+co by produkce neměla. Chybělo jí:
 
 - `components/Analytics.tsx` — měření GA4
 - `lib/consent.ts`, `components/ConsentControls.tsx`, `app/zasady-cookies/` — souhlas s cookies
@@ -101,23 +105,28 @@ Oproti produkci jí **chybí** (nic naopak — je striktně pozadu):
 - `public/FOTO1–4.jpg` — fotky v článcích
 - aktualizovaná data vězňů, patička, ticker, karty na úvodu
 
-### Konfigurace se mezi větvemi liší
+Spolu s ní se smazala i funkce **„Vězeň dne"** (denní rotace vybraného vězně
+na `/vezni`), která existovala jen tam. Na produkci se záměrně nikdy nenasadila
+a bylo rozhodnuto, že není potřeba.
 
-| | `cloudflare` (produkce) | `claude/cool-albattani-C67qZ` |
+### Kdyby se někdo na Vercel vracel
+
+Konfigurace by se musela přepnout zpátky — produkce je stavěná pro statický
+export na Cloudflare:
+
+| | `cloudflare` (produkce) | co by Vercel potřeboval |
 |---|---|---|
 | `next.config.js` | `output: "export"` | bez exportu (běží na serveru) |
 | HTTP hlavičky | `public/_headers` | `headers()` v `next.config.js` |
-| `wrangler.jsonc` | je | není |
-| `vercel.json` | build vypnutý | build zapnutý |
+| `wrangler.jsonc` | je | nepotřebný |
+| `vercel.json` | build vypnutý (`ignoreCommand`) | `ignoreCommand` odstranit |
 
 **Pozor:** funkce `headers()` v `next.config.js` se statickým exportem
 **nedělá vůbec nic** — proto jsou na produkci hlavičky v `public/_headers`.
-Kdyby se někdo vracel na Vercel, musí se to přepnout zpátky.
 
-### Co dělat s tou větví
-
-Buď ji **smazat**, nebo ji přepsat z produkce (`git checkout cloudflare -- .`).
-Nechávat ji takhle je matoucí — vypadá to, že se na ní pracuje, a přitom je mrtvá.
+Navíc je tu licenční háček: free tarif Vercelu („Hobby") je určený jen pro
+**nekomerční osobní projekty**. Web Národního divadla by pod to nespadal a
+vyžadoval by placený tarif. Cloudflare tohle omezení nemá.
 
 ---
 
@@ -167,9 +176,11 @@ prostřední pás — u FOTO1 a FOTO2 by jinak padly hlavy mimo záběr.
 | 2 | **Popisky videí** | První short má „Short z Avignonu", druhý jen „Short". Druhý by si zasloužil konkrétnější název. `app/page.tsx`, `reelLabel`. |
 | 3 | **Mrtvý kód: Instagram** | `components/InstagramEmbed.tsx` se už nepoužívá, ale `ContentPair.tsx` ho pořád importuje a má prop `instagramUrl`. Instagram se z webu vypustil. Lze smazat. |
 | 4 | **Nepoužité fonty DIN** | `public/fonts/DINNextLTPro-*.woff` nejsou nikde v kódu použité, ale **nasazují se a jsou veřejně stažitelné**. Je to komerčně licencované písmo — stojí za zvážení je z `public/` odstranit (záloha zůstane na větvi `varianta-din`). |
-| 5 | **Zastaralá větev pro Vercel** | Viz §3 — smazat nebo srovnat s produkcí. |
-| 6 | **Aktualizace Next.js** | Zamčeno na 16.3.0, k dispozici je 16.3.5 (jen opravy chyb). Záměrně neaktualizováno — viz §7. |
-| 7 | **Google Search Console** | Web do ní ještě není přidaný. Ověření projde přes stejný účet jako GA4, pak vložit `sitemap.xml`. Urychlí indexaci. |
+| 5 | **Aktualizace Next.js** | Zamčeno na 16.3.0, k dispozici je 16.3.5 (jen opravy chyb). Záměrně neaktualizováno — viz §7. |
+| 6 | **Google Search Console** | Web do ní ještě není přidaný. Ověření projde přes stejný účet jako GA4, pak vložit `sitemap.xml`. Urychlí indexaci. |
+
+> **Hotovo 20. 11. 2026:** zastaralá větev pro Vercel smazána a výchozí větví
+> repozitáře je nově `cloudflare` (viz §3).
 
 ---
 
